@@ -142,15 +142,15 @@ h4 {
 }
 
 .header__item {
-  margin-right: 55px;
+  padding-right: 55px;
 }
 
 .header__item:last-child {
-  margin-right: 0;
+  padding-right: 0;
 }
 
-.gallery{
-    padding-right: 5px;
+.tickets {
+  padding-left: 5px;
 }
 
 .header__link {
@@ -173,3 +173,72 @@ h4 {
 }
 
 /* Header styles end */
+
+/* Main styles start */
+
+/* -Section Welcome start */
+
+.Welcome {
+    min-height: 750px;
+    background-image: url("../assets/jpg/Main_foto.jpg");
+    background-size: 1215px 750px;
+    background-repeat: no-repeat;
+    background-position: calc(50% + 352px) 100%;
+    background-color: #030303;
+    margin-bottom: 75px;
+  }
+  
+  .Welcome__wrapper {
+    display: flex;
+    flex-flow: row nowrap;
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+  
+  .Welcome__section {
+    margin-top: 114px;
+  }
+  
+  .Welcome__title {
+    font-family: Forum;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 80px;
+    line-height: 90px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    max-width: 598px;
+    margin-bottom: 26px;
+  }
+  
+  .Welcome__subtitle {
+    font-size: 28px;
+    line-height: 33px;
+    letter-spacing: 2px;
+    margin-bottom: 76px;
+  }
+  
+  .Welcome__button {
+    width: 360px;
+    height: 75px;
+    font-weight: 100;
+    line-height: 26px;
+    letter-spacing: 1.5px;
+    color: #ffffff;
+    background: #710707;
+    border: 0;
+    border-radius: 10px;
+  }
+  
+  .Welcome__button:hover,
+  .Welcome__button:focus,
+  .Welcome__button:active {
+    background: #9d8665;
+    transition: 0.5s;
+  }
+  
+  .Welcome__button:not(:hover) {
+    transition: 0.5s;
+  }
+  
+  /* -Section Welcome end */
