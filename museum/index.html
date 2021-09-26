@@ -7,64 +7,110 @@
     <title>Museum</title>
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="icon" href="assets/img/louvre-museum.png">
+    <link rel="icon" href="assets/img/louvre-museum.png" />
   </head>
   <body>
     <header class="header">
-        <div class="wrapper">
-          <div class="header__wrapper">
-            <div class="header__logo">
-              <a href="#" class="header__logo-link">
-                <div class="header__logo-pic"></div>
-                <h4>Louvre</h4>
-              </a>
-            </div>
-            <nav class="header__nav">
-              <ul class="header__list">
-                <li class="header__item">
-                  <a href="#visiting" class="header__link">Visiting</a>
-                </li>
-                <li class="header__item">
-                  <a href="#explore" class="header__link">Explore</a>
-                </li>
-                <li class="header__item">
-                  <a href="#video" class="header__link">Video</a>
-                </li>
-                <li class="header__item">
-                    <a href="#gallery" class="header__link" >Gallery</a>
-                  </li>
-                <li class="header__item">
-                  <a href="#tickets" class="header__link tickets">Tickets</a>
-                </li>
-                <li class="header__item">
-                  <a href="#contacts" class="header__link">Contacts</a>
-                </li>
-              </ul>
-            </nav>
+      <div class="wrapper">
+        <div class="header__wrapper">
+          <div class="header__logo">
+            <a href="#" class="header__logo-link">
+              <div class="header__logo-pic"></div>
+              <h4>Louvre</h4>
+            </a>
           </div>
+          <nav class="header__nav">
+            <ul class="header__list">
+              <li class="header__item">
+                <a href="#visiting" class="header__link">Visiting</a>
+              </li>
+              <li class="header__item">
+                <a href="#explore" class="header__link">Explore</a>
+              </li>
+              <li class="header__item">
+                <a href="#video" class="header__link">Video</a>
+              </li>
+              <li class="header__item">
+                <a href="#gallery" class="header__link">Gallery</a>
+              </li>
+              <li class="header__item">
+                <a href="#tickets" class="header__link tickets">Tickets</a>
+              </li>
+              <li class="header__item">
+                <a href="#contacts" class="header__link">Contacts</a>
+              </li>
+            </ul>
+          </nav>
         </div>
-      </header>
-      <main>
-        <section class="Welcome" id="welcome">
-            <div class="Welcome__wrapper">
-              <div class="Welcome__section">
-                <h1 class="Welcome__title">
-                  Welcome <br />
-                  to the louvre
-                </h1>
-                <h2 class="Welcome__subtitle">From the castle to the museum</h2>
-                <form
-                  action="https://www.google.com/maps/@48.8618159,2.3366818,3a,75y,81.55h,73.4t/data=!3m7!1e1!3m5!1sAF1QipOVxZQuSy3Bx9T_HpH_7FtBHDTXvI6SF-A10ocT!2e10!3e12!7i5472!8i2736"
-                  target="_blank"
-                >
-                  <button type="submit" class="Welcome__button">
-                    Discover the Louvre
-                  </button>
-                </form>
+      </div>
+    </header>
+    <main>
+      <section class="Welcome" id="welcome">
+        <div class="wrapper">
+          <div class="Welcome__wrapper">
+            <div class="Welcome__section">
+              <h1 class="Welcome__title">
+                Welcome <br />
+                to the louvre
+              </h1>
+              <h2 class="Welcome__subtitle">From the castle to the museum</h2>
+
+              <a class="Welcome__button" href="tours/tour1.html" target="_blank"
+                >Discover the Louvre</a
+              >
+            </div>
+            <div class="Welcome__carousel">
+              <div class="Welcome__container">
+                <div class="Welcome__item active">
+                  <img src="assets/img/welcome-slider/1.jpg" alt="Мона Лиза" />
+                </div>
+                <div class="Welcome__item">
+                  <img
+                    src="assets/img/welcome-slider/2.jpg"
+                    alt="Свобода, ведущая народ"
+                  />
+                </div>
+                <div class="Welcome__item">
+                  <img
+                    src="assets/img/welcome-slider/3.jpg"
+                    alt="Прекрасная ферроньера"
+                  />
+                </div>
+                <div class="Welcome__item">
+                  <img
+                    src="assets/img/welcome-slider/4.jpg"
+                    alt="Плот Медузы"
+                  />
+                </div>
+                <div class="Welcome__item">
+                  <img src="assets/img/welcome-slider/5.jpg" alt="Астроном" />
+                </div>
+              </div>
+              <div class="Welcome__control">
+                <div class="Welcome__position">
+                  <div class="Welcome__current">01</div>
+                  <div class="Welcome__separator">|</div>
+                  <div class="Welcome__total">05</div>
+                </div>
+                <div class="Welcome__bullet">
+                  <div class="Welcome__point"></div>
+                  <div class="Welcome__point"></div>
+                  <div class="Welcome__point"></div>
+                  <div class="Welcome__point"></div>
+                  <div class="Welcome__point"></div>
+                </div>
+                <div class="Welcome__control__left">
+                  <div class="Welcome__arrow left"></div>
+                </div>
+                <div class="Welcome__control__right">
+                  <div class="Welcome__arrow right"></div>
+                </div>
               </div>
             </div>
-          </section>
-      </main>
-      <footer></footer>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer></footer>
   </body>
 </html>

@@ -78,8 +78,6 @@ body {
   line-height: 38px;
   font-weight: 300;
   color: #ffffff;
-  max-width: 1920px;
-  margin: 0 auto;
 }
 
 .wrapper {
@@ -179,66 +177,208 @@ h4 {
 /* -Section Welcome start */
 
 .Welcome {
-    min-height: 750px;
-    background-image: url("../assets/jpg/Main_foto.jpg");
-    background-size: 1215px 750px;
+  min-height: 810px;
+  /* background-image: url("../assets/img/welcome-slider/1.jpg");
+    background-size: 1000px 750px;
     background-repeat: no-repeat;
-    background-position: calc(50% + 352px) 100%;
-    background-color: #030303;
-    margin-bottom: 75px;
-  }
-  
-  .Welcome__wrapper {
-    display: flex;
-    flex-flow: row nowrap;
-    max-width: 1440px;
-    margin: 0 auto;
-  }
-  
-  .Welcome__section {
-    margin-top: 114px;
-  }
-  
-  .Welcome__title {
-    font-family: Forum;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 80px;
-    line-height: 90px;
-    letter-spacing: 5px;
-    text-transform: uppercase;
-    max-width: 598px;
-    margin-bottom: 26px;
-  }
-  
-  .Welcome__subtitle {
-    font-size: 28px;
-    line-height: 33px;
-    letter-spacing: 2px;
-    margin-bottom: 76px;
-  }
-  
-  .Welcome__button {
-    width: 360px;
-    height: 75px;
-    font-weight: 100;
-    line-height: 26px;
-    letter-spacing: 1.5px;
-    color: #ffffff;
-    background: #710707;
-    border: 0;
-    border-radius: 10px;
-  }
-  
-  .Welcome__button:hover,
-  .Welcome__button:focus,
-  .Welcome__button:active {
-    background: #9d8665;
-    transition: 0.5s;
-  }
-  
-  .Welcome__button:not(:hover) {
-    transition: 0.5s;
-  }
-  
-  /* -Section Welcome end */
+    background-position: calc(50% + 232px) 100%; */
+  background-color: #030303;
+  margin-bottom: 75px;
+}
+
+.Welcome__wrapper {
+  /* display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between; */
+  position: relative;
+}
+
+.Welcome__section {
+  position: absolute;
+  margin-top: 150px;
+  z-index: 10;
+}
+
+.Welcome__title {
+  font-family: Forum;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 80px;
+  line-height: 90px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  max-width: 598px;
+  margin-bottom: 26px;
+}
+
+.Welcome__subtitle {
+  font-size: 28px;
+  line-height: 33px;
+  letter-spacing: 2px;
+  margin-bottom: 75px;
+}
+
+.Welcome__button {
+  display: flex;
+  width: 360px;
+  height: 75px;
+  font-weight: 100;
+  line-height: 26px;
+  letter-spacing: 2px;
+  color: #ffffff;
+  background: #710707;
+  border: 0;
+  border-radius: 10px;
+  text-decoration: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.Welcome__button:hover,
+.Welcome__button:focus,
+.Welcome__button:active {
+  background: #9d8665;
+  transition: 0.5s;
+}
+
+.Welcome__button:not(:hover) {
+  transition: 0.5s;
+}
+
+.Welcome__carousel {
+  position: absolute;
+  right: 0;
+}
+
+.Welcome__carousel::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    to right,
+    rgb(0, 0, 0, 1) 0%,
+    rgb(0, 0, 0, 0.5) 20%,
+    rgb(255, 255, 250, 0) 35%
+  );
+  z-index: 1;
+}
+
+.Welcome__item {
+  display: none;
+}
+
+.Welcome__item.active,
+.Welcome__item.next {
+  display: block;
+}
+
+.Welcome__item.next {
+  position: absolute;
+  width: 100%;
+}
+
+.Welcome__control {
+  position: absolute;
+  width: 600px;
+  height: 120px;
+  background-color: #000;
+  bottom: -60px;
+  right: 0;
+  z-index: 10;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.Welcome__position {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-right: 55px;
+  margin-top: 1px;
+}
+
+.Welcome__current,
+.Welcome__separator {
+  margin-right: 10px;
+}
+
+.Welcome__bullet {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.Welcome__point {
+  width: 16px;
+  height: 16px;
+  background-color: #fff;
+  margin-right: 25px;
+}
+
+.Welcome__point:first-child {
+  background-color: #d2b183;
+}
+
+.Welcome__point:last-child {
+  margin-right: 60px;
+}
+
+.Welcome__point:hover,
+.Welcome__point:focus,
+.Welcome__point:active {
+  background-color: #9d8665;
+  transition: 0.3s;
+}
+
+.Welcome__point:not(:hover) {
+  transition: 0.3s;
+}
+
+.Welcome__arrow.left {
+  background-image: url("../assets/img/Left.png");
+  background-repeat: no-repeat;
+  width: 30px;
+  height: 8px;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+.Welcome__arrow.left:hover,
+.Welcome__arrow.left:focus,
+.Welcome__arrow.left:active {
+  filter: invert(54%) sepia(3%) saturate(3204%) hue-rotate(356deg)
+    brightness(99%) contrast(93%);
+  transition: 0.3s;
+}
+
+.Welcome__arrow.left:not(:hover) {
+  transition: 0.3s;
+}
+
+.Welcome__arrow.right {
+  background-image: url("../assets/img/Right.png");
+  background-repeat: no-repeat;
+  width: 30px;
+  height: 8px;
+  cursor: pointer;
+}п
+
+.Welcome__arrow.right:hover,
+.Welcome__arrow.right:focus,
+.Welcome__arrow.right:active {
+  filter: invert(54%) sepia(3%) saturate(3204%) hue-rotate(356deg)
+    brightness(99%) contrast(93%);
+  transition: 0.3s;
+}
+
+.Welcome__arrow.right:not(:hover) {
+  transition: 0.3s;
+}
+
+/* -Section Welcome end */
