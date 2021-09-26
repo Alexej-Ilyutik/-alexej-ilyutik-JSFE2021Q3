@@ -259,7 +259,7 @@ h4 {
   bottom: 0;
   background: linear-gradient(
     to right,
-    rgb(0, 0, 0, 1) 0%,
+    rgb(3, 3, 3, 1) 0%,
     rgb(0, 0, 0, 0.5) 20%,
     rgb(255, 255, 250, 0) 35%
   );
@@ -367,9 +367,8 @@ h4 {
   width: 30px;
   height: 8px;
   cursor: pointer;
-}п
-
-.Welcome__arrow.right:hover,
+}
+п .Welcome__arrow.right:hover,
 .Welcome__arrow.right:focus,
 .Welcome__arrow.right:active {
   filter: invert(54%) sepia(3%) saturate(3204%) hue-rotate(356deg)
@@ -382,3 +381,90 @@ h4 {
 }
 
 /* -Section Welcome end */
+
+/* -Section Visiting start */
+.Visiting {
+  margin-bottom: 73px;
+}
+
+.top__title-white {
+  font-family: Forum;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 80px;
+  line-height: 90px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: #9d8665;
+  padding-bottom: 25px;
+  border-bottom: 3px solid #710707;
+  margin-bottom: 75px;
+}
+
+.Visiting__cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 76px 60px;
+}
+
+.Visiting__card-thumb {
+  width: 440px;
+  height: 285px;
+  margin-bottom: 25px;
+}
+
+.Visiting__card-thumb:hover {
+  transform: scale(1.06);
+  transition: 1s;
+}
+
+.Visiting__card-thumb:not(:hover) {
+  transition: 0.5s;
+}
+
+.Visiting__card-pic {
+  position: relative;
+}
+
+.Visiting__card-pic::after {
+  content: "";
+  position: absolute;
+  bottom: -46px;
+  left: 0;
+  width: 300px;
+  height: 2px;
+  background-color: #710707;
+}
+
+.Visiting__card:hover .Visiting__card-pic::after {
+  width: 440px;
+  transition: 1s;
+}
+
+.Visiting__card-title {
+  font-family: Forum;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 35px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: #000000;
+  margin-bottom: 22px;
+}
+
+.Visiting__card-comments-360 {
+  font-weight: 100;
+  line-height: 26px;
+  color: #000000;
+  margin-bottom: 10px;
+}
+
+.Visiting__card-comments-view {
+  font-weight: 100;
+  font-size: 18px;
+  line-height: 21px;
+  color: #000000;
+}
+
+/* -Section Visiting end */
