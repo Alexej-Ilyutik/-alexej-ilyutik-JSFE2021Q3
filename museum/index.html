@@ -405,6 +405,110 @@
           </div>
         </div>
       </section>
+      <section class="Tickets" id="tickets">
+        <div class="wrapper">
+          <h2 class="top__title-white">Buy tickets</h2>
+          <div class="Tickets__content">
+            <img
+              src="assets/img/Tickets_img.jpg"
+              alt="Pic Tickets"
+              class="Tickets__content-pic"
+            />
+            <div class="tickets__type">
+              <h5 class="tickets__type-title">Ticket Type</h5>
+              <div class="tickets__radio" id="first__radio-button">
+                <input
+                  id="permanent"
+                  type="radio"
+                  name="radio"
+                  value="1"
+                  checked
+                />
+                <label for="permanent">Permanent exhibition</label>
+              </div>
+              <div class="tickets__radio">
+                <input id="temporary" type="radio" name="radio" value="2" />
+                <label for="temporary">Temporary exhibition</label>
+              </div>
+              <div class="tickets__radio">
+                <input id="combined" type="radio" name="radio" value="3" />
+                <label for="combined">Combined Admission</label>
+              </div>
+            </div>
+            <div class="tickets__amount">
+              <h5 class="tickets__amount-title">Amount</h5>
+              <div class="tickets__age-basic">
+                <p class="tickets__amount-age">Basic 18+</p>
+                <div class="number">
+                  <button
+                    class="number-minus"
+                    type="button"
+                    onclick="this.nextElementSibling.stepDown(); this.nextElementSibling.onchange();"
+                  >
+                    &ndash;
+                  </button>
+                  <input type="number" min="0" max="20" value="1" readonly />
+                  <button
+                    class="number-plus"
+                    type="button"
+                    onclick="this.previousElementSibling.stepUp(); this.previousElementSibling.onchange();"
+                  >
+                    &plus;
+                  </button>
+                </div>
+              </div>
+              <div class="tickets__age-senior">
+                <p class="tickets__amount-age">Senior 65+</p>
+                <div class="number">
+                  <button
+                    class="number-minus"
+                    type="button"
+                    onclick="this.nextElementSibling.stepDown(); this.nextElementSibling.onchange();"
+                  >
+                    &ndash;
+                  </button>
+                  <input type="number" min="0" max="20" value="1" readonly />
+                  <button
+                    class="number-plus"
+                    type="button"
+                    onclick="this.previousElementSibling.stepUp(); this.previousElementSibling.onchange();"
+                  >
+                    &plus;
+                  </button>
+                </div>
+              </div>
+              <h5 class="tickets__amount-total">Total &#8364;220</h5>
+              <button type="submit" class="tickets__button-buy">Buy Now</button>
+            </div>
+          </div>  
+        </div>
+        <div class="Tickets__paralax"></div>
+      </section>
+      <section class="Contacts" id="contacts">
+        <div class="wrapper">
+          <h2 class="top__title-white">Contacts</h2>
+          <div class="Contacts__content">
+            <div class="Contacts__content-address">
+              <div class="Contacts__content-title">
+                Palais Royal <br />
+                Musee du Louvre
+              </div>
+              <p class="Contacts__address-description">
+                address: 75001 Paris, France
+              </p>
+              <p class="Contacts__address-description">
+                phone: +33(0) 1 40 20 50 50
+              </p>
+              <p class="Contacts__address-description">mail: info@louvre.fr</p>
+            </div>
+            <img
+              src="assets/png/Map.png"
+              alt="Map"
+              class="Contacts__content-map"
+            />
+          </div>
+        </div>
+      </section>
     </main>
     <footer></footer>
     <!-- <script src="js/index.js"></script> -->
