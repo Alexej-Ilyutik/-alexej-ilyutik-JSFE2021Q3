@@ -4,7 +4,6 @@ let ticketsForm = document.getElementById("ticketsForm"),
 
 buttonForm.onclick = function () {
   ticketsForm.style.display = "block";
-  ticketsForm.style.left = "0";
 };
 
 closeButton.onclick = function () {
