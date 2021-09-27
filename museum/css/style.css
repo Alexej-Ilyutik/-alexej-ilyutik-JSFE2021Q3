@@ -854,3 +854,58 @@ h4 {
 }
 
 /* -Section Video end */
+
+/* -Section Gallery start */
+.Gallery {
+  background-color: #030303;
+  margin-bottom: 75px;
+}
+
+.Gallery__picture-container {
+  height: 2200px;
+  overflow-y: hidden;
+}
+
+.Gallery__title {
+  font-family: Forum;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 80px;
+  line-height: 90px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-bottom: 76px;
+  padding-top: 75px;
+}
+
+.Gallery__picture-inner-container {
+  display: flex;
+  flex-direction: column;
+  column-count: 3;
+  row-gap: 24px;
+  column-gap: 36px;
+  height: 2960px;
+  flex-wrap: wrap;
+}
+
+/* .Gallery__picture-container::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  height: 360px;
+  width: 100%;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
+  z-index: 100;
+} */
+
+.Gallery__pic {
+  max-width: 456px;
+}
+
+.Gallery__pic:first-child,
+.Gallery__pic:nth-child(11) {
+  padding-top: 50px;
+}
+
+/* -Section Gallery end */
