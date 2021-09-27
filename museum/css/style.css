@@ -914,7 +914,7 @@ h4 {
 
 .Tickets {
   margin-bottom: 75px;
-  padding-bottom: 74px;
+  
 }
 
 .Tickets__content {
@@ -1184,6 +1184,42 @@ h5.tickets__amount-total {
   
 }
 
-
-
 /* -Section Tickets end */
+
+/* -Section Contacts start */
+.Contacts {
+  margin-bottom: 75px;
+}
+
+.Contacts__content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.Contacts__content-title {
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 33px;
+  color: #000000;
+  margin-bottom: 51px;
+}
+
+.Contacts__address-description {
+  line-height: 26px;
+  color: #000000;
+  margin-bottom: 25px;
+}
+
+.Contacts__address-description a{
+  text-decoration: none;
+  color: #000;
+}
+
+.Contacts__content-map {
+  width: 960px;
+  height: 620px;
+}
+/* -Section Contacts end */
+
+/* Main styles end */
