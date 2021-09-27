@@ -889,16 +889,6 @@ h4 {
   flex-wrap: wrap;
 }
 
-/* .Gallery__picture-container::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  height: 360px;
-  width: 100%;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
-  z-index: 100;
-} */
-
 .Gallery__pic {
   max-width: 456px;
 }
@@ -1171,6 +1161,285 @@ h5.tickets__amount-total {
   transition: 0.5s;
 }
 
+.Tickets__wrapper-form {
+  display: none;
+  opacity: 0.9;
+  position: fixed;
+  top: 0;
+  left: -5000px;
+  height: 100vh;
+  width: 100%;
+  z-index: 100000;
+  background-color: #000;
+}
+
+.Booking__tickets {
+  background-color: #fff;
+  width: 1440px;
+  height: 845px;
+  margin: 0 auto;
+  padding: 91px 235px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.Booking__tickets-logo {
+  background-image: url("../assets/svg/Tickets_logo.svg");
+  width: 85px;
+  height: 41px;
+}
+
+.Booking__tickets-title {
+  font-family: Forum;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 50px;
+  line-height: 55px;
+  text-transform: uppercase;
+  color: #9d8665;
+  margin-bottom: 14px;
+}
+
+.Booking__tickets-subtitle {
+  font-size: 18px;
+  line-height: 21px;
+  color: #710707;
+  font-weight: normal;
+  width: 400px;
+  padding-bottom: 8px;
+  border-bottom: 3px solid #710707;
+  margin-bottom: 60px;
+}
+
+.Booking__form-left p {
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+  color: #030303;
+}
+
+.first_form {
+  display: flex;
+  flex-direction: row;
+  width: 400px;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.date_form,
+.time_form {
+  width: 190px;
+  height: 45px;
+  border: 1px solid #030303;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.date_form img,
+.time_form img {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.date_form p {
+  margin-right: 60px;
+}
+
+.time_form p {
+  margin-right: 58px;
+}
+
+.contact_form {
+  width: 400px;
+  height: 45px;
+  border: 1px solid #030303;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.contact_form img {
+  margin-left: 15px;
+}
+
+.contact_form p {
+  margin-left: 15px;
+}
+
+.contact_form:last-child p {
+  margin-right: 215px;
+}
+
+.Entry_ticket {
+  width: 400px;
+  height: 135px;
+  border: 1px solid #030303;
+  padding: 10px 15px 15px 15px;
+}
+
+.Entry_ticket-title {
+  font-family: Forum;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 20px;
+  color: #9d8665;
+  width: 370px;
+  padding-bottom: 4px;
+  border-bottom: 2px solid #740c11;
+}
+
+.Ticket_counter {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.Ticket_age {
+  display: flex;
+  flex-direction: column;
+  margin-top: 18px;
+}
+
+.Ticket_age p:last-child {
+  margin-top: 21px;
+}
+
+.Ticket_pic {
+  display: flex;
+  flex-direction: column;
+  margin-top: 16px;
+}
+
+.Ticket_pic img:last-child {
+  margin-top: 18px;
+}
+
+.Booking__form-right {
+  width: 530px;
+  height: 663px;
+  border: 1px solid #030303;
+  padding: 25px 30px 30px 26px;
+  margin-left: 40px;
+}
+
+.Overview {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+
+.Overview__description h2 {
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 37px;
+  color: #272727;
+  padding-bottom: 2px;
+  padding-left: 2px;
+}
+
+.Overview__description h3 {
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 26px;
+  color: #740c11;
+  opacity: 0.9;
+  padding-bottom: 10px;
+  padding-left: 2px;
+}
+
+.Overview_date,
+.Overview_time,
+.Overview_temporary {
+  display: flex;
+  flex-direction: row;
+  margin-left: 2px;
+  margin-bottom: 5px;
+}
+
+.Overview_date img,
+.Overview_time img,
+.Overview_temporary img {
+  margin-right: 15px;
+}
+
+.Overview__description p {
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 21px;
+  color: #030303;
+}
+
+.Cost {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 2px;
+  border-bottom: 2px solid #740c11;
+  margin-bottom: 12px;
+}
+
+.Cost_left {
+  display: flex;
+  flex-direction: column;
+}
+
+.Cost_left-price p,
+.Cost_right p {
+  font-weight: normal;
+  font-size: 22px;
+  line-height: 26px;
+  color: #030303;
+}
+
+.Cost_left-price img {
+  margin-right: 10px;
+}
+
+.Cost_left-price,
+.Cost_right p {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 7px;
+}
+
+.Total {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 2px;
+  margin-bottom: 10px;
+}
+
+.Total p {
+  font-weight: normal;
+  font-size: 32px;
+  line-height: 37px;
+  color: #030303;
+}
+
+.Card {
+  margin-left: 2px;
+  margin-bottom: 25px;
+}
+
+.Tickets_button {
+  width: 220px;
+  height: 45px;
+  float: right;
+  background-color: #710707;
+  text-align: center;
+  padding-top: 7px;
+}
+
+.Close {
+  width: 25px;
+  height: 25px;
+  z-index: 10000;
+  cursor: pointer;
+  margin-left: 180px;
+  margin-top: -70px;
+}
+
 .Tickets__paralax {
   width: 100%;
   height: 400px;
@@ -1360,9 +1629,6 @@ h5.tickets__amount-total {
 
 .rsShool a {
   margin-right: 420px;
-}
-
-.name a {
 }
 
 /* Footer styles end */
