@@ -409,7 +409,7 @@ h4 {
 }
 
 .Visiting__card-thumb {
-  width: 440px;
+  max-width: 440px;
   height: 285px;
   margin-bottom: 25px;
 }
@@ -1166,11 +1166,11 @@ h5.tickets__amount-total {
   top: calc(50vh - 422.5px);
   left: calc(50vw - 728px);
   background-color: transparent;
-  background-color: #FFF;
+  background-color: #fff;
   transition: left 0.8s ease;
 }
 
-.wrapper__form-hidden{
+.wrapper__form-hidden {
   left: -100%;
   transition: left 0.8s ease;
 }
@@ -1591,13 +1591,13 @@ h5.tickets__amount-total {
   margin-top: 10px;
 }
 
-.Card__front{
+.Card__front {
   margin-left: 2px;
-   position: relative;
+  position: relative;
   width: 360px;
   height: 211px;
   padding: 15px 20px;
-  background-color: #BCBCBC;
+  background-color: #bcbcbc;
   border-radius: 3px;
   z-index: 10;
 }
@@ -1615,21 +1615,21 @@ h5.tickets__amount-total {
   color: #161615;
 }
 
-.Card__input-number{
-   width: 215px;
+.Card__input-number {
+  width: 215px;
   height: 35px;
   padding: 0 12px;
   border: none;
   outline: none;
 }
 
-.Card__date-wrapper{
+.Card__date-wrapper {
   display: flex;
   justify-content: space-between;
   width: 215px;
 }
 
-.Card__date-month, 
+.Card__date-month,
 .Card__date-year {
   width: 100px;
   height: 35px;
@@ -1642,12 +1642,12 @@ h5.tickets__amount-total {
   outline: none;
 }
 
-.Card__date-month::-webkit-inner-spin-button, 
+.Card__date-month::-webkit-inner-spin-button,
 .Card__date-year::-webkit-inner-spin-button {
   opacity: 1;
 }
 
-.Card__input-name{
+.Card__input-name {
   width: 320px;
   height: 34px;
   padding: 0 12px;
@@ -1655,13 +1655,13 @@ h5.tickets__amount-total {
   outline: none;
 }
 
-.Card__logo{
+.Card__logo {
   position: absolute;
   top: 24px;
   left: 285px;
 }
 
-.Card__logo-master{
+.Card__logo-master {
   margin-left: 2px;
 }
 
@@ -1715,7 +1715,7 @@ h5.tickets__amount-total {
   padding: 12px 0;
   font-weight: 400;
   font-size: 22px;
-  color: #FFFFFF;
+  color: #ffffff;
   background-color: #710707;
   opacity: 0.9;
   overflow: hidden;
@@ -1726,7 +1726,7 @@ h5.tickets__amount-total {
 
 .ripple {
   position: absolute;
-  background-color: #FFF;
+  background-color: #fff;
   width: 100px;
   height: 100px;
   border-radius: 50%;
@@ -1741,7 +1741,7 @@ h5.tickets__amount-total {
   }
 }
 
-.form__show{
+.form__show {
   position: fixed;
   top: 0px;
   left: 0px;
@@ -1753,7 +1753,7 @@ h5.tickets__amount-total {
   transition: opacity 0.5s;
 }
 
-.form__hidden{
+.form__hidden {
   display: none;
   opacity: 0;
   transition: opacity 0.5s;
@@ -1925,7 +1925,7 @@ h5.tickets__amount-total {
   display: flex;
   height: 124px;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -1943,11 +1943,119 @@ h5.tickets__amount-total {
 }
 
 .year {
-  margin-right: 485px;
-}
-
-.rsShool a {
-  margin-right: 420px;
+  margin-right: 4.8%;
 }
 
 /* Footer styles end */
+
+@media screen and (max-width: 1650px) {
+  .wrapper {
+    max-width: 1240px;
+  }
+
+  .Visiting__cards {
+    grid-gap: 76px 15px;
+  }
+
+  .Visiting__card-thumb {
+    max-width: 400px;
+  }
+
+  .Explore {
+    height: 1265px;
+  }
+
+  .Explore__wrapper {
+    max-width: 1240px;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .Explore__description-left {
+    max-width: 100%;
+  }
+
+  br {
+    display: none;
+  }
+
+  .Explore__slider {
+    margin-top: 20px;
+    margin-left: calc(50% - 360px);
+  }
+
+  .Video__title {
+    margin-bottom: 15px;
+  }
+
+  .Video__description-right {
+    width: 60%;
+    margin-bottom: 55px;
+  }
+
+  .Video__player-pic {
+    width: 1240px;
+    height: auto;
+  }
+
+  .Video__button-play {
+    top: 155px;
+  }
+
+  .Video__player-panel {
+    width: 1240px;
+    height: 75px;
+    margin-bottom: 40px;
+  }
+
+  .Video__player-wrapper {
+    flex-wrap: nowrap;
+    padding-top: 22px;
+  }
+
+  .Video__player-play {
+    margin-right: 30px;
+  }
+
+  .Video__progress {
+    width: 810px;
+    margin-right: 30px;
+  }
+
+  .Video__player-sound {
+    margin-right: 30px;
+  }
+
+  .Sound__progress {
+    width: 135px;
+    margin-right: 30px;
+  }
+
+  .Video__slider-pic {
+    width: 400px;
+    height: 240px;
+  }
+
+  .Gallery__picture-inner-container {
+    column-gap: 16px;
+    height: 2650px;
+  }
+
+  .Gallery__pic {
+    max-width: 400px;
+  }
+
+  .tickets__type {
+    display: none;
+  }
+
+  .tickets__amount {
+    align-items: flex-start;
+  }
+
+  .Close {
+ 
+  left: calc(100% - 120px);
+  
+}
+}
