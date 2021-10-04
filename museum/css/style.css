@@ -1160,158 +1160,329 @@ h5.tickets__amount-total {
   transition: 0.5s;
 }
 
-.Tickets__wrapper-form {
-  display: none;
-  opacity: 0.9;
+.wrapper__form {
   position: fixed;
-  top: 0;
-  height: 100vh;
-  width: 100%;
-  z-index: 100000;
-  background-color: #000;
+  z-index: 100;
+  top: calc(50vh - 422.5px);
+  left: calc(50vw - 728px);
+  background-color: transparent;
+  background-color: #FFF;
+  transition: left 0.8s ease;
 }
 
-.Booking__tickets {
-  background-color: #fff;
+.wrapper__form-hidden{
+  left: -100%;
+  transition: left 0.8s ease;
+}
+
+.tickets__form {
+  padding-bottom: 90px;
   width: 1440px;
-  height: 845px;
+  height: 850px;
   margin: 0 auto;
-  padding: 91px 235px;
+}
+
+.Close {
+  display: inline-block;
+  width: 33px;
+  height: 33px;
+  position: relative;
+  top: 23px;
+  left: calc(100% - 56px);
+  z-index: 1000;
+  cursor: pointer;
+}
+
+.tickets__wrapper {
+  width: 970px;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
+  margin-top: 53px;
 }
 
-.Booking__tickets-logo {
-  background-image: url("../assets/svg/Tickets_logo.svg");
-  width: 85px;
-  height: 41px;
-}
-
-.Booking__tickets-title {
-  font-family: Forum;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 50px;
-  line-height: 55px;
-  text-transform: uppercase;
-  color: #9d8665;
-  margin-bottom: 14px;
-}
-
-.Booking__tickets-subtitle {
-  font-size: 18px;
-  line-height: 21px;
-  color: #710707;
-  font-weight: normal;
+.tickets__wrapper-left {
   width: 400px;
-  padding-bottom: 8px;
-  border-bottom: 3px solid #710707;
+  height: 100%;
+}
+
+.tickets__wrapper-title {
   margin-bottom: 60px;
 }
 
-.Booking__form-left p {
+.Booking__tickets-logo {
+  margin-bottom: 8px;
+}
+
+.Booking__tickets-title {
+  color: #9d8665;
+  font-family: "Forum";
+  font-weight: 300;
   font-weight: normal;
+  font-size: 80px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  margin-top: 81px;
+  margin-bottom: 31px;
+  font-size: 50px;
+  letter-spacing: normal;
+  margin-top: 0px;
+  margin-bottom: 15px;
+}
+
+.Booking__tickets-subtitle {
+  color: #710707;
   font-size: 18px;
-  line-height: 21px;
-  color: #030303;
+  margin-bottom: 13px;
+  border-bottom: 3px solid #710707;
 }
 
 .first_form {
   display: flex;
-  flex-direction: row;
-  width: 400px;
   justify-content: space-between;
-  margin-bottom: 20px;
 }
 
 .date_form,
 .time_form {
   width: 190px;
   height: 45px;
-  border: 1px solid #030303;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+  border: 1px solid #000000;
 }
 
-.date_form img,
-.time_form img {
-  margin-left: 15px;
-  margin-right: 15px;
+.date_wrapper,
+.time_wrapper {
+  display: inline-flex;
 }
 
-.date_form p {
-  margin-right: 60px;
+.date_wrapper img {
+  display: inline-block;
+  margin: 12px 15px;
 }
 
-.time_form p {
-  margin-right: 58px;
+.date_wrapper p,
+.time_wrapper p {
+  font-size: 18px;
+  font-weight: 400;
+  margin-top: 4px;
+  color: #000;
+}
+
+.label_date {
+  cursor: pointer;
+  position: relative;
+  width: 17px;
+  height: 17px;
+  display: inline-block;
+  left: 71px;
+  bottom: 3px;
+  background-size: 17px 17px;
+}
+
+#date_id {
+  position: relative;
+  opacity: 0;
+  right: 29px;
+  bottom: 38px;
+  z-index: 1000;
+}
+
+.time_wrapper img {
+  display: inline-block;
+  margin: 12px 15px;
+}
+
+.label_time {
+  cursor: pointer;
+  position: relative;
+  width: 17px;
+  height: 17px;
+  display: inline-block;
+  left: 67px;
+  bottom: 3px;
+  background-size: 17px 17px;
+}
+
+#time_id {
+  position: relative;
+  opacity: 0;
+  left: 80px;
+  bottom: 38px;
+  z-index: 1000;
 }
 
 .contact_form {
-  width: 400px;
+  width: 100%;
   height: 45px;
-  border: 1px solid #030303;
+  border: 1px solid #000000;
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  margin-bottom: 20px;
+  margin-top: 20px;
 }
 
 .contact_form img {
-  margin-left: 15px;
+  display: inline-block;
+  margin: 15px;
 }
 
-.contact_form p {
-  margin-left: 15px;
+.contact_form-input {
+  display: inline-block;
+  width: calc(100% - 45px);
+  font-size: 18px;
+  border: none;
 }
 
-.contact_form:last-child p {
-  margin-right: 215px;
+.name_form img {
+  width: 13px;
+  height: 15px;
+  margin-left: 13px;
 }
 
-.Entry_ticket {
+.email_form img {
+  width: 15px;
+  height: 11px;
+  margin-left: 13px;
+}
+
+.phone_form img {
+  width: 14px;
+  height: 23px;
+  margin-left: 14px;
+  margin-top: 10px;
+}
+
+.select {
+  min-width: 400px;
+  max-width: 400px;
+  height: 45px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+  color: #030303;
+  border: 1px solid #030303;
+  padding-left: 45px;
+  margin-top: 20px;
+  background: url(../assets/svg/arrow.svg) 368px 14px no-repeat,
+    url(../assets/svg/ballot.svg) 15px 14px no-repeat;
+  -webkit-appearance: none;
+}
+
+.entryTicket_form {
   width: 400px;
   height: 135px;
   border: 1px solid #030303;
   padding: 10px 15px 15px 15px;
+  margin-top: 20px;
 }
 
-.Entry_ticket-title {
+.entryTicket_form-title {
   font-family: Forum;
-  font-weight: normal;
+  font-weight: 400;
   font-size: 18px;
   line-height: 20px;
   color: #9d8665;
   width: 370px;
   padding-bottom: 4px;
   border-bottom: 2px solid #740c11;
+  text-transform: capitalize;
 }
 
-.Ticket_counter {
+.entryTicket_wrapper {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 
-.Ticket_age {
+.entryTicket-left {
   display: flex;
   flex-direction: column;
-  margin-top: 18px;
+  margin-top: 10px;
 }
 
-.Ticket_age p:last-child {
-  margin-top: 21px;
+.entryTicket-left h3 {
+  font-size: 18px;
+  color: #030303;
 }
 
-.Ticket_pic {
+.entryTicket-left h3:last-child {
+  margin-top: 5px;
+}
+
+.entryTicket-right {
   display: flex;
   flex-direction: column;
   margin-top: 16px;
 }
 
-.Ticket_pic img:last-child {
-  margin-top: 18px;
+.age-panel {
+  display: inline-block;
+  position: relative;
+  width: 105px;
+  height: 25px;
+  margin-bottom: 18px;
+}
+
+.age-panel input[type="number"] {
+  display: block;
+  height: 25px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  color: #000;
+  box-sizing: border-box;
+  text-align: center;
+  -moz-appearance: textfield;
+  -webkit-appearance: textfield;
+  appearance: textfield;
+  border: 1px solid #000;
+}
+
+.age-panel input[type="number"]::-webkit-outer-spin-button,
+.age-panel input[type="number"]::-webkit-inner-spin-button {
+  display: none;
+}
+
+.age-panel-minus {
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  bottom: 1px;
+  width: 35px;
+  height: 23px;
+  padding: 0;
+  display: block;
+  text-align: center;
+  border: none;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  color: #fff;
+  background-color: #030303;
+}
+
+.age-panel-plus {
+  position: absolute;
+  top: 1px;
+  right: 1px;
+  bottom: 1px;
+  width: 35px;
+  height: 23px;
+  padding: 0;
+  display: block;
+  text-align: center;
+  border: none;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  color: #fff;
+  background-color: #030303;
 }
 
 .Booking__form-right {
@@ -1416,26 +1587,176 @@ h5.tickets__amount-total {
 }
 
 .Card {
+  position: relative;
+  margin-top: 10px;
+}
+
+.Card__front{
   margin-left: 2px;
-  margin-bottom: 25px;
+   position: relative;
+  width: 360px;
+  height: 211px;
+  padding: 15px 20px;
+  background-color: #BCBCBC;
+  border-radius: 3px;
+  z-index: 10;
+}
+
+.Card__number,
+.Card__date {
+  margin-bottom: 10px;
+}
+
+.Card__title {
+  margin-bottom: 4px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  color: #161615;
+}
+
+.Card__input-number{
+   width: 215px;
+  height: 35px;
+  padding: 0 12px;
+  border: none;
+  outline: none;
+}
+
+.Card__date-wrapper{
+  display: flex;
+  justify-content: space-between;
+  width: 215px;
+}
+
+.Card__date-month, 
+.Card__date-year {
+  width: 100px;
+  height: 35px;
+  padding: 0 12px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  color: #161615;
+  border: none;
+  outline: none;
+}
+
+.Card__date-month::-webkit-inner-spin-button, 
+.Card__date-year::-webkit-inner-spin-button {
+  opacity: 1;
+}
+
+.Card__input-name{
+  width: 320px;
+  height: 34px;
+  padding: 0 12px;
+  border: none;
+  outline: none;
+}
+
+.Card__logo{
+  position: absolute;
+  top: 24px;
+  left: 285px;
+}
+
+.Card__logo-master{
+  margin-left: 2px;
+}
+
+.Card__back {
+  position: absolute;
+  top: 30px;
+  left: 110px;
+  width: 360px;
+  height: 211px;
+  padding: 15px 20px;
+  text-align: end;
+  background-color: #939393;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.Card__line {
+  width: 107%;
+  height: 45px;
+  margin: 10px 0 15px 0;
+  background-color: #161615;
+}
+
+.Card__title-cvv {
+  margin: 0 12px 6px 0;
+}
+
+.Card__input-cvv {
+  width: 75px;
+  height: 35px;
+  padding: 0 12px;
+  border: none;
+  outline: none;
+}
+
+.Card__cvv-description {
+  width: 55px;
+  margin: 4px 0px 0 260px;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 12px;
+  color: #161615;
+  text-align: left;
 }
 
 .Tickets_button {
+  position: relative;
   width: 220px;
   height: 45px;
-  float: right;
+  margin: 56px 0px 0 252px;
+  padding: 12px 0;
+  font-weight: 400;
+  font-size: 22px;
+  color: #FFFFFF;
   background-color: #710707;
+  opacity: 0.9;
+  overflow: hidden;
   text-align: center;
   padding-top: 7px;
+  cursor: pointer;
 }
 
-.Close {
-  width: 25px;
-  height: 25px;
-  z-index: 10000;
-  cursor: pointer;
-  margin-left: 180px;
-  margin-top: -70px;
+.ripple {
+  position: absolute;
+  background-color: #FFF;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  animation: circle 0.6s ease-out;
+}
+
+@keyframes circle {
+  to {
+    transform: translate(-50%, -50%) scale(3);
+    opacity: 0;
+  }
+}
+
+.form__show{
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 10;
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+
+.form__hidden{
+  display: none;
+  opacity: 0;
+  transition: opacity 0.5s;
 }
 
 .Tickets__paralax {
