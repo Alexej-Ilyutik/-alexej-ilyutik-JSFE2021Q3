@@ -930,7 +930,7 @@ h4 {
 
 .Tickets__content {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: space-between;
 }
 
@@ -2373,6 +2373,44 @@ h5.tickets__amount-total {
 
 .Gallery__pic {
   max-width: 304px;
+}
+
+.Tickets {
+  margin-bottom: 60px;
+}
+
+.tickets__type {
+  display: none;
+}
+
+.Tickets__content-pic{
+  width: 700px;
+  height: 440px;
+}
+
+.tickets__amount {
+  align-items: flex-start;
+  margin-right: 30px;
+}
+
+.tickets__amount-age {
+  margin-bottom: 5px;
+}
+
+.number {
+  margin-bottom: 25px;
+   width: 175px;
+}
+
+h5.tickets__amount-total {
+  margin-top: 0px;
+  margin-bottom: 65px;
+}
+
+
+.Tickets__paralax {
+  height: 400px;
+  margin-top: 60px;
 }
 
 }
