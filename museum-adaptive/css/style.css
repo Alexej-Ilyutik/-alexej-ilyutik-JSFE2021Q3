@@ -1836,7 +1836,7 @@ h5.tickets__amount-total {
 
 .footer__wrapper {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: space-between;
   padding-top: 75px;
   padding-bottom: 35px;
@@ -2432,6 +2432,22 @@ h5.tickets__amount-total {
 .Contacts__content-map{
   width: 70.6%;
   height: 454px;
+}
+
+.footer__wrapper {
+  padding-top: 52px;
+  padding-bottom: 35px;
+}
+.footer__nav {
+  margin-right: 14%;
+}
+
+.footer__item {
+  margin-right: 122px;
+}
+
+.year {
+  margin-right: 6.8%;
 }
 
 }
