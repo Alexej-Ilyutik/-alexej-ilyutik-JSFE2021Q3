@@ -299,7 +299,7 @@
           </div>
         </div>
       </section>
-      <!-- <section class="Video" id="video">
+      <section class="Video" id="video">
         <div class="wrapper">
           <div class="Video__description">
             <h2 class="Video__title">Video journey</h2>
@@ -310,13 +310,8 @@
             </p>
           </div>
           <div class="Video__player">
-            <img
-              src="assets/img/Video.jpg"
-              alt="Video"
-              class="Video__player-pic"
-            />
-            <button class="Video__button-play play1920"></button>
-            <button class="Video__button-play play1024"></button>
+            <video src="#" poster="assets/img/Video.jpg "></video>
+            <button class="Video__button-play"></button>
             <div class="Video__player-panel">
               <div class="Video__player-wrapper">
                 <button class="Video__player-play"></button>
@@ -327,7 +322,16 @@
                   min="0"
                   max="100"
                   step="1"
-                  class="Video__progress"
+                  class="First__progress Video__progress"
+                />
+
+                <input
+                  type="range"
+                  value="40"
+                  min="0"
+                  max="100"
+                  step="1"
+                  class="Second__progress Video__progress"
                 />
                 <button class="Video__player-sound"></button>
                 <input
@@ -369,7 +373,7 @@
             <div class="Video__right"></div>
           </div>
         </div>
-      </section> -->
+      </section>
       <section class="Gallery" id="gallery">
         <div class="Gallery__picture-container wrapper">
           <h2 class="Gallery__title">Art gallery</h2>
