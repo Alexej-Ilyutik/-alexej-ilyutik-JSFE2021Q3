@@ -78,12 +78,15 @@ body {
   line-height: 38px;
   font-weight: 300;
   color: #ffffff;
+  min-width: 1500px;
 }
 
 .wrapper {
   max-width: 1440px;
   margin: 0 auto;
-}
+} 
+
+
 
 /* Header styles start */
 
@@ -94,7 +97,6 @@ body {
 
 .header__wrapper {
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   padding-top: 51px;
@@ -136,16 +138,8 @@ h4 {
 
 .header__list {
   display: flex;
-  flex-wrap: nowrap;
-  justify-content: flex-end;
-}
-
-.header__item {
-  padding-right: 11%;
-}
-
-.header__item:last-child {
-  padding-right: 0;
+  justify-content: space-between;
+  width: 775px;
 }
 
 .tickets {
@@ -192,12 +186,28 @@ h4 {
   flex-flow: row nowrap;
   justify-content: space-between; */
   position: relative;
+  display: flex;
+  justify-content: space-between;
+  height: 810px;
+  background: linear-gradient(
+      90deg,
+      #000000 0%,
+      rgba(0, 0, 0, 0.5) 16.19%,
+      rgba(0, 0, 0, 0) 30.73%
+    ),
+    url(../assets/svg/MonaLisa.svg) no-repeat;
+  background-position: right top;
 }
 
 .Welcome__section {
-  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 598px;
+  max-width: 598px;
+  height: 388px;
   margin-top: 150px;
-  z-index: 10;
 }
 
 .Welcome__title {
@@ -251,6 +261,7 @@ h4 {
 }
 
 .Welcome__carousel {
+  display: none;
   position: absolute;
   right: 0;
 }
@@ -290,9 +301,8 @@ h4 {
   width: 600px;
   height: 120px;
   background-color: #030303;
-  bottom: -60px;
+  bottom: 0;
   right: 0;
-  z-index: 10;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -483,6 +493,7 @@ h4 {
 }
 
 .Explore__wrapper {
+  width: 100%;
   max-width: 1440px;
   margin: 0 auto;
   display: flex;
@@ -529,6 +540,7 @@ h4 {
 .Explore__slider__after {
   position: relative;
   background-image: url(../assets/img/explore-slider/after.jpg);
+  overflow: hidden;
 }
 
 .Explore__slider__before {
@@ -592,7 +604,7 @@ h4 {
 }
 
 .Video__player-pic {
-  max-width: 1440px;
+  width: 1440px;
   height: 650px;
 }
 
@@ -872,6 +884,7 @@ h4 {
 }
 
 .Gallery__picture-container {
+  position: relative;
   height: 2200px;
   overflow-y: hidden;
 }
@@ -1963,7 +1976,9 @@ h5.tickets__amount-total {
 
 /* Footer styles end */
 
-@media screen and (max-width: 1650px) {
+
+
+/* @media screen and (max-width: 1460px) {
   .wrapper {
     max-width: 1240px;
   }
@@ -2053,9 +2068,9 @@ h5.tickets__amount-total {
   .Close {
     left: calc(100% - 120px);
   }
-}
+} */
 
-@media screen and (max-width: 1370px) {
+/* @media screen and (max-width: 1370px) {
   .wrapper {
     max-width: 984px;
   }
@@ -2162,3 +2177,7 @@ h5.tickets__amount-total {
 }
 
 }
+
+@media screen and (max-width: 1024px) {
+
+}  */
