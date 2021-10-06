@@ -2289,9 +2289,6 @@ h5.tickets__amount-total {
     background-size: cover;
     right: 42.3%;
     top: 145px;
-    background-color: transparent;
-    border: 0;
-    border-radius: 50%;
   }
 
   .Video__player-panel {
@@ -2322,6 +2319,7 @@ h5.tickets__amount-total {
     );
     height: 5px;
     width: 63.5%;
+    order: 1;
   }
 
   .First__progress {
@@ -2336,6 +2334,7 @@ h5.tickets__amount-total {
     width: 26px;
     height: 20px;
     background-size: cover;
+    order: 2;
   }
 
   .Sound__progress {
@@ -2347,6 +2346,7 @@ h5.tickets__amount-total {
     width: 26px;
     height: 26px;
     background-size: cover;
+    order: 3;
   }
 
   .Video__slider-pic {
@@ -2675,4 +2675,76 @@ h5.tickets__amount-total {
   .Explore__slider {
     margin-top: 0px;
   }
+
+.Video {
+  height: 837px;
+    margin-bottom: 0px;
+  }
+
+  .Video__title {
+    font-size: 40px;
+    line-height: 60px;
+    margin-bottom: 20px;
+    padding-top: 40px;
+  }
+
+  .Video__player video {
+    height: 329px;
+  }
+
+  .Video__player-wrapper {
+    padding-top: 14px;
+    width: 674px;
+    margin: 0 auto;
+    justify-content: space-between;
+  }
+
+   .Video__button-play {
+    width: 80px;
+    height: 80px;
+    right: 44.7%;
+    top: 125px;
+  }
+
+  .Video__player-panel {
+    height: 57px;
+    margin-top: -12px;
+    margin-bottom: 20px;
+  }
+
+  .Sound__progress {
+    display: none;
+  }
+
+  .Video__progress {
+    width: 71.5%;
+    order: 2;
+  }
+
+  .Video__player-sound {
+    width: 26px;
+    height: 20px;
+    order: 1;
+  }
+
+  .Video__slider {
+  margin-bottom: 20px;
+}
+
+  .Video__slider-pic {
+    width: 48.6%;
+    height: 199px;
+  }
+
+  .Video__slider-pic:last-child{
+display: none;
+  }
+
+  .Video__circle {
+  width: 10px;
+  height: 10px;
+  background-size: cover;
+}
+
+
 }
