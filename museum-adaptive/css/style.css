@@ -2939,8 +2939,7 @@ h5.tickets__amount-total {
   }
 
   .Welcome {
-    height: 571px;
-    margin-bottom: 0px;
+    height: 549px;
   }
 
   .Welcome__wrapper {
@@ -3012,4 +3011,46 @@ h5.tickets__amount-total {
     background-size: cover;
     background-position: right;
   }
+
+  .Visiting {
+    height: 2100px;
+  }
+
+  .top__title-white {
+    font-weight: normal;
+font-size: 28px;
+line-height: 40px;
+    padding-bottom: 21px;
+    margin-bottom: 40px;
+  }
+
+  .Visiting__cards {
+  display: flex;
+  flex-direction: column;
+  width: 280px;
+height: 2075px;
+}
+
+.Visiting__card-thumb {
+  margin-bottom: 24px;
+}
+
+.Visiting__card-title {
+    font-size: 18px;
+    line-height: 20px;
+    letter-spacing: 5px;
+    margin-bottom: 24px;
+  }
+
+  .Visiting__card-comments-360 {
+    font-weight: 200;
+font-size: 16px;
+line-height: 19px;
+    margin-bottom: 10px;
+  }
+
+  .Visiting__card-pic::after {
+    bottom: -32px;
+  }
+
 }
