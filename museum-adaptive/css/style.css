@@ -102,7 +102,7 @@ body {
 
 .header__logo-link {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   text-decoration: none;
 }
 
@@ -2764,7 +2764,7 @@ display: none;
   .Gallery__picture-inner-container {
      column-count: 2;
   column-gap: 24px;
-    height: 2950px;
+    height: 3350px;
   }
 
   .Gallery__pic {
@@ -2826,4 +2826,48 @@ display: none;
     height: 476px;
   }
 
+  .footer__wrapper {
+    padding-top: 40px;
+    padding-bottom: 35px;
+    flex-wrap: wrap;
+    
+  }
+
+  .footer__link {
+  font-weight: 200;
+  line-height: 21px;
+  font-size: 18px;
+}
+
+.footer__list {
+  height: 131px;
+  width: 340px;
+align-content: space-between;
+justify-content: space-between;
+margin-right: 90px;
+margin-top: 6px;
+margin-bottom: 42px;
+}
+
+.footer__nav {
+    margin-right: 0px;
+  }
+
+  .footer__item {
+    margin-right: 0px;
+    width: 85px;
+  }
+
+  .footer_contacts {
+  margin-left: 41%;
+   margin-bottom: 3px;
+}
+
+.Personal__contacts {
+  height: 102px;
+}
+  
+ .year {
+    margin-right: 9%;
+  }
 }
