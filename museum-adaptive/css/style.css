@@ -2858,7 +2858,7 @@ margin-bottom: 42px;
     width: 85px;
   }
 
-  .footer_contacts {
+ .footer__wrapper .footer_contacts {
   margin-left: 41%;
    margin-bottom: 3px;
 }
