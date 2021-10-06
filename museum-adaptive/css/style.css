@@ -2068,6 +2068,14 @@ h5.tickets__amount-total {
     display: none;
   }
 
+  .header__nav-line{
+    display: none;
+  }
+
+  .header__nav-menu .footer_contacts{
+    display: none;
+  }
+
   .tickets {
     padding-left: 0px;
   }
@@ -2497,6 +2505,11 @@ h5.tickets__amount-total {
     margin-bottom: 8px;
   }
 
+  .Welcome {
+    height: 870px;
+    margin-bottom: 40px;
+  }
+
   .Welcome__wrapper {
     flex-direction: column;
 
@@ -2588,11 +2601,57 @@ h5.tickets__amount-total {
     margin-bottom: 25px;
   }
 
-  .footer_contacts{
+.header__nav-line{
+    display: block;
+  }
+
+ .header__nav-menu .footer_contacts{
     display: flex;
     justify-content: center;
     margin-top: 33px;
     margin-right: 26px;
+  }
+
+  .Visiting {
+    height: 1187px;
+    margin-bottom: 0px;
+  }
+
+  .top__title-white {
+    font-size: 40px;
+    line-height: 60px;
+    padding-bottom: 21px;
+    margin-bottom: 40px;
+  }
+
+   .Visiting__cards {
+    width: 616px;
+    grid-gap: 39px 9%;
+  }
+
+  .Visiting__card-thumb {
+    max-width: 280px;
+    height: 180px;
+  }
+
+  .Visiting__card-title {
+    font-size: 22px;
+    line-height: 24px;
+    margin-bottom: 22px;
+  }
+
+  .Visiting__card-pic::after {
+    bottom: -36px;
+  }
+
+  .Visiting__card:hover .Visiting__card-pic::after {
+    width: 280px;
+  }
+
+  .Visiting__card-comments-360 {
+    line-height: 21px;
+    font-size: 18px;
+    margin-bottom: 11px;
   }
 
 }
