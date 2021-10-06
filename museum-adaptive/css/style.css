@@ -2743,7 +2743,7 @@ display: none;
 }
 
   .Gallery {
-    margin-bottom: 0px;
+    margin-bottom: 40px;
   }
 
  .Gallery__picture-container {
@@ -2770,5 +2770,37 @@ display: none;
   .Gallery__pic {
     max-width: 352px;
   }
+
+  .Tickets {
+    margin-bottom: 40px;
+  }
+
+  .Tickets__content-pic {
+    width: 444px;
+    height: 340px;
+  }
+
+  .tickets__amount {
+    margin-right: 50px;
+  }
+
+  h5.tickets__amount-title {
+  margin-bottom: 30px;
+}
+
+.number {
+    margin-bottom: 20px;
+  }
+
+  h5.tickets__amount-total {
+    margin-top: 17px;
+    margin-bottom: 40px;
+  }
+
+  .Tickets__paralax {
+  width: 100%;
+  height: 300px;
+  margin-top: 40px;
+}
 
 }
