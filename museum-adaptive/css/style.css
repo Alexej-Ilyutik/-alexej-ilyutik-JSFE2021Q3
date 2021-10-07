@@ -3264,6 +3264,11 @@ line-height: 0px;
     margin-bottom: 20px;
   }
 
+   .Contacts {
+    margin-bottom: 0px;
+    height: 595px;
+  }
+
   .Contacts__content {
   flex-direction: column;
   
@@ -3295,4 +3300,61 @@ line-height: 19px;
     height: 248px;
   }
 
+  .footer__wrapper {
+    padding-top: 26px;
+    padding-bottom: 35px;
+  }
+  
+.footer__logo .header__logo-link .header__logo-pic {
+  margin-right: 20px;
+  
+}
+
+ .footer__list {
+    height: 88px;
+    width: 380px;
+    margin-right: 0px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+
+   .footer__link {
+    font-weight: 200;
+    font-size: 16px;
+line-height: 19px;
+  }
+
+  .footer__item {
+    width: 75px;
+  }
+
+   .footer__wrapper .footer_contacts {
+    margin-left: 14.5%;
+    margin-bottom: 3px;
+  }
+
+  .footer_contacts-links .footer_contacts-social {
+  margin-right: 4px;
+}
+
+.year,
+.rsShool a,
+.name a {
+  font-weight: 200;
+font-size: 16px;
+line-height: 22px;
+}
+
+.year {
+  margin-right: 0%;
+  margin-left: 3px;
+}
+
+.rsShool{
+  display: none;
+}
+
+.footer__line {
+  height: 2px;
+}
 }
