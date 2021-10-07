@@ -138,7 +138,7 @@ h4 {
   display: none;
 }
 
-.header__nav-pic-mobile{
+.header__nav-pic-mobile {
   display: none;
 }
 
@@ -2934,7 +2934,7 @@ h5.tickets__amount-total {
     margin-right: 20px;
   }
 
-  .header__nav-menu .footer_contacts .footer_contacts-social{
+  .header__nav-menu .footer_contacts .footer_contacts-social {
     margin-right: 3px;
   }
 
@@ -3013,29 +3013,29 @@ h5.tickets__amount-total {
   }
 
   .Visiting {
-    height: 2100px;
+    height: 2113px;
   }
 
   .top__title-white {
     font-weight: normal;
-font-size: 28px;
-line-height: 40px;
+    font-size: 28px;
+    line-height: 40px;
     padding-bottom: 21px;
     margin-bottom: 40px;
   }
 
   .Visiting__cards {
-  display: flex;
-  flex-direction: column;
-  width: 280px;
-height: 2075px;
-}
+    display: flex;
+    flex-direction: column;
+    width: 280px;
+    height: 2075px;
+  }
 
-.Visiting__card-thumb {
-  margin-bottom: 24px;
-}
+  .Visiting__card-thumb {
+    margin-bottom: 24px;
+  }
 
-.Visiting__card-title {
+  .Visiting__card-title {
     font-size: 18px;
     line-height: 20px;
     letter-spacing: 5px;
@@ -3044,8 +3044,8 @@ height: 2075px;
 
   .Visiting__card-comments-360 {
     font-weight: 200;
-font-size: 16px;
-line-height: 19px;
+    font-size: 16px;
+    line-height: 19px;
     margin-bottom: 10px;
   }
 
@@ -3053,4 +3053,35 @@ line-height: 19px;
     bottom: -32px;
   }
 
+    .Explore {
+    height: 551px;
+  }
+
+  .top__title-black {
+    height: 63px;
+   font-size: 28px;
+line-height: 40px;
+    padding-bottom: 60px;
+    margin-bottom: 0px;
+    padding-top: 40px;
+  }
+
+  
+.Explore__slider {
+  width: 380px;
+  height: 368px;
+  margin-left: calc(50% - 190px);
+}
+
+
+.Explore__slider__after,
+.Explore__slider__before {
+  background-size: cover;
+}
+
+.explore__slider__separator::-webkit-slider-thumb {
+  width: 20px;
+  height: 368px;
+ background-size: cover;
+}
 }
