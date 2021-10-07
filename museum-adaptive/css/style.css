@@ -1837,6 +1837,10 @@ h5.tickets__amount-total {
   color: #000;
 }
 
+.Contacts__content-map-two{
+  display: none;
+}
+
 /* -Section Contacts end */
 
 /* Main styles end */
@@ -3258,6 +3262,37 @@ line-height: 0px;
 
   .number {
     margin-bottom: 20px;
+  }
+
+  .Contacts__content {
+  flex-direction: column;
+  
+  height: 453px;
+}
+
+   .Contacts__content-title {
+    font-weight: 500;
+font-size: 16px;
+line-height: 19px;
+    margin-bottom: 38px;
+  }
+
+  
+  .Contacts__address-description {
+    font-size: 16px;
+line-height: 19px;
+    margin-bottom: 16px;
+  }
+
+
+  .Contacts__content-map{
+  display: none;
+}
+
+   .Contacts__content-map-two {
+     display: block;
+    width: 100%;
+    height: 248px;
   }
 
 }
