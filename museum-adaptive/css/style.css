@@ -942,6 +942,10 @@ h4 {
   justify-content: space-between;
 }
 
+.Tickets__content-pic-line{
+  display: none;
+}
+
 .tickets__type {
   margin-right: 12.3%;
 }
@@ -3199,7 +3203,61 @@ line-height: 40px;
     max-width: 178px;
   }
 
+  .Tickets {
+    margin-bottom: 40px;
+  }
 
+  .Tickets__content {
+    flex-direction: column;
+align-items: center;
+height: 576px;
+  }
 
+  .Tickets__content-pic {
+   display: none;
+  }
+
+  .Tickets__content-pic-line{
+  display: block;
+  width: 100%;
+  height: 160px;
+}
+
+h5.tickets__amount-title {
+  font-weight: bold;
+font-size: 16px;
+line-height: 19px;
+  margin-bottom: 20px;
+}
+
+.tickets__amount {
+  align-items: center;
+   margin-right: 0px;
+   height: 376px;
+}
+
+.tickets__amount-age {
+  font-weight: 300;
+font-size: 16px;
+line-height: 19px;
+    margin-bottom: 15px;
+  }
+
+  h5.tickets__amount-total {
+    font-size: 16px;
+line-height: 19px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    letter-spacing: 0.5px;
+  }
+
+  .tickets__button-buy{
+    font-size: 16px;
+line-height: 0px;
+  }
+
+  .number {
+    margin-bottom: 20px;
+  }
 
 }
