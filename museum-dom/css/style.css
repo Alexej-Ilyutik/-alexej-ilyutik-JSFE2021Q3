@@ -366,7 +366,8 @@ h4 {
   background-image: url("../assets/img/Left.png");
   background-repeat: no-repeat;
   width: 30px;
-  height: 8px;
+  height: 20px;
+  background-position: center;
   cursor: pointer;
   margin-right: 20px;
 }
@@ -387,7 +388,8 @@ h4 {
   background-image: url("../assets/img/Right.png");
   background-repeat: no-repeat;
   width: 30px;
-  height: 8px;
+  height: 20px;
+  background-position: center;
   cursor: pointer;
 }
 
@@ -918,11 +920,19 @@ h4 {
 
 .Gallery__pic {
   max-width: 456px;
+  transform: translate(0px, 30% ) scale(0.8);
+  opacity: 0;
+  transition: all 0.8s ease 0s;
 }
 
 .Gallery__pic:first-child,
 .Gallery__pic:nth-child(11) {
   padding-top: 50px;
+}
+
+.Gallery__pic._active {
+  transform: translate(0px, 0px) scale(1);
+  opacity: 1;
 }
 
 /* -Section Gallery end */
