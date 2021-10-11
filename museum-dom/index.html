@@ -7,6 +7,7 @@
     <title>Museum</title>
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/swiper.css" />
     <link rel="icon" href="assets/img/louvre-museum.png" />
   </head>
   <body>
@@ -63,70 +64,65 @@
           <div class="Welcome__picture">
             <img src="assets/img/welcome-slider/1.jpg" alt="Mona" />
           </div>
-          <div class="Welcome__carousel">
-            <div class="Welcome__container">
-              <div class="Welcome__item active">
-                <img src="assets/img/welcome-slider/1.jpg" alt="Мона Лиза" />
+          <div class="Welcome__slider-section">
+            <div class="Welcome__slider swiper">
+              <div class="Welcome__slider-wrapper swiper-wrapper">
+                <div class="Welcome__slider-slide swiper-slide">
+                  <div class="Welcome__image-slider">
+                    <img
+                      src="assets/img/welcome-slider/1.jpg"
+                      alt="Мона Лиза"
+                    />
+                  </div>
+                </div>
+                <div class="Welcome__slider-slide swiper-slide">
+                  <div class="Welcome__image-slider">
+                    <img
+                      src="assets/img/welcome-slider/2.jpg"
+                      alt="Свобода, ведущая народ"
+                    />
+                  </div>
+                </div>
+                <div class="Welcome__slider-slide swiper-slide">
+                  <div class="Welcome__image-slider">
+                    <img
+                      src="assets/img/welcome-slider/3.jpg"
+                      alt="Прекрасная ферроньера"
+                    />
+                  </div>
+                </div>
+                <div class="Welcome__slider-slide swiper-slide">
+                  <div class="Welcome__image-slider">
+                    <img
+                      src="assets/img/welcome-slider/4.jpg"
+                      alt="Плот Медузы"
+                    />
+                  </div>
+                </div>
+                <div class="Welcome__slider-slide swiper-slide">
+                  <div class="Welcome__image-slider">
+                    <img src="assets/img/welcome-slider/5.jpg" alt="Астроном" />
+                  </div>
+                </div>
               </div>
-              <div class="Welcome__item">
-                <img
-                  src="assets/img/welcome-slider/2.jpg"
-                  alt="Свобода, ведущая народ"
-                />
+              <div class="Welcome__control">
+                <div class="Welcome__control-wrapper">
+
+                  <div class="Welcome__slider-fraction">
+                            <div class="slider_fraction_current">01</div>
+                            <div class="slider_fraction_separator">|</div>
+                            <div class="slider_fraction_total">05</div>
+                        </div>
+
+                  <div class="Welcome__slider-bullet swiper-pagination"></div>
+
+                  <div class="Welcome__slider-arrow">
+                    <div class="Welcome__arrow Welcome__slider-left"></div>
+                    <div class="Welcome__arrow Welcome__slider-right"></div>
+                  </div>
+                </div>
               </div>
-              <div class="Welcome__item">
-                <img
-                  src="assets/img/welcome-slider/3.jpg"
-                  alt="Прекрасная ферроньера"
-                />
-              </div>
-              <div class="Welcome__item">
-                <img src="assets/img/welcome-slider/4.jpg" alt="Плот Медузы" />
-              </div>
-              <div class="Welcome__item">
-                <img src="assets/img/welcome-slider/5.jpg" alt="Астроном" />
-              </div>
-            </div>
-            <div class="Welcome__control">
-              <div class="Welcome__position">
-                <div class="Welcome__current">01</div>
-                <div class="Welcome__separator">|</div>
-                <div class="Welcome__total">05</div>
-              </div>
-              <div class="Welcome__bullet">
-                <div class="Welcome__point"></div>
-                <div class="Welcome__point"></div>
-                <div class="Welcome__point"></div>
-                <div class="Welcome__point"></div>
-                <div class="Welcome__point"></div>
-              </div>
-              <div class="Welcome__control__left">
-                <div class="Welcome__arrow left"></div>
-              </div>
-              <div class="Welcome__control__right">
-                <div class="Welcome__arrow right"></div>
-              </div>
-            </div>
-          </div>
-          <div class="Welcome__control">
-            <div class="Welcome__position">
-              <div class="Welcome__current">01</div>
-              <div class="Welcome__separator">|</div>
-              <div class="Welcome__total">05</div>
-            </div>
-            <div class="Welcome__bullet">
-              <div class="Welcome__point"></div>
-              <div class="Welcome__point"></div>
-              <div class="Welcome__point"></div>
-              <div class="Welcome__point"></div>
-              <div class="Welcome__point"></div>
-            </div>
-            <div class="Welcome__control__left">
-              <div class="Welcome__arrow left"></div>
-            </div>
-            <div class="Welcome__control__right">
-              <div class="Welcome__arrow right"></div>
-            </div>
+            </div>          
           </div>
         </div>
         <nav class="header__nav-menu">
@@ -246,6 +242,7 @@
             </ul>
           </address>
         </nav>
+        <div class="burger-menu-overlay"></div>
       </section>
       <section class="Visiting" id="visiting">
         <div class="wrapper">
@@ -479,65 +476,65 @@
             <img
               src="assets/img/galery/galery1.jpg"
               alt="galery1"
-              class="Gallery__pic"
+              class="Gallery__pic _picture-items"
             />
             <img
               src="assets/img/galery/galery2.jpg"
               alt="galery2"
-              class="Gallery__pic"
+              class="Gallery__pic _picture-items"
             />
             <img
               src="assets/img/galery/galery3.jpg"
               alt="galery3"
-              class="Gallery__pic"
+              class="Gallery__pic _picture-items"
             /><img
               src="assets/img/galery/galery4.jpg"
               alt="galery4"
-              class="Gallery__pic"
+              class="Gallery__pic _picture-items"
             /><img
               src="assets/img/galery/galery5.jpg"
               alt="galery5"
-              class="Gallery__pic"
+              class="Gallery__pic _picture-items"
             /><img
               src="assets/img/galery/galery6.jpg"
               alt="galery6"
-              class="Gallery__pic"
+              class="Gallery__pic _picture-items"
             /><img
               src="assets/img/galery/galery7.jpg"
               alt="galery7"
-              class="Gallery__pic"
+              class="Gallery__pic _picture-items"
             /><img
               src="assets/img/galery/galery8.jpg"
               alt="galery8"
-              class="Gallery__pic"
+              class="Gallery__pic _picture-items"
             /><img
               src="assets/img/galery/galery9.jpg"
               alt="galery9"
-              class="Gallery__pic"
+              class="Gallery__pic _picture-items"
             /><img
               src="assets/img/galery/galery10.jpg"
               alt="galery10"
-              class="Gallery__pic"
+              class="Gallery__pic _picture-items"
             /><img
               src="assets/img/galery/galery11.jpg"
               alt="galery11"
-              class="Gallery__pic"
+              class="Gallery__pic _picture-items"
             /><img
               src="assets/img/galery/galery12.jpg"
               alt="galery12"
-              class="Gallery__pic"
+              class="Gallery__pic _picture-items"
             /><img
               src="assets/img/galery/galery13.jpg"
               alt="galery13"
-              class="Gallery__pic"
+              class="Gallery__pic _picture-items"
             /><img
               src="assets/img/galery/galery14.jpg"
               alt="galery14"
-              class="Gallery__pic"
+              class="Gallery__pic _picture-items"
             /><img
               src="assets/img/galery/galery15.jpg"
               alt="galery15"
-              class="Gallery__pic"
+              class="Gallery__pic _picture-items"
             />
           </div>
         </div>
@@ -1072,6 +1069,8 @@
         </div>
       </div>
     </footer>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script src="js/slider-welcome.js"></script>
     <script src="js/burger.js"></script>
     <script src="js/explore.js"></script>
     <script src="js/form.js"></script>

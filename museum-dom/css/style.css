@@ -142,6 +142,17 @@ h4 {
   display: none;
 }
 
+.burger-menu-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: rgb(0, 0, 0, 0);
+}
+
 .header__menu {
   display: none;
 }
@@ -182,7 +193,7 @@ h4 {
 /* -Section Welcome start */
 
 .Welcome {
-  height: 810px;
+  /* height: 810px; */
   /* background-image: url("../assets/img/welcome-slider/1.jpg");
     background-size: 1000px 750px;
     background-repeat: no-repeat;
@@ -195,21 +206,20 @@ h4 {
   /* display: flex;
   flex-flow: row nowrap;
   justify-content: space-between; */
-  position: relative;
-  display: flex;
-  justify-content: space-between;
   height: 810px;
-  background: linear-gradient(
+  /* background: linear-gradient(
       90deg,
       #030303 0%,
       rgba(0, 0, 0, 0.5) 16.19%,
       rgba(0, 0, 0, 0) 30.73%
     ),
     url(../assets/svg/MonaLisa.svg) no-repeat;
-  background-position: right top;
+  background-position: right top; */
 }
 
 .Welcome__section {
+  position: absolute;
+  z-index: 10;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -228,7 +238,7 @@ h4 {
   line-height: 90px;
   letter-spacing: 5px;
   text-transform: uppercase;
-  max-width: 598px;
+  width: 598px;
   margin-bottom: 26px;
 }
 
@@ -241,6 +251,7 @@ h4 {
   line-height: 33px;
   letter-spacing: 2px;
   margin-bottom: 75px;
+  font-weight: 100;
 }
 
 .Welcome__button {
@@ -270,139 +281,127 @@ h4 {
   transition: 0.5s;
 }
 
-.Welcome__carousel {
-  display: none;
-  position: absolute;
-  right: 0;
+.Welcome__slider-section {
+  width: 1000px;
+  height: 750px;
+  position: relative;
+  margin-left: auto;
 }
 
-.Welcome__carousel::before {
+.Welcome__slider-two .swiper{
+  position: absolute;
+  bottom: 1000px;
+}
+
+.Welcome__slider-slide::after {
+  z-index: 100;
   content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(
-    to right,
-    rgb(3, 3, 3, 1) 0%,
-    rgb(0, 0, 0, 0.5) 20%,
-    rgb(255, 255, 250, 0) 35%
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(#030303),
+    color-stop(16.19%, rgba(0, 0, 0, 0.5)),
+    color-stop(30.73%, rgba(0, 0, 0, 0))
   );
-  z-index: 1;
-}
-
-.Welcome__item {
-  display: none;
-}
-
-.Welcome__item.active,
-.Welcome__item.next {
-  display: block;
-}
-
-.Welcome__item.next {
+  background: linear-gradient(
+    90deg,
+    #030303 0%,
+    rgba(0, 0, 0, 0.5) 16.19%,
+    rgba(0, 0, 0, 0) 30.73%
+  );
   position: absolute;
   width: 100%;
+  height: 100%;
+  top: 0;
+  right: 1px;
+  pointer-events: none;
 }
 
 .Welcome__control {
-  position: absolute;
+  position: relative;
   width: 600px;
   height: 120px;
   background-color: #030303;
-  bottom: 0;
-  right: 0;
+  bottom: 60px;
+  margin-left: auto;
+  z-index: 150;
+}
+
+.Welcome__control-wrapper {
+  margin: 0 auto;
+  padding-top: 20px;
+  width: 451px;
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
 }
 
-.Welcome__position {
+.Welcome__slider-fraction{
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  margin-right: 55px;
-  margin-top: 1px;
 }
 
-.Welcome__current,
-.Welcome__separator {
+.slider_fraction_current{
   margin-right: 10px;
 }
 
-.Welcome__bullet {
+.slider_fraction_separator{
+   margin-right: 10px;
+}
+
+.Welcome__slider-arrow {
+  width: 200px;
+  height: 80px;
   display: flex;
-  flex-direction: row;
   justify-content: center;
-  cursor: pointer;
+  align-items: center;
 }
 
-.Welcome__point {
-  width: 16px;
-  height: 16px;
-  background-color: #fff;
-  margin-right: 25px;
+.Welcome__slider-bullet .swiper-pagination {
+  display: flex;
+  justify-content: center;
 }
 
-.Welcome__point:first-child {
-  background-color: #d2b183;
-}
-
-.Welcome__point:last-child {
-  margin-right: 60px;
-}
-
-.Welcome__point:hover,
-.Welcome__point:focus,
-.Welcome__point:active {
-  background-color: #9d8665;
-  transition: 0.3s;
-}
-
-.Welcome__point:not(:hover) {
-  transition: 0.3s;
-}
-
-.Welcome__arrow.left {
+.Welcome__arrow.Welcome__slider-left {
   background-image: url("../assets/img/Left.png");
   background-repeat: no-repeat;
   width: 30px;
-  height: 8px;
+  height: 20px;
+  background-position: center;
   cursor: pointer;
   margin-right: 20px;
 }
 
-.Welcome__arrow.left:hover,
-.Welcome__arrow.left:focus,
-.Welcome__arrow.left:active {
+.Welcome__arrow.Welcome__slider-left:hover,
+.Welcome__arrow.Welcome__slider-left:focus,
+.Welcome__arrow.Welcome__slider-left:active {
   filter: invert(54%) sepia(3%) saturate(3204%) hue-rotate(356deg)
     brightness(99%) contrast(93%);
   transition: 0.3s;
 }
 
-.Welcome__arrow.left:not(:hover) {
+.Welcome__arrow.Welcome__slider-left:not(:hover) {
   transition: 0.3s;
 }
 
-.Welcome__arrow.right {
+.Welcome__arrow.Welcome__slider-right {
   background-image: url("../assets/img/Right.png");
   background-repeat: no-repeat;
   width: 30px;
-  height: 8px;
+  height: 20px;
+  background-position: center;
   cursor: pointer;
 }
 
-.Welcome__arrow.right:hover,
-.Welcome__arrow.right:focus,
-.Welcome__arrow.right:active {
+.Welcome__arrow.Welcome__slider-right:hover,
+.Welcome__arrow.Welcome__slider-right:focus,
+.Welcome__arrow.Welcome__slider-right:active {
   filter: invert(54%) sepia(3%) saturate(3204%) hue-rotate(356deg)
     brightness(99%) contrast(93%);
   transition: 0.3s;
 }
 
-.Welcome__arrow.right:not(:hover) {
+.Welcome__arrow.Welcome__slider-right:not(:hover) {
   transition: 0.3s;
 }
 
@@ -921,11 +920,19 @@ h4 {
 
 .Gallery__pic {
   max-width: 456px;
+  transform: translate(0px, 30% ) scale(0.8);
+  opacity: 0;
+  transition: all 0.8s ease 0s;
 }
 
 .Gallery__pic:first-child,
 .Gallery__pic:nth-child(11) {
   padding-top: 50px;
+}
+
+.Gallery__pic._active {
+  transform: translate(0px, 0px) scale(1);
+  opacity: 1;
 }
 
 /* -Section Gallery end */
@@ -2057,7 +2064,7 @@ h5.tickets__amount-total {
     width: 297px;
     height: 585px;
     background-color: #030303;
-    padding: 23px 30px 0px 55px;
+    padding: 23px 115px 0px 55px;
     transition: all 0.5s ease-in-out;
     z-index: 4;
     transform: translate(-100%, 0px);
@@ -2065,6 +2072,10 @@ h5.tickets__amount-total {
 
   .header__nav-menu._active {
     transform: translate(0px, 0px);
+  }
+
+  .burger-menu-overlay._active {
+    display: block;
   }
 
   .header__item-menu {
@@ -2472,23 +2483,22 @@ h5.tickets__amount-total {
   }
 
   .wrapper__form {
-  top: calc(50vh - 384px);
-  left: calc(50% - 512px);
-}
+    top: calc(50vh - 384px);
+    left: calc(50% - 512px);
+  }
 
-.wrapper__form-hidden {
-  left: -120%;
-}
+  .wrapper__form-hidden {
+    left: -120%;
+  }
 
   .tickets__form {
-  width: 1024px;
-  height: 768px;
-}
+    width: 1024px;
+    height: 768px;
+  }
 
-.tickets__wrapper {
-  margin-top: 38px;
-}
-
+  .tickets__wrapper {
+    margin-top: 38px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -2877,116 +2887,111 @@ h5.tickets__amount-total {
     margin-right: 9%;
   }
 
-  
   .wrapper__form {
-  top: 50px;
-  left: calc(50% - 295px);
-  overflow: auto;
-}
+    top: 50px;
+    left: calc(50% - 295px);
+    overflow: auto;
+  }
 
-.wrapper__form-hidden {
-  left: -120%;
-}
+  .wrapper__form-hidden {
+    left: -120%;
+  }
 
   .tickets__form {
-  width: 590px;
-  height: 785px;
-  
-}
+    width: 590px;
+    height: 785px;
+  }
 
-.tickets__wrapper {
-  flex-direction: column;
-  width: 530px;
-  margin-top: 42px;
-  align-items: center;
-}
+  .tickets__wrapper {
+    flex-direction: column;
+    width: 530px;
+    margin-top: 42px;
+    align-items: center;
+  }
 
-.Booking__form-right {
-  margin-left: 0px;
-  margin-bottom: 30px;
-}
+  .Booking__form-right {
+    margin-left: 0px;
+    margin-bottom: 30px;
+  }
 
-.Booking__tickets-subtitle {
-  padding-bottom: 2px;
-  margin-bottom: 0px;
-}
+  .Booking__tickets-subtitle {
+    padding-bottom: 2px;
+    margin-bottom: 0px;
+  }
 
-.tickets__wrapper-left {
-  width: 100%;
-}
+  .tickets__wrapper-left {
+    width: 100%;
+  }
 
+  .tickets__wrapper-title {
+    margin-bottom: 40px;
+  }
 
-.tickets__wrapper-title {
-  margin-bottom: 40px;
-}
+  .date_form,
+  .time_form {
+    width: 251px;
+  }
 
-.date_form,
-.time_form {
-  width: 251px;
-}
+  .label_date {
+    left: 131px;
+  }
 
-.label_date {
-  left: 131px;
-}
+  #date_id {
+    right: 0px;
+    left: 32px;
+  }
 
-#date_id {
-  right: 0px;
-  left: 32px
-}
+  .label_time {
+    left: 127px;
+  }
 
-.label_time {
-  left: 127px; 
-}
+  #time_id {
+    right: 0px;
+    left: 23px;
+    bottom: 0px;
+  }
 
-#time_id {
-  right: 0px;
-  left: 23px;
-  bottom: 0px;
-}
+  .select {
+    min-width: 530px;
+    background: url(../assets/svg/arrow.svg) 497px 12px no-repeat,
+      url(../assets/svg/ballot.svg) 15px 14px no-repeat;
+    -webkit-appearance: none;
+  }
 
-.select {
-  min-width: 530px;
-  background: url(../assets/svg/arrow.svg) 497px 12px no-repeat,
-    url(../assets/svg/ballot.svg) 15px 14px no-repeat;
-  -webkit-appearance: none;
-}
+  .entryTicket_form {
+    width: 530px;
+    padding: 10px 15px 15px 15px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+  }
 
-.entryTicket_form {
-  width: 530px;
-  padding: 10px 15px 15px 15px;
-  margin-top: 20px;
-  margin-bottom: 50px;
-}
+  .Booking__form-right {
+    width: 530px;
+    padding: 25px 13px 30px 13px;
+    margin-left: 0px;
+  }
 
-.Booking__form-right {
-  width: 530px;
-  padding: 25px 13px 30px 13px;
-  margin-left: 0px;
-}
+  .Overview {
+    margin-bottom: 21px;
+  }
 
-.Overview {
-  margin-bottom: 21px;
-}
+  .Card__back {
+    left: 145px;
+  }
 
-.Card__back {
-  left: 145px;
-}
+  .Card__title-cvv {
+    margin: 17px 18px 6px 0;
+  }
 
-.Card__title-cvv {
-  margin: 17px 18px 6px 0;
-}
+  .Card__cvv-description {
+    margin: 4px 0px 0 255px;
+  }
 
-.Card__cvv-description {
-  margin: 4px 0px 0 255px;
-}
-
-.Tickets_button {
-  margin: 56px 0px 0 282px;
-  padding: 12px 0;
-  padding-top:4px;
-  
-}
-
+  .Tickets_button {
+    margin: 56px 0px 0 282px;
+    padding: 12px 0;
+    padding-top: 4px;
+  }
 }
 
 @media (max-width: 420px) {
@@ -3461,151 +3466,145 @@ h5.tickets__amount-total {
   }
 
   .wrapper__form {
-  left: calc(50% - 210px);
-}
+    left: calc(50% - 210px);
+  }
 
-.wrapper__form-hidden {
-  left: -110%;
-}
+  .wrapper__form-hidden {
+    left: -110%;
+  }
 
   .tickets__form {
-  width: 420px;
-  height: 760px;
-  
-}
+    width: 420px;
+    height: 760px;
+  }
 
-.tickets__wrapper {
-  width: 360px;
-  margin-top: 42px;
-}
+  .tickets__wrapper {
+    width: 360px;
+    margin-top: 42px;
+  }
 
-.Booking__tickets-title {
-  font-size: 32px;
-  letter-spacing: 0px; 
-  margin-top: -9px;
-  margin-bottom: 5px;
-  
-}
+  .Booking__tickets-title {
+    font-size: 32px;
+    letter-spacing: 0px;
+    margin-top: -9px;
+    margin-bottom: 5px;
+  }
 
-.first_form {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-  height: 110px;
-}
+  .first_form {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 110px;
+  }
 
-.date_form,
-.time_form {
-  width: 360px;
-}
+  .date_form,
+  .time_form {
+    width: 360px;
+  }
 
-.label_date {
-  left: 239px;
-}
+  .label_date {
+    left: 239px;
+  }
 
-#date_id {
-  left: 30px;
-  bottom: 0;
-}
+  #date_id {
+    left: 30px;
+    bottom: 0;
+  }
 
-.label_time {
-  left: 235px; 
-}
+  .label_time {
+    left: 235px;
+  }
 
-#time_id {
-  left: 130px;
- 
-}
+  #time_id {
+    left: 130px;
+  }
 
-.select {
-  min-width: 360px;
-  background: url(../assets/svg/arrow.svg) 327px 12px no-repeat,
-    url(../assets/svg/ballot.svg) 15px 14px no-repeat;
-  -webkit-appearance: none;
-}
+  .select {
+    min-width: 360px;
+    background: url(../assets/svg/arrow.svg) 327px 12px no-repeat,
+      url(../assets/svg/ballot.svg) 15px 14px no-repeat;
+    -webkit-appearance: none;
+  }
 
-.entryTicket_form {
-  width: 360px;
-  padding: 10px 15px 15px 15px;
-  margin-top: 20px;
-  margin-bottom: 50px;
-}
+  .entryTicket_form {
+    width: 360px;
+    padding: 10px 15px 15px 15px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+  }
 
-.entryTicket_form-title {
-  width: 330px;
-}
+  .entryTicket_form-title {
+    width: 330px;
+  }
 
-.Booking__form-right {
-  width: 360px;
-  height: 885px;
-}
+  .Booking__form-right {
+    width: 360px;
+    height: 885px;
+  }
 
-.Overview {
- width: 330px;
-}
+  .Overview {
+    width: 330px;
+  }
 
-.Overview__pic img{
-  width: 120px;
-  height: 96px;
-}
+  .Overview__pic img {
+    width: 120px;
+    height: 96px;
+  }
 
-.Total {
-  margin-bottom: 15px;
-}
+  .Total {
+    margin-bottom: 15px;
+  }
 
-.Card__front {
-  width: 330px;
-}
+  .Card__front {
+    width: 330px;
+  }
 
-.Card__title {
-  font-weight: 300;
-  font-size: 11px;
-  line-height: 13px;
-}
+  .Card__title {
+    font-weight: 300;
+    font-size: 11px;
+    line-height: 13px;
+  }
 
-.Card__input-name {
-  width: 290px;
-}
+  .Card__input-name {
+    width: 290px;
+  }
 
-.Card__logo {
-  top: 22px;
-  left: 252px;
-}
+  .Card__logo {
+    top: 22px;
+    left: 252px;
+  }
 
-.Card__back {
-   margin-left: 2px;
-  position: relative;
-  width: 330px;
-  height: 211px;
-  padding: 15px 0px;
-  background-color: #939393;
- border-radius: 3px;
-  z-index: 10;
-   left: 0px;
-  margin-top: -8px;
-}
+  .Card__back {
+    margin-left: 2px;
+    position: relative;
+    width: 330px;
+    height: 211px;
+    padding: 15px 0px;
+    background-color: #939393;
+    border-radius: 3px;
+    z-index: 10;
+    left: 0px;
+    margin-top: -8px;
+  }
 
-.Card__title-cvv {
-  font-size: 13px;
-line-height: 15px;
-  margin: 2px 28px 3px 0;
-}
+  .Card__title-cvv {
+    font-size: 13px;
+    line-height: 15px;
+    margin: 2px 28px 3px 0;
+  }
 
-.Card__input-cvv {
-  width: 75px;
-  margin-right: 18px;
-  
-}
+  .Card__input-cvv {
+    width: 75px;
+    margin-right: 18px;
+  }
 
-.Card__cvv-description {
-  margin: 4px 0px 0 250px;
-}
+  .Card__cvv-description {
+    margin: 4px 0px 0 250px;
+  }
 
-.Tickets_button {
-  margin: 68px 0px 0 113px;
-  padding: 12px 0;
-  padding-top:4px;
-  
-}
-
+  .Tickets_button {
+    margin: 68px 0px 0 113px;
+    padding: 12px 0;
+    padding-top: 4px;
+  }
 }
