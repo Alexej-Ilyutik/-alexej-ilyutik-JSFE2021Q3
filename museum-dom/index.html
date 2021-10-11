@@ -9,6 +9,11 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/swiper.css" />
     <link rel="icon" href="assets/img/louvre-museum.png" />
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js"></script>
+    <link
+      href="https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header class="header">
@@ -107,12 +112,11 @@
               </div>
               <div class="Welcome__control">
                 <div class="Welcome__control-wrapper">
-
                   <div class="Welcome__slider-fraction">
-                            <div class="slider_fraction_current">01</div>
-                            <div class="slider_fraction_separator">|</div>
-                            <div class="slider_fraction_total">05</div>
-                        </div>
+                    <div class="slider_fraction_current">01</div>
+                    <div class="slider_fraction_separator">|</div>
+                    <div class="slider_fraction_total">05</div>
+                  </div>
 
                   <div class="Welcome__slider-bullet swiper-pagination"></div>
 
@@ -122,7 +126,7 @@
                   </div>
                 </div>
               </div>
-            </div>          
+            </div>
           </div>
         </div>
         <nav class="header__nav-menu">
@@ -920,7 +924,8 @@
                 mail: <a href="mailto:info@louvre.fr">info@louvre.fr</a>
               </p>
             </div>
-            <img
+            <div class="map" id="map"></div>
+            <!-- <img
               src="assets/img/Map.png"
               alt="Map"
               class="Contacts__content-map"
@@ -929,7 +934,7 @@
               src="assets/img/Map-two.jpg"
               alt="Map"
               class="Contacts__content-map-two"
-            />
+            /> -->
           </div>
         </div>
       </section>
@@ -1076,5 +1081,6 @@
     <script src="js/form.js"></script>
     <script src="js/ripple.js"></script>
     <script src="js/gallery.js"></script>
+    <script src="js/map.js"></script>
   </body>
 </html>

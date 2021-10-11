@@ -288,7 +288,7 @@ h4 {
   margin-left: auto;
 }
 
-.Welcome__slider-two .swiper{
+.Welcome__slider-two .swiper {
   position: absolute;
   bottom: 1000px;
 }
@@ -337,16 +337,16 @@ h4 {
   align-items: center;
 }
 
-.Welcome__slider-fraction{
+.Welcome__slider-fraction {
   display: flex;
 }
 
-.slider_fraction_current{
+.slider_fraction_current {
   margin-right: 10px;
 }
 
-.slider_fraction_separator{
-   margin-right: 10px;
+.slider_fraction_separator {
+  margin-right: 10px;
 }
 
 .Welcome__slider-arrow {
@@ -914,13 +914,13 @@ h4 {
   column-count: 3;
   row-gap: 24px;
   column-gap: 36px;
-  height: 2960px;
+  height: 2948px;
   flex-wrap: wrap;
 }
 
 .Gallery__pic {
   max-width: 456px;
-  transform: translate(0px, 30% ) scale(0.8);
+  transform: translate(0px, 30%) scale(0.8);
   opacity: 0;
   transition: all 0.8s ease 0s;
 }
@@ -1815,6 +1815,7 @@ h5.tickets__amount-total {
 
 /* -Section Contacts start */
 .Contacts {
+  height: 812px;
   margin-bottom: 75px;
 }
 
@@ -1845,6 +1846,11 @@ h5.tickets__amount-total {
 
 .Contacts__content-map-two {
   display: none;
+}
+
+.map{
+  width: 960px;
+  height: 620px;
 }
 
 /* -Section Contacts end */

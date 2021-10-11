@@ -6,7 +6,7 @@ arr.map((event, i) => (event.src = arrSrcMix[i]));
 const pictureItems = document.querySelectorAll("._picture-items");
 
 if (pictureItems.length > 0) {
-    window.addEventListener("scroll", pictureOnScroll);
+  window.addEventListener("scroll", pictureOnScroll);
   function pictureOnScroll() {
     for (let i = 0; i < pictureItems.length; i++) {
       const pictureItem = pictureItems[i];
@@ -27,8 +27,8 @@ if (pictureItems.length > 0) {
         pageYOffset < pictureItemOffset + pictureItemHeight
       ) {
         pictureItem.classList.add("_active");
-      }else{
-          pictureItem.classList.remove("_active");
+      } else {
+        pictureItem.classList.remove("_active");
       }
     }
   }
@@ -39,4 +39,6 @@ if (pictureItems.length > 0) {
       scrollTop = window.pageYOffset || document.documentElement.scrollTop;
     return { top: rect.top + scrollTop, left: rect.left + scrollLeft };
   }
+
+  pictureOnScroll();
 }
