@@ -561,20 +561,21 @@
               <h5 class="tickets__type-title">Ticket Type</h5>
               <div class="tickets__radio" id="first__radio-button">
                 <input
+                class="tickets__radio-input"
                   id="permanent"
                   type="radio"
                   name="radio"
-                  value="1"
+                  value="20"
                   checked
                 />
                 <label for="permanent">Permanent exhibition</label>
               </div>
               <div class="tickets__radio">
-                <input id="temporary" type="radio" name="radio" value="2" />
+                <input class="tickets__radio-input" id="temporary" type="radio" name="radio" value="25" />
                 <label for="temporary">Temporary exhibition</label>
               </div>
               <div class="tickets__radio">
-                <input id="combined" type="radio" name="radio" value="3" />
+                <input class="tickets__radio-input" id="combined" type="radio" name="radio" value="40" />
                 <label for="combined">Combined Admission</label>
               </div>
             </div>
@@ -582,19 +583,27 @@
               <h5 class="tickets__amount-title">Amount</h5>
               <div class="tickets__age-basic">
                 <p class="tickets__amount-age">Basic 18+</p>
+    
                 <div class="number">
                   <button
                     class="number-minus"
                     type="button"
-                    onclick="this.nextElementSibling.stepDown(); this.nextElementSibling.onchange();"
+                    id="Basic__amount-minus"   
                   >
                     &ndash;
                   </button>
-                  <input type="number" min="0" max="20" value="1" readonly />
+                  <input
+                    type="number"
+                    min="0"
+                    max="20"
+                    value="1"
+                    id="Basic__amount-input"
+                  />
+              
                   <button
                     class="number-plus"
                     type="button"
-                    onclick="this.previousElementSibling.stepUp(); this.previousElementSibling.onchange();"
+                    id="Basic__amount-plus"                 
                   >
                     &plus;
                   </button>
@@ -606,21 +615,31 @@
                   <button
                     class="number-minus"
                     type="button"
-                    onclick="this.nextElementSibling.stepDown(); this.nextElementSibling.onchange();"
+                    id="Senior__amount-minus"
+                
                   >
                     &ndash;
                   </button>
-                  <input type="number" min="0" max="20" value="1" readonly />
+                  <input
+                    type="number"
+                    min="0"
+                    max="20"
+                    value="1"
+                    id="Senior__amount-input"
+                  />
                   <button
                     class="number-plus"
                     type="button"
-                    onclick="this.previousElementSibling.stepUp(); this.previousElementSibling.onchange();"
+                    id="Senior__amount-plus"
+            
                   >
                     &plus;
                   </button>
                 </div>
               </div>
-              <h5 class="tickets__amount-total">Total &#8364; 220</h5>
+              <h5 class="tickets__amount-total">
+                Total <span id="tickets__total-price">0</span> &#8364;
+              </h5>
               <button type="submit" class="tickets__button-buy" id="buttonForm">
                 Buy Now
               </button>
@@ -697,17 +716,17 @@
                         placeholder="Phone"
                       />
                     </div>
-                    <select class="select">
+                    <select class="select" id="select__exhibition">
                       <option disabled selected class="select-first">
                         Ticket Type
                       </option>
-                      <option value="Permanent exhibition">
+                      <option value="20" id="permanent">
                         Permanent exhibition
                       </option>
-                      <option value="Temporary exhibition">
+                      <option value="25" id="temporary">
                         Temporary exhibition
                       </option>
-                      <option value="Combined Admission">
+                      <option value="40" id="combined" >
                         Combined Admission
                       </option>
                     </select>
@@ -724,7 +743,7 @@
                             <button
                               class="age-panel-minus"
                               type="button"
-                              onclick="this.nextElementSibling.stepDown(); this.nextElementSibling.onchange();"
+                              onclick="this.nextElementSibling.stepDown();"
                             >
                               &minus;
                             </button>
@@ -732,13 +751,13 @@
                               type="number"
                               min="0"
                               max="20"
-                              value="2"
+                              value="1"
                               readonly
                             />
                             <button
                               class="age-panel-plus"
                               type="button"
-                              onclick="this.previousElementSibling.stepUp(); this.previousElementSibling.onchange();"
+                              onclick="this.previousElementSibling.stepUp();"
                             >
                               &plus;
                             </button>
@@ -747,7 +766,7 @@
                             <button
                               class="age-panel-minus"
                               type="button"
-                              onclick="this.nextElementSibling.stepDown(); this.nextElementSibling.onchange();"
+                              onclick="this.nextElementSibling.stepDown();"
                             >
                               &minus;
                             </button>
@@ -755,13 +774,13 @@
                               type="number"
                               min="0"
                               max="20"
-                              value="2"
+                              value="1"
                               readonly
                             />
                             <button
                               class="age-panel-plus"
                               type="button"
-                              onclick="this.previousElementSibling.stepUp(); this.previousElementSibling.onchange();"
+                              onclick="this.previousElementSibling.stepUp();"
                             >
                               &plus;
                             </button>
@@ -815,7 +834,7 @@
                 </div>
                 <div class="Total">
                   <p>Total:</p>
-                  <p>60 €</p>
+                  <p><span id="tickets__total-form">0</span> €</p>
                 </div>
                 <div class="Card">
                   <div class="Card__front">
@@ -1078,6 +1097,7 @@
     <script src="js/slider-welcome.js"></script>
     <script src="js/burger.js"></script>
     <script src="js/explore.js"></script>
+    <script src="js/tickets.js"></script>
     <script src="js/form.js"></script>
     <script src="js/ripple.js"></script>
     <script src="js/gallery.js"></script>
