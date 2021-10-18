@@ -561,21 +561,32 @@
               <h5 class="tickets__type-title">Ticket Type</h5>
               <div class="tickets__radio" id="first__radio-button">
                 <input
-                class="tickets__radio-input"
+                  class="tickets__radio-input permanent-input"
                   id="permanent"
                   type="radio"
                   name="radio"
                   value="20"
-                  checked
                 />
                 <label for="permanent">Permanent exhibition</label>
               </div>
               <div class="tickets__radio">
-                <input class="tickets__radio-input" id="temporary" type="radio" name="radio" value="25" />
+                <input
+                  class="tickets__radio-input temporary-input"
+                  id="temporary"
+                  type="radio"
+                  name="radio"
+                  value="25"
+                />
                 <label for="temporary">Temporary exhibition</label>
               </div>
               <div class="tickets__radio">
-                <input class="tickets__radio-input" id="combined" type="radio" name="radio" value="40" />
+                <input
+                  class="tickets__radio-input combined-input"
+                  id="combined"
+                  type="radio"
+                  name="radio"
+                  value="40"
+                />
                 <label for="combined">Combined Admission</label>
               </div>
             </div>
@@ -583,12 +594,12 @@
               <h5 class="tickets__amount-title">Amount</h5>
               <div class="tickets__age-basic">
                 <p class="tickets__amount-age">Basic 18+</p>
-    
+
                 <div class="number">
                   <button
                     class="number-minus"
                     type="button"
-                    id="Basic__amount-minus"   
+                    id="Basic__amount-minus"
                   >
                     &ndash;
                   </button>
@@ -599,11 +610,11 @@
                     value="1"
                     id="Basic__amount-input"
                   />
-              
+
                   <button
                     class="number-plus"
                     type="button"
-                    id="Basic__amount-plus"                 
+                    id="Basic__amount-plus"
                   >
                     &plus;
                   </button>
@@ -616,7 +627,6 @@
                     class="number-minus"
                     type="button"
                     id="Senior__amount-minus"
-                
                   >
                     &ndash;
                   </button>
@@ -631,7 +641,6 @@
                     class="number-plus"
                     type="button"
                     id="Senior__amount-plus"
-            
                   >
                     &plus;
                   </button>
@@ -726,7 +735,7 @@
                       <option value="25" id="temporary">
                         Temporary exhibition
                       </option>
-                      <option value="40" id="combined" >
+                      <option value="40" id="combined">
                         Combined Admission
                       </option>
                     </select>
@@ -735,15 +744,20 @@
 
                       <div class="entryTicket_wrapper">
                         <div class="entryTicket-left">
-                          <h3 class="first_age">Basic 18+ (20 €)</h3>
-                          <h3 class="second_age">Senior 65+ (10 €)</h3>
+                          <h3 class="first_age">
+                            Basic 18+ (<span class="first_age-date">0</span> €)
+                          </h3>
+                          <h3 class="second_age">
+                            Senior 65+ (<span class="second_age-date">0</span>
+                            €)
+                          </h3>
                         </div>
                         <div class="entryTicket-right">
                           <div class="age-panel">
                             <button
                               class="age-panel-minus"
                               type="button"
-                              onclick="this.nextElementSibling.stepDown();"
+                              id="Basic__entryTicket-minus"
                             >
                               &minus;
                             </button>
@@ -752,12 +766,13 @@
                               min="0"
                               max="20"
                               value="1"
+                              id="Basic__entryTicket-input"
                               readonly
                             />
                             <button
                               class="age-panel-plus"
                               type="button"
-                              onclick="this.previousElementSibling.stepUp();"
+                              id="Basic__entryTicket-plus"
                             >
                               &plus;
                             </button>
@@ -766,7 +781,7 @@
                             <button
                               class="age-panel-minus"
                               type="button"
-                              onclick="this.nextElementSibling.stepDown();"
+                              id="Senior__entryTicket-minus"
                             >
                               &minus;
                             </button>
@@ -775,12 +790,13 @@
                               min="0"
                               max="20"
                               value="1"
+                              id="Senior__entryTicket-input"
                               readonly
                             />
                             <button
                               class="age-panel-plus"
                               type="button"
-                              onclick="this.previousElementSibling.stepUp();"
+                              id="Senior__entryTicket-plus"
                             >
                               &plus;
                             </button>
@@ -809,7 +825,9 @@
                         src="assets/svg/check_circle_outline.svg"
                         alt="check"
                       />
-                      <p>Temporary exhibition</p>
+                      <p class="Overview_temporary-type">
+                        Temporary exhibition
+                      </p>
                     </div>
                   </div>
                   <div class="Overview__pic">
@@ -819,17 +837,21 @@
                 <div class="Cost">
                   <div class="Cost_left">
                     <div class="Cost_left-price">
-                      <img src="assets/svg/Cost.svg" alt="Cost" />
-                      <p>Basic (20 €)</p>
+                      <div class="Cost_left-price-val">
+                        <span class="Cost_left-price-basic">1</span>
+                      </div>
+                      <p>Basic (<span class="first_age-value">0</span> €)</p>
                     </div>
                     <div class="Cost_left-price">
-                      <img src="assets/svg/Cost.svg" alt="Cost" />
-                      <p>Senior (10 €)</p>
+                      <div class="Cost_left-price-val">
+                        <span class="Cost_left-price-senior">1</span>
+                      </div>
+                      <p>Senior (<span class="second_age-value">0</span> €)</p>
                     </div>
                   </div>
                   <div class="Cost_right">
-                    <p>40 €</p>
-                    <p>20 €</p>
+                    <p> <span class="Cost_right-basic">0</span> €</p>
+                    <p> <span class="Cost_right-senior">0</span> €</p>
                   </div>
                 </div>
                 <div class="Total">

@@ -1616,6 +1616,24 @@ h5.tickets__amount-total {
   flex-direction: column;
 }
 
+.Cost_left-price-val{
+  background-color: #030303;
+  border-radius: 5px;
+  width: 32px;
+  height: 20px;
+   margin-right: 10px;
+   margin-top: 2px;
+   text-align: center;
+   
+}
+
+.Cost_left-price-basic,
+.Cost_left-price-senior{
+  vertical-align: top;
+  font-size: 18px;
+line-height: 21px
+}
+
 .Cost_left-price p,
 .Cost_right p {
   font-weight: normal;
@@ -1624,12 +1642,12 @@ h5.tickets__amount-total {
   color: #030303;
 }
 
-.Cost_left-price img {
-  margin-right: 10px;
+.Cost_right p {
+  text-align: right;
 }
 
-.Cost_left-price,
-.Cost_right p {
+
+.Cost_left-price{
   display: flex;
   flex-direction: row;
   margin-bottom: 7px;
