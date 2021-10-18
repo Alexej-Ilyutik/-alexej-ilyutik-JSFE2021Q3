@@ -28,6 +28,11 @@ const secondAgeDate = document.querySelector(".second_age-date");
 const firstAgeValue = document.querySelector(".first_age-value");
 const secondAgeValue = document.querySelector(".second_age-value");
 
+const costPriceBasic = document.querySelector(".Cost_left-price-basic");
+const costPriceSenior = document.querySelector(".Cost_left-price-senior");
+const costRightBasic = document.querySelector(".Cost_right-basic");
+const costRightSenior = document.querySelector(".Cost_right-senior");
+
 document
   .querySelector("#Basic__amount-minus")
   .addEventListener("click", inputBasicDown);
@@ -94,6 +99,26 @@ function entrySeniorUp() {
   seniorEntryTicketInput.dispatchEvent(new Event("change", { bubbles: true }));
 }
 
+basicAmountInput.addEventListener("change", function () {
+  basicEntryTicketInput.value = basicAmountInput.value;
+  costPriceBasic.innerHTML = basicAmountInput.value;
+});
+
+basicEntryTicketInput.addEventListener("change", function () {
+  basicAmountInput.value = basicEntryTicketInput.value;
+  costPriceBasic.innerHTML = basicAmountInput.value;
+});
+
+seniorAmountInput.addEventListener("change", function () {
+  seniorEntryTicketInput.value = seniorAmountInput.value;
+  costPriceSenior.innerHTML = seniorAmountInput.value;
+});
+
+seniorEntryTicketInput.addEventListener("change", function () {
+  seniorAmountInput.value = seniorEntryTicketInput.value;
+  costPriceSenior.innerHTML = seniorAmountInput.value;
+});
+
 basicAmountInput.addEventListener("input", function () {
   if (basicAmountInput.value > 20) {
     alert("error! Max value: 20");
@@ -109,17 +134,24 @@ seniorAmountInput.addEventListener("input", function () {
 });
 
 function calculate() {
+  let basicPrice = 0;
+  let seniorPrice = 0;
   let totalPrice = 0;
   for (let radio of radioType) {
     if (radio.checked === true) {
       totalPrice =
         parseInt(basicAmountInput.value) * parseInt(radio.value) +
         (parseInt(seniorAmountInput.value) * parseInt(radio.value)) / 2;
+      basicPrice = parseInt(basicAmountInput.value) * parseInt(radio.value);
+      seniorPrice =
+        (parseInt(seniorAmountInput.value) * parseInt(radio.value)) / 2;
     }
   }
 
   totalPriceElement.innerText = totalPrice;
   totalPriceForm.innerText = totalPrice;
+  costRightBasic.innerText = basicPrice;
+  costRightSenior.innerText = seniorPrice;
 }
 
 calculate();
@@ -183,3 +215,5 @@ selectExhibition.addEventListener("change", () => {
     calculate();
   }
 });
+
+
