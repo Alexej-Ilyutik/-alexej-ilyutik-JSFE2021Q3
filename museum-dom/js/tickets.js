@@ -33,6 +33,14 @@ const costPriceSenior = document.querySelector(".Cost_left-price-senior");
 const costRightBasic = document.querySelector(".Cost_right-basic");
 const costRightSenior = document.querySelector(".Cost_right-senior");
 
+const dateId = document.querySelector("#date_id");
+const timeId = document.querySelector(".time_wrapper-select");
+const dateWrapperValue = document.querySelector(".date_wrapper-value");
+const overviewDateWeek = document.querySelector(".Overview_date-week");
+const overviewDateMonth = document.querySelector(".Overview_date-month");
+const overviewDateDay = document.querySelector(".Overview_date-day");
+const overviewTimeValue = document.querySelector(".Overview_time-value");
+
 document
   .querySelector("#Basic__amount-minus")
   .addEventListener("click", inputBasicDown);
@@ -216,4 +224,60 @@ selectExhibition.addEventListener("change", () => {
   }
 });
 
+let date = new Date();
+let dateObject;
+dateId.setAttribute(
+  "min",
+  `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`
+);
 
+timeId.addEventListener("change", () => {
+  overviewTimeValue.innerHTML = timeId.value;
+});
+
+dateId.addEventListener("change", () => {
+  dateObject = dateId.valueAsDate;
+  if (dateObject !== null) {
+    if (dateObject.getDay() === 0) {
+      overviewDateWeek.innerHTML = "Sunday,&nbsp;";
+    } else if (dateObject.getDay() === 1) {
+      overviewDateWeek.innerHTML = "Monday,&nbsp;";
+    } else if (dateObject.getDay() === 2) {
+      overviewDateWeek.innerHTML = "Tuesday,&nbsp;";
+    } else if (dateObject.getDay() === 3) {
+      overviewDateWeek.innerHTML = "Wednes­day,&nbsp;";
+    } else if (dateObject.getDay() === 4) {
+      overviewDateWeek.innerHTML = "Thursday,&nbsp;";
+    } else if (dateObject.getDay() === 5) {
+      overviewDateWeek.innerHTML = "Friday,&nbsp;";
+    } else if (dateObject.getDay() === 6) {
+      overviewDateWeek.innerHTML = "Saturday,&nbsp;";
+    }
+    if (dateObject.getMonth() === 0) {
+      overviewDateMonth.innerHTML = "January&nbsp;";
+    } else if (dateObject.getMonth() === 1) {
+      overviewDateMonth.innerHTML = "February&nbsp;";
+    } else if (dateObject.getMonth() === 2) {
+      overviewDateMonth.innerHTML = "March&nbsp;";
+    } else if (dateObject.getMonth() === 3) {
+      overviewDateMonth.innerHTML = "April&nbsp;";
+    } else if (dateObject.getMonth() === 4) {
+      overviewDateMonth.innerHTML = "May&nbsp;";
+    } else if (dateObject.getMonth() === 5) {
+      overviewDateMonth.innerHTML = "June&nbsp;";
+    } else if (dateObject.getMonth() === 6) {
+      overviewDateMonth.innerHTML = "July&nbsp;";
+    } else if (dateObject.getMonth() === 7) {
+      overviewDateMonth.innerHTML = "August&nbsp;";
+    } else if (dateObject.getMonth() === 8) {
+      overviewDateMonth.innerHTML = "September&nbsp;";
+    } else if (dateObject.getMonth() === 9) {
+      overviewDateMonth.innerHTML = "October&nbsp;";
+    } else if (dateObject.getMonth() === 10) {
+      overviewDateMonth.innerHTML = "November&nbsp;";
+    } else if (dateObject.getMonth() === 11) {
+      overviewDateMonth.innerHTML = "December&nbsp;";
+    }
+    overviewDateDay.innerHTML = dateObject.getDate();
+  }
+});
