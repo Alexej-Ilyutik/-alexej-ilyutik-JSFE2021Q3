@@ -1369,7 +1369,7 @@ h5.tickets__amount-total {
   width: 175px;
 }
 
-.time_wrapper-select{
+.time_wrapper-select {
   border: none;
   font-size: 18px;
   font-weight: 400;
@@ -1377,7 +1377,6 @@ h5.tickets__amount-total {
   margin-top: 8px;
   z-index: 100;
   background: url(../assets/svg/arrow.svg) no-repeat right 30%;
-  
 }
 
 .contact_form {
@@ -1400,6 +1399,35 @@ h5.tickets__amount-total {
   border: none;
 }
 
+.input-requirements {
+  display: none;
+  position: absolute;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  color: red;
+  width: 350px;
+  height: 150px;
+  border: 2px solid red;
+  padding: 10px 10px;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  background-color: whitesmoke;
+  border-radius: 10px;
+}
+
+.input-requirements span{
+  border: 2px solid red;
+border-radius: 5px;
+  padding: 5px 5px;
+  text-align: center;
+  z-index: 1100;
+  cursor: pointer;
+}
+
 .name_form img {
   width: 13px;
   height: 15px;
@@ -1417,6 +1445,10 @@ h5.tickets__amount-total {
   height: 23px;
   margin-left: 14px;
   margin-top: 10px;
+}
+
+.__invalid {
+  border: 2px solid red;
 }
 
 .select {
