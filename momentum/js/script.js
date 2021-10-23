@@ -1,6 +1,8 @@
 const TIME = document.querySelector(".time");
 const DATE = document.querySelector(".date");
 const GREETING = document.querySelector(".greeting");
+const NAME = document.querySelector(".name");
+
 
 
 // Date and Time
@@ -37,15 +39,35 @@ function showDate() {
 
 // Greeting
 
-// 
+function getTimeOfDay(){
   const date = new Date();
   const hours = date.getHours();
-  console.log(hours);
-//   if (hours > 23 || hours < 7) document.write("Привет совам и лунатикам! :)");
-//   if (hours > 6 && hours < 12) document.write("Доброе утро! Выспался? :)");
-//   if (hours > 11 && hours < 19) document.write("Добрый день!");
-//   if (hours > 18 && hours < 24)
-//   document.write("Привет! Уже вечер, кстати... домой не пора?"); 
-// }
-// getTimeOfDay()
+  if (hours >= 6 && hours < 12) {
+      return "morning"
+    } else if(hours >= 12 && hours < 18) {
+        return "afternoon"
+    }else if (hours >= 18 && hours < 24){
+        return "evening";
+    }else{
+        return "night";
+    }
+
+}
+
+const timeOfDay = getTimeOfDay();
+const greetingText = `Good ${timeOfDay}`;
+GREETING.textContent = greetingText;
+
+
+function setLocalStorage() {
+  localStorage.setItem("name", NAME.value);
+}
+window.addEventListener("beforeunload", setLocalStorage);
+
+function getLocalStorage() {
+  if (localStorage.getItem("name")) {
+    NAME.value = localStorage.getItem("name");
+  }
+}
+window.addEventListener("load", getLocalStorage);
 
