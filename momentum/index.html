@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="assets/favicon.ico" rel="shortcut icon" />
+    <link rel="stylesheet" href="css/owfont-regular.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>momentum</title>
+  </head>
+  <body class="body">
+    <header class="header">
+      <div class="player">
+        <div class="song-details">
+          <p class="song-name"></p>
+          <p class="artist"></p>
+        </div>
+        <div class="progress-area">
+          <div class="progress-bar">
+            <audio id="main-audio" src=""></audio>
+          </div>
+          <div class="song-timer">
+            <span class="current-time"></span>
+            <span class="max-duration"></span>
+          </div>
+        </div>
+        <div class="player-controls">
+          <div class="sound">
+            <button class="volume player-icon"></button>
+            <button class="mute player-icon"></button>
+          </div>
+
+          <button class="play-prev player-icon"></button>
+          <div class="play-pause">
+            <button class="play player-icon"></button>
+            <button class="pause player-icon"></button>
+          </div>
+          <button class="play-next player-icon"></button>
+          <button class="list player-icon"></button>
+        </div>
+        <div class="music-list">
+          <div class="list-header">
+            <div class="list-header-row">
+              <div class="list-icon player-icon"></div>
+              <span class="music-list-title">Music list</span>
+            </div>
+            <div id="close" class="list-close"></div>
+          </div>
+          <ul class="audio-list-description"></ul>
+        </div>
+        <!-- <ul class="play-list"></ul> -->
+      </div>
+      <div class="weather">
+        <input type="text" class="city" />
+        <i class="weather-icon owf"></i>
+        <div class="weather-error"></div>
+        <div class="description-container">
+          <span class="temperature"></span>
+          <span class="weather-description"></span>
+        </div>
+        <div class="wind"></div>
+        <div class="humidity"></div>
+      </div>
+    </header>
+    <main class="main">
+      <div class="slider-icons">
+        <button class="slide-prev slider-icon"></button>
+        <button class="slide-next slider-icon"></button>
+      </div>
+      <time class="time"></time>
+      <date class="date"></date>
+      <div class="greeting-container">
+        <span class="greeting"></span>
+        <input type="text" class="name" placeholder="[Enter name]" />
+      </div>
+    </main>
+    <footer class="footer">
+      <button class="change-quote"></button>
+      <div>
+        <div class="quote"></div>
+        <div class="author"></div>
+      </div>
+      <div class="setting-wrapper">
+        <div class="setting">
+          <div class="setting-header">
+            <span class="stng" >Setting</span>
+            <div class="setting-close"></div>
+          </div>
+          <ul class="setting-change">
+            <li>
+              <span class="select-language">Select language:</span>
+              <select class="language">
+                <option value="english">English</option>
+                <option value="russian">Русский</option>
+              </select>
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+      <button class="setting-icon"></button>
+    </footer>
+    <script src="js/music-list.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
