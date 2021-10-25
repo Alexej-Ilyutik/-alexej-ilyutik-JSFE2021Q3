@@ -36,39 +36,74 @@ const VOLUME = document.querySelector(".volume");
 const MUTE = document.querySelector(".mute");
 const SOUND = document.querySelector(".sound");
 
+const SETTING_ICON = document.querySelector(".setting-icon");
+const SETTING_CLOSE = document.querySelector(".setting-close");
+const SETTING = document.querySelector(".setting");
+
+const LANGUAGE = document.querySelector(".language");
+const SETTING_LANGUAGE = document.querySelector(".stng");
+const SELECT_LANGUAGE = document.querySelector(".select-language");
+const MUSIC_LIST_TITLE = document.querySelector(".music-list-title");
+
 // Date and Time
 
 function showTime() {
   const date = new Date();
   const currentTime = date.toLocaleTimeString();
   TIME.textContent = currentTime;
-  showDate();
   getTimeOfDay();
   setTimeout(showTime, 1000);
 }
 showTime();
 
+LANGUAGE.addEventListener("change", showDate);
+
 function showDate() {
+  let choice = LANGUAGE.value;
   const date = new Date();
   const options = {
     month: "long",
     day: "numeric",
   };
-  const currentDate = date.toLocaleDateString("en-US", options);
-  const days = [
-    "Sunday",
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
-  ];
   let dayWeek = date.getDay();
-  DATE.textContent = days[dayWeek] + ", " + currentDate;
+  if (choice === "english") {
+    const currentDate = date.toLocaleDateString("en-US", options);
+    const days = [
+      "Sunday",
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+    ];
+    DATE.textContent = days[dayWeek] + ", " + currentDate;
+    SETTING_LANGUAGE.innerText = "Setting";
+    SELECT_LANGUAGE.innerText = "Select language:";
+    MUSIC_LIST_TITLE.innerText = "Music list";
+  } else {
+    const currentDate = date.toLocaleDateString("ru-RU", options);
+    const days = [
+      "Воскресенье",
+      "Понедельник",
+      "Вторник",
+      "Среда",
+      "Четверг",
+      "Пятница",
+      "Суббота",
+    ];
+    DATE.textContent = days[dayWeek] + ", " + currentDate;
+    SETTING_LANGUAGE.innerText = "Настройки";
+    SELECT_LANGUAGE.innerText = "Выбор языка:";
+    MUSIC_LIST_TITLE.innerText = "Список песен";
+  }
+  setTimeout(showDate, 1);
 }
+showDate();
 
 // Greeting
+
+LANGUAGE.addEventListener("change", getgreetingText);
 
 function getTimeOfDay() {
   const date = new Date();
@@ -87,9 +122,33 @@ function getTimeOfDay() {
 const timeOfDay = getTimeOfDay();
 
 function getgreetingText() {
-  const greetingText = `Good ${timeOfDay},`;
-  GREETING.textContent = greetingText;
-  setTimeout(getgreetingText, 1000);
+  const date = new Date();
+  const hours = date.getHours();
+  let choiceGreeting = LANGUAGE.value;
+  if (choiceGreeting === "english") {
+    const greetingText = `Good ${timeOfDay},`;
+    GREETING.textContent = greetingText;
+  } else {
+    if (hours >= 6 && hours < 12) {
+      const greetingText = `Доброе утро,`;
+      GREETING.textContent = greetingText;
+      NAME.placeholder = "[Введите имя]";
+    } else if (hours >= 12 && hours < 18) {
+      const greetingText = `Добрый день,`;
+      GREETING.textContent = greetingText;
+      NAME.placeholder = "[Введите имя]";
+    } else if (hours >= 18 && hours < 24) {
+      const greetingText = `Добрый вечер,`;
+      GREETING.textContent = greetingText;
+      NAME.placeholder = "[Введите имя]";
+    } else {
+      const greetingText = `Доброй ночи,`;
+      GREETING.textContent = greetingText;
+      NAME.placeholder = "[Введите имя]";
+    }
+  }
+
+  setTimeout(getgreetingText, 1);
 }
 getgreetingText();
 
@@ -151,23 +210,43 @@ if (localStorage.getItem("city") === undefined) {
   CITY.value = localStorage.getItem("city");
 }
 
+LANGUAGE.addEventListener("change", getWeather);
+
 async function getWeather() {
   try {
-    const url = `https://api.openweathermap.org/data/2.5/weather?q=${CITY.value}&lang=en&appid=b69f64863e2b4d04a4a6ef613a52f41d&units=metric`;
-    const res = await fetch(url);
-    const data = await res.json();
+    let choiceWeather = LANGUAGE.value;
+    if (choiceWeather === "english") {
+      const url = `https://api.openweathermap.org/data/2.5/weather?q=${CITY.value}&lang=en&appid=b69f64863e2b4d04a4a6ef613a52f41d&units=metric`;
+      const res = await fetch(url);
+      const data = await res.json();
 
-    WEATHER_ICON.className = "weather-icon owf";
-    WEATHER_ICON.classList.add(`owf-${data.weather[0].id}`);
-    TEMPERATURE.textContent = `${Math.round(data.main.temp)}°C`;
-    WEATHER_DESCRIPTION.textContent = data.weather[0].description;
-    WIND.textContent = `Wind speed: ${Math.round(data.wind.speed)}m/s`;
-    HUMIDITY.textContent = `Humidity: ${Math.round(data.main.humidity)}%`;
-    WEATHER_ERROR.textContent = "";
+      WEATHER_ICON.className = "weather-icon owf";
+      WEATHER_ICON.classList.add(`owf-${data.weather[0].id}`);
+      TEMPERATURE.textContent = `${Math.round(data.main.temp)}°C`;
+      WEATHER_DESCRIPTION.textContent = data.weather[0].description;
+      WIND.textContent = `Wind speed: ${Math.round(data.wind.speed)}m/s`;
+      HUMIDITY.textContent = `Humidity: ${Math.round(data.main.humidity)}%`;
+      WEATHER_ERROR.textContent = "";
+      setTimeout(getWeather, 1);
+    } else {
+      const url = `https://api.openweathermap.org/data/2.5/weather?q=${CITY.value}&lang=ru&appid=b69f64863e2b4d04a4a6ef613a52f41d&units=metric`;
+      const res = await fetch(url);
+      const data = await res.json();
+
+      WEATHER_ICON.className = "weather-icon owf";
+      WEATHER_ICON.classList.add(`owf-${data.weather[0].id}`);
+      TEMPERATURE.textContent = `${Math.round(data.main.temp)}°C`;
+      WEATHER_DESCRIPTION.textContent = data.weather[0].description;
+      WIND.textContent = `Скорость ветра: ${Math.round(data.wind.speed)}м/с`;
+      HUMIDITY.textContent = `Влажность: ${Math.round(data.main.humidity)}%`;
+      WEATHER_ERROR.textContent = "";
+      setTimeout(getWeather, 1);
+    }
   } catch (error) {
     WEATHER_ERROR.textContent = "Error! City not found!";
   }
 }
+
 getWeather();
 
 CITY.addEventListener("change", getWeather);
@@ -175,6 +254,7 @@ CITY.addEventListener("change", getWeather);
 function setLocalStorage() {
   localStorage.setItem("name", NAME.value);
   localStorage.setItem("city", CITY.value);
+  localStorage.setItem("language", LANGUAGE.value);
 }
 window.addEventListener("beforeunload", setLocalStorage);
 
@@ -184,6 +264,9 @@ function getLocalStorage() {
   }
   if (localStorage.getItem("city")) {
     CITY.value = localStorage.getItem("city");
+  }
+  if (localStorage.getItem("language")) {
+    LANGUAGE.value = localStorage.getItem("language");
   }
 }
 window.addEventListener("load", getLocalStorage);
@@ -196,16 +279,30 @@ function getRandomQuote(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
+LANGUAGE.addEventListener("change", getQuotes);
+
 async function getQuotes() {
-  let randomQuote = getRandomQuote();
-  const quotes = "js/quotes.json";
-  const res = await fetch(quotes);
-  const data = await res.json();
-  let number = data[randomQuote];
-  QUOTE.textContent = `"${number.quote}"`;
-  AUTHOR.textContent = number.author;
+  let choiceQuote = LANGUAGE.value;
+  if (choiceQuote === "english") {
+    let randomQuote = getRandomQuote();
+    const quotes = "js/quotes.json";
+    const res = await fetch(quotes);
+    const data = await res.json();
+    let number = data[randomQuote];
+    QUOTE.textContent = `"${number.quote}"`;
+    AUTHOR.textContent = number.author;
+  } else {
+    let randomQuote = getRandomQuote();
+    const quotes = "js/data.json";
+    const res = await fetch(quotes);
+    const data = await res.json();
+    let number = data[randomQuote];
+    QUOTE.textContent = `"${number.text}"`;
+    AUTHOR.textContent = number.author;
+  }
 }
 getQuotes();
+window.onload = getQuotes;
 
 CHANGE_QUOTE.addEventListener("click", getQuotes);
 
@@ -218,11 +315,23 @@ window.addEventListener("load", () => {
   loadMusic(musicIndex);
 });
 
+
+
 function loadMusic(indexNumb) {
-  SONG_NAME.innerText = allMusic[indexNumb - 1].name;
-  ARTIST.innerText = allMusic[indexNumb - 1].artist;
-  MAIN_AUDIO.src = `../assets/sounds/${allMusic[indexNumb - 1].src}.mp3`;
+  let choiceMus = LANGUAGE.value;
+  if (choiceMus === "english") {
+    SONG_NAME.innerText = allMusic[indexNumb - 1].name;
+    ARTIST.innerText = allMusic[indexNumb - 1].artist;
+    MAIN_AUDIO.src = `../assets/sounds/${allMusic[indexNumb - 1].src}.mp3`;
+  } else {
+    SONG_NAME.innerText = allMusic[indexNumb - 1].nameRu;
+    ARTIST.innerText = allMusic[indexNumb - 1].artistRu;
+    MAIN_AUDIO.src = `../assets/sounds/${allMusic[indexNumb - 1].src}.mp3`;
+    
+  }
 }
+
+LANGUAGE.addEventListener("change", loadMusic);
 
 function playPause() {
   if (MAIN_AUDIO.paused) {
@@ -261,14 +370,15 @@ function nextMusic() {
 PLAY_PREV.addEventListener("click", prevMusic);
 PLAY_NEXT.addEventListener("click", nextMusic);
 
-function getVolume(){
+function getVolume() {
   MAIN_AUDIO.muted = !MAIN_AUDIO.muted;
   if (MAIN_AUDIO.muted) {
     VOLUME.style.display = "none";
     MUTE.style.display = "block";
-  } else {VOLUME.style.display = "block";
+  } else {
+    VOLUME.style.display = "block";
     MUTE.style.display = "none";
-}
+  }
 }
 
 SOUND.addEventListener("click", getVolume);
@@ -321,6 +431,7 @@ AUDIO_LIST.addEventListener("click", () => {
 AUDIO_LIST_CLOSE.addEventListener("click", () => {
   AUDIO_LIST.click();
 });
+
 
 for (let i = 0; i < allMusic.length; i++) {
   let liTag = `<li li-index="${i + 1}">
@@ -387,9 +498,19 @@ function playingSong() {
 }
 
 function clicked(element) {
-   let getLiIndex = element.getAttribute("li-index");
-    musicIndex = getLiIndex;
-    loadMusic(musicIndex);
-    playingSong();
-    playPause();
+  let getLiIndex = element.getAttribute("li-index");
+  musicIndex = getLiIndex;
+  loadMusic(musicIndex);
+  playingSong();
+  playPause();
 }
+
+// Setting
+
+SETTING_ICON.addEventListener("click", () => {
+  SETTING.classList.toggle("show");
+});
+
+SETTING_CLOSE.addEventListener("click", () => {
+  SETTING_ICON.click();
+});

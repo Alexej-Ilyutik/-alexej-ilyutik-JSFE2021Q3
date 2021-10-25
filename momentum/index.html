@@ -27,9 +27,9 @@
         <div class="player-controls">
           <div class="sound">
             <button class="volume player-icon"></button>
-          <button class="mute player-icon"></button>
+            <button class="mute player-icon"></button>
           </div>
-          
+
           <button class="play-prev player-icon"></button>
           <div class="play-pause">
             <button class="play player-icon"></button>
@@ -42,7 +42,7 @@
           <div class="list-header">
             <div class="list-header-row">
               <div class="list-icon player-icon"></div>
-              <span>Music list</span>
+              <span class="music-list-title">Music list</span>
             </div>
             <div id="close" class="list-close"></div>
           </div>
@@ -80,6 +80,25 @@
         <div class="quote"></div>
         <div class="author"></div>
       </div>
+      <div class="setting-wrapper">
+        <div class="setting">
+          <div class="setting-header">
+            <span class="stng" >Setting</span>
+            <div class="setting-close"></div>
+          </div>
+          <ul class="setting-change">
+            <li>
+              <span class="select-language">Select language:</span>
+              <select class="language">
+                <option value="english">English</option>
+                <option value="russian">Русский</option>
+              </select>
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+      <button class="setting-icon"></button>
     </footer>
     <script src="js/music-list.js"></script>
     <script src="js/script.js"></script>
