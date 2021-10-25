@@ -227,7 +227,6 @@ async function getWeather() {
       WIND.textContent = `Wind speed: ${Math.round(data.wind.speed)}m/s`;
       HUMIDITY.textContent = `Humidity: ${Math.round(data.main.humidity)}%`;
       WEATHER_ERROR.textContent = "";
-      setTimeout(getWeather, 1);
     } else {
       const url = `https://api.openweathermap.org/data/2.5/weather?q=${CITY.value}&lang=ru&appid=b69f64863e2b4d04a4a6ef613a52f41d&units=metric`;
       const res = await fetch(url);
@@ -240,7 +239,6 @@ async function getWeather() {
       WIND.textContent = `Скорость ветра: ${Math.round(data.wind.speed)}м/с`;
       HUMIDITY.textContent = `Влажность: ${Math.round(data.main.humidity)}%`;
       WEATHER_ERROR.textContent = "";
-      setTimeout(getWeather, 1);
     }
   } catch (error) {
     WEATHER_ERROR.textContent = "Error! City not found!";
@@ -248,6 +246,7 @@ async function getWeather() {
 }
 
 getWeather();
+window.onload = getWeather;
 
 CITY.addEventListener("change", getWeather);
 
@@ -315,19 +314,16 @@ window.addEventListener("load", () => {
   loadMusic(musicIndex);
 });
 
-
-
 function loadMusic(indexNumb) {
   let choiceMus = LANGUAGE.value;
   if (choiceMus === "english") {
     SONG_NAME.innerText = allMusic[indexNumb - 1].name;
     ARTIST.innerText = allMusic[indexNumb - 1].artist;
-    MAIN_AUDIO.src = `../assets/sounds/${allMusic[indexNumb - 1].src}.mp3`;
+    MAIN_AUDIO.src = `assets/sounds/${allMusic[indexNumb - 1].src}.mp3`;
   } else {
     SONG_NAME.innerText = allMusic[indexNumb - 1].nameRu;
     ARTIST.innerText = allMusic[indexNumb - 1].artistRu;
-    MAIN_AUDIO.src = `../assets/sounds/${allMusic[indexNumb - 1].src}.mp3`;
-    
+    MAIN_AUDIO.src = `assets/sounds/${allMusic[indexNumb - 1].src}.mp3`;
   }
 }
 
@@ -432,7 +428,6 @@ AUDIO_LIST_CLOSE.addEventListener("click", () => {
   AUDIO_LIST.click();
 });
 
-
 for (let i = 0; i < allMusic.length; i++) {
   let liTag = `<li li-index="${i + 1}">
               <div class="list-row">
@@ -446,7 +441,7 @@ for (let i = 0; i < allMusic.length; i++) {
                 </div>  
               </div>
               <span id="${allMusic[i].src}" class="audio-duration">2:25</span>
-              <audio class="${allMusic[i].src}" src="../assets/sounds/${
+              <audio class="${allMusic[i].src}" src="assets/sounds/${
     allMusic[i].src
   }.mp3"></audio>
             </li>`;
@@ -463,8 +458,8 @@ for (let i = 0; i < allMusic.length; i++) {
     if (totalSec < 10) {
       totalSec = `0${totalSec}`;
     }
-    liAudioDuartionTag.innerText = `${totalMin}:${totalSec}`; //passing total duation of song
-    liAudioDuartionTag.setAttribute("t-duration", `${totalMin}:${totalSec}`); //adding t-duration attribute with total duration value
+    liAudioDuartionTag.innerText = `${totalMin}:${totalSec}`;
+    liAudioDuartionTag.setAttribute("t-duration", `${totalMin}:${totalSec}`);
   });
 }
 
