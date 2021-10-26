@@ -6,6 +6,7 @@
     <link href="assets/favicon.ico" rel="shortcut icon" />
     <link rel="stylesheet" href="css/owfont-regular.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
     <title>momentum</title>
   </head>
   <body class="body">
@@ -83,7 +84,7 @@
       <div class="setting-wrapper">
         <div class="setting">
           <div class="setting-header">
-            <span class="stng" >Setting</span>
+            <span class="stng">Setting</span>
             <div class="setting-close"></div>
           </div>
           <ul class="setting-change">
@@ -94,11 +95,29 @@
                 <option value="russian">Русский</option>
               </select>
             </li>
-            
           </ul>
         </div>
       </div>
       <button class="setting-icon"></button>
+      <div class="todo-wrapper">
+        <div class="todo">
+          <div class="todo-header">
+            <span class="todo-title">ToDo List</span>
+            <div class="todo-close"></div>
+          </div>
+          <div class="todo-inputField">
+            <input type="text" placeholder="Add your new todo" />
+            <button>&plus;</button>
+          </div>
+          <ul class="todoList">
+          </ul>
+          <div class="todo-footer">
+            <span>You have <span class="todo-pendingTasks"></span> pending tasks</span>
+            <button>Clear All</button>
+          </div>
+        </div>
+      </div>
+      <button class="todo-icon">ToDo</button>
     </footer>
     <script src="js/music-list.js"></script>
     <script src="js/script.js"></script>
