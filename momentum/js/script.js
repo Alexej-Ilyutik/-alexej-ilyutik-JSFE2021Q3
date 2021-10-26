@@ -89,6 +89,7 @@ function showDate() {
     SETTING_LANGUAGE.innerText = "Setting";
     SELECT_LANGUAGE.innerText = "Select language:";
     MUSIC_LIST_TITLE.innerText = "Music list";
+    CITY.placeholder = "[Enter city]";
   } else {
     const currentDate = date.toLocaleDateString("ru-RU", options);
     const days = [
@@ -104,6 +105,7 @@ function showDate() {
     SETTING_LANGUAGE.innerText = "Настройки";
     SELECT_LANGUAGE.innerText = "Выбор языка:";
     MUSIC_LIST_TITLE.innerText = "Список песен";
+    CITY.placeholder = "[Введите город]";
   }
   setTimeout(showDate, 1);
 }
@@ -218,7 +220,6 @@ if (localStorage.getItem("city") === undefined) {
   CITY.value = localStorage.getItem("city");
 }
 
-
 LANGUAGE.addEventListener("change", getWeather);
 
 async function getWeather() {
@@ -255,7 +256,6 @@ async function getWeather() {
 }
 getWeather();
 
-
 CITY.addEventListener("change", getWeather);
 
 function setLocalStorage() {
@@ -264,7 +264,6 @@ function setLocalStorage() {
   localStorage.setItem("language", LANGUAGE.value);
 }
 window.addEventListener("beforeunload", setLocalStorage);
-
 
 function getLocalStorage() {
   if (localStorage.getItem("name")) {
@@ -286,14 +285,10 @@ window.addEventListener("load", () => {
   getWeather();
 });
 
-
 function changeLanguage() {
   let choiceQuote = LANGUAGE.value;
-  
 
-  if (
-    choiceQuote === "english"
-  ) {
+  if (choiceQuote === "english") {
     function getRandomQuote(min, max) {
       min = 0;
       max = 60;
@@ -327,14 +322,11 @@ function changeLanguage() {
     }
     getQuotesRu();
     CHANGE_QUOTE.addEventListener("click", getQuotesRu);
-  
   }
 }
 changeLanguage();
 
-
 LANGUAGE.addEventListener("change", changeLanguage);
-
 
 // AudioPlayer
 
@@ -542,7 +534,6 @@ SETTING_CLOSE.addEventListener("click", () => {
   SETTING_ICON.click();
 });
 
-
 // ListToDo
 
 TODO_ICON.addEventListener("click", () => {
@@ -553,17 +544,16 @@ TODO_CLOSE.addEventListener("click", () => {
   TODO_ICON.click();
 });
 
-
 INPUT_BOX.onkeyup = () => {
-  let userEnteredValue = INPUT_BOX.value; 
+  let userEnteredValue = INPUT_BOX.value;
   if (userEnteredValue.trim() != 0) {
-    ADD_BTN .classList.add("active"); 
+    ADD_BTN.classList.add("active");
   } else {
-    ADD_BTN .classList.remove("active"); 
+    ADD_BTN.classList.remove("active");
   }
 };
 
-showTasks(); 
+showTasks();
 
 ADD_BTN.onclick = () => {
   let userEnteredValue = INPUT_BOX.value;
@@ -577,7 +567,7 @@ ADD_BTN.onclick = () => {
   localStorage.setItem("New Todo", JSON.stringify(listArray));
   showTasks();
   ADD_BTN.classList.remove("active");
-}
+};
 
 function showTasks() {
   let getLocalStorageData = localStorage.getItem("New Todo");
@@ -587,32 +577,32 @@ function showTasks() {
     listArray = JSON.parse(getLocalStorageData);
   }
   const pendingTasksNumb = document.querySelector(".todo-pendingTasks");
-  pendingTasksNumb.textContent = listArray.length; 
+  pendingTasksNumb.textContent = listArray.length;
   if (listArray.length > 0) {
-    DELETE_ALL_BTN.classList.add("active"); 
+    DELETE_ALL_BTN.classList.add("active");
   } else {
-    DELETE_ALL_BTN.classList.remove("active"); 
+    DELETE_ALL_BTN.classList.remove("active");
   }
   let newLiTag = "";
   listArray.forEach((element, index) => {
     newLiTag += `<li>${element}<span class="icon" onclick="deleteTask(${index})"><i class="fas fa-trash"></i></span></li>`;
   });
- TODO_LIST.innerHTML = newLiTag;
+  TODO_LIST.innerHTML = newLiTag;
   INPUT_BOX.value = "";
 }
 
 function deleteTask(index) {
   let getLocalStorageData = localStorage.getItem("New Todo");
   listArray = JSON.parse(getLocalStorageData);
-  listArray.splice(index, 1); 
+  listArray.splice(index, 1);
   localStorage.setItem("New Todo", JSON.stringify(listArray));
-  showTasks(); 
+  showTasks();
 }
 
 DELETE_ALL_BTN.onclick = () => {
   listArray = [];
   localStorage.setItem("New Todo", JSON.stringify(listArray));
-  showTasks(); 
+  showTasks();
 };
 
 // Description task
@@ -627,5 +617,8 @@ console.log("Аудиоплеер. " + "%c+15", "color: red");
 console.log("Продвинутый аудиоплеер. " + "%c+17", "color: red");
 console.log("Перевод приложения на два языка. " + "%c+15", "color: red");
 console.log("Настройки приложения. " + "%c+3", "color: red");
-console.log("Дополнительный функционал на выбор. ToDo List " + "%c+10", "color: red");
+console.log(
+  "Дополнительный функционал на выбор. ToDo List " + "%c+10",
+  "color: red"
+);
 console.log("%cИТОГО: +130", "color: red");
