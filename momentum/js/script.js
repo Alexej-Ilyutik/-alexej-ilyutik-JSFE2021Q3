@@ -40,6 +40,14 @@ const SETTING_ICON = document.querySelector(".setting-icon");
 const SETTING_CLOSE = document.querySelector(".setting-close");
 const SETTING = document.querySelector(".setting");
 
+const TODO_ICON = document.querySelector(".todo-icon");
+const TODO_CLOSE = document.querySelector(".todo-close");
+const TODO = document.querySelector(".todo");
+const INPUT_BOX = document.querySelector(".todo-inputField input");
+const ADD_BTN = document.querySelector(".todo-inputField button");
+const TODO_LIST = document.querySelector(".todoList");
+const DELETE_ALL_BTN = document.querySelector(".todo-footer button");
+
 const LANGUAGE = document.querySelector(".language");
 const SETTING_LANGUAGE = document.querySelector(".stng");
 const SELECT_LANGUAGE = document.querySelector(".select-language");
@@ -210,6 +218,7 @@ if (localStorage.getItem("city") === undefined) {
   CITY.value = localStorage.getItem("city");
 }
 
+
 LANGUAGE.addEventListener("change", getWeather);
 
 async function getWeather() {
@@ -244,9 +253,8 @@ async function getWeather() {
     WEATHER_ERROR.textContent = "Error! City not found!";
   }
 }
-
 getWeather();
-window.onload = getWeather;
+
 
 CITY.addEventListener("change", getWeather);
 
@@ -256,6 +264,7 @@ function setLocalStorage() {
   localStorage.setItem("language", LANGUAGE.value);
 }
 window.addEventListener("beforeunload", setLocalStorage);
+
 
 function getLocalStorage() {
   if (localStorage.getItem("name")) {
@@ -272,38 +281,60 @@ window.addEventListener("load", getLocalStorage);
 
 // Quote
 
-function getRandomQuote(min, max) {
-  min = 0;
-  max = 60;
-  return Math.floor(Math.random() * (max - min + 1)) + min;
-}
+window.addEventListener("load", () => {
+  changeLanguage();
+  getWeather();
+});
 
-LANGUAGE.addEventListener("change", getQuotes);
 
-async function getQuotes() {
+function changeLanguage() {
   let choiceQuote = LANGUAGE.value;
-  if (choiceQuote === "english") {
-    let randomQuote = getRandomQuote();
-    const quotes = "js/quotes.json";
-    const res = await fetch(quotes);
-    const data = await res.json();
-    let number = data[randomQuote];
-    QUOTE.textContent = `"${number.quote}"`;
-    AUTHOR.textContent = number.author;
+  
+
+  if (
+    choiceQuote === "english"
+  ) {
+    function getRandomQuote(min, max) {
+      min = 0;
+      max = 60;
+      return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+    CHANGE_QUOTE.addEventListener("click", getQuotes);
+    async function getQuotes() {
+      let randomQuote = getRandomQuote();
+      const quotes = "js/quotes.json";
+      const res = await fetch(quotes);
+      const data = await res.json();
+      let number = data[randomQuote];
+      QUOTE.textContent = `"${number.quote}"`;
+      AUTHOR.textContent = number.author;
+    }
+    getQuotes();
   } else {
-    let randomQuote = getRandomQuote();
-    const quotes = "js/data.json";
-    const res = await fetch(quotes);
-    const data = await res.json();
-    let number = data[randomQuote];
-    QUOTE.textContent = `"${number.text}"`;
-    AUTHOR.textContent = number.author;
+    function getRandomQuote(min, max) {
+      min = 0;
+      max = 60;
+      return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+    async function getQuotesRu() {
+      let randomQuote = getRandomQuote();
+      const quotes = "js/data.json";
+      const res = await fetch(quotes);
+      const data = await res.json();
+      let number = data[randomQuote];
+      QUOTE.textContent = `"${number.text}"`;
+      AUTHOR.textContent = number.author;
+    }
+    getQuotesRu();
+    CHANGE_QUOTE.addEventListener("click", getQuotesRu);
+  
   }
 }
-getQuotes();
-window.onload = getQuotes;
+changeLanguage();
 
-CHANGE_QUOTE.addEventListener("click", getQuotes);
+
+LANGUAGE.addEventListener("change", changeLanguage);
+
 
 // AudioPlayer
 
@@ -316,6 +347,7 @@ window.addEventListener("load", () => {
 
 function loadMusic(indexNumb) {
   let choiceMus = LANGUAGE.value;
+
   if (choiceMus === "english") {
     SONG_NAME.innerText = allMusic[indexNumb - 1].name;
     ARTIST.innerText = allMusic[indexNumb - 1].artist;
@@ -509,3 +541,91 @@ SETTING_ICON.addEventListener("click", () => {
 SETTING_CLOSE.addEventListener("click", () => {
   SETTING_ICON.click();
 });
+
+
+// ListToDo
+
+TODO_ICON.addEventListener("click", () => {
+  TODO.classList.toggle("show");
+});
+
+TODO_CLOSE.addEventListener("click", () => {
+  TODO_ICON.click();
+});
+
+
+INPUT_BOX.onkeyup = () => {
+  let userEnteredValue = INPUT_BOX.value; 
+  if (userEnteredValue.trim() != 0) {
+    ADD_BTN .classList.add("active"); 
+  } else {
+    ADD_BTN .classList.remove("active"); 
+  }
+};
+
+showTasks(); 
+
+ADD_BTN.onclick = () => {
+  let userEnteredValue = INPUT_BOX.value;
+  let getLocalStorageData = localStorage.getItem("New Todo");
+  if (getLocalStorageData == null) {
+    listArray = [];
+  } else {
+    listArray = JSON.parse(getLocalStorageData);
+  }
+  listArray.push(userEnteredValue);
+  localStorage.setItem("New Todo", JSON.stringify(listArray));
+  showTasks();
+  ADD_BTN.classList.remove("active");
+}
+
+function showTasks() {
+  let getLocalStorageData = localStorage.getItem("New Todo");
+  if (getLocalStorageData == null) {
+    listArray = [];
+  } else {
+    listArray = JSON.parse(getLocalStorageData);
+  }
+  const pendingTasksNumb = document.querySelector(".todo-pendingTasks");
+  pendingTasksNumb.textContent = listArray.length; 
+  if (listArray.length > 0) {
+    DELETE_ALL_BTN.classList.add("active"); 
+  } else {
+    DELETE_ALL_BTN.classList.remove("active"); 
+  }
+  let newLiTag = "";
+  listArray.forEach((element, index) => {
+    newLiTag += `<li>${element}<span class="icon" onclick="deleteTask(${index})"><i class="fas fa-trash"></i></span></li>`;
+  });
+ TODO_LIST.innerHTML = newLiTag;
+  INPUT_BOX.value = "";
+}
+
+function deleteTask(index) {
+  let getLocalStorageData = localStorage.getItem("New Todo");
+  listArray = JSON.parse(getLocalStorageData);
+  listArray.splice(index, 1); 
+  localStorage.setItem("New Todo", JSON.stringify(listArray));
+  showTasks(); 
+}
+
+DELETE_ALL_BTN.onclick = () => {
+  listArray = [];
+  localStorage.setItem("New Todo", JSON.stringify(listArray));
+  showTasks(); 
+};
+
+// Description task
+
+console.group("%cMomentum", "color: red");
+console.log("Часы и календарь. " + "%c+15", "color: red");
+console.log("Приветствие. " + "%c+10", "color: red");
+console.log("Смена фонового изображения. " + "%c+20", "color: red");
+console.log("Виджет погоды. " + "%c+15", "color: red");
+console.log("Виджет цитата дня. " + "%c+10", "color: red");
+console.log("Аудиоплеер. " + "%c+15", "color: red");
+console.log("Продвинутый аудиоплеер. " + "%c+17", "color: red");
+console.log("Перевод приложения на два языка. " + "%c+15", "color: red");
+console.log("Настройки приложения. " + "%c+3", "color: red");
+console.log("Дополнительный функционал на выбор. ToDo List " + "%c+10", "color: red");
+console.log("%cИТОГО: +130", "color: red");
