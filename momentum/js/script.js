@@ -614,3 +614,18 @@ DELETE_ALL_BTN.onclick = () => {
   localStorage.setItem("New Todo", JSON.stringify(listArray));
   showTasks(); 
 };
+
+// Description task
+
+console.group("%cMomentum", "color: red");
+console.log("Часы и календарь. " + "%c+15", "color: red");
+console.log("Приветствие. " + "%c+10", "color: red");
+console.log("Смена фонового изображения. " + "%c+20", "color: red");
+console.log("Виджет погоды. " + "%c+15", "color: red");
+console.log("Виджет цитата дня. " + "%c+10", "color: red");
+console.log("Аудиоплеер. " + "%c+15", "color: red");
+console.log("Продвинутый аудиоплеер. " + "%c+17", "color: red");
+console.log("Перевод приложения на два языка. " + "%c+15", "color: red");
+console.log("Настройки приложения. " + "%c+3", "color: red");
+console.log("Дополнительный функционал на выбор. ToDo List " + "%c+10", "color: red");
+console.log("%cИТОГО: +130", "color: red");
