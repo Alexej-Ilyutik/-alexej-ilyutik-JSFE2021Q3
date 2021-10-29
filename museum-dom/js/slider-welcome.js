@@ -13,6 +13,10 @@ const swiper = new Swiper(".Welcome__slider", {
     nextEl: ".Welcome__slider-right",
     prevEl: ".Welcome__slider-left",
   },
+
+  breakpoints:{
+
+  },
 });
 
 swiper.on("slideChange", () => {

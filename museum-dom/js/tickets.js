@@ -306,41 +306,6 @@ dateId.addEventListener("change", () => {
 
 // form validation
 
-// const checkValidParameters = () => {
-//   const inputNameValue = inputName.value;
-
-//   const nameReg = /^(([a-zA-Z\s]{3,15})$|^([а-яёА-ЯЁ\s]{3,15}))$/.test(
-//     inputNameValue
-//   );
-//   if (!nameReg) {
-//     return false;
-//   }
-//   return true;
-// }
-
-// ticketsForm.addEventListener('submit', (event) => {
-//   event.preventDefault();
-//   const isValid = checkValidParameters();
-//   if (isValid){
-//     ticketsForm.submit();
-//   }
-// })
-
-// inputName.addEventListener('change', (event) => {
-//   const nameReg = /^(([a-zA-Z\s]{3,15})$|^([а-яёА-ЯЁ\s]{3,15}))$/.test(
-//     inputNameValue
-//   );
-//   if (!nameReg) {
-//     userNameRequirements.style.display = "block";
-//     event.target.classList.add('__invalid');
-//   } else{
-//     userNameRequirements.style.display = "none";
-//     event.target.classList.remove("__invalid");
-//   }
-// })
-
-// start new
-
 const nameReg = /^(([a-zA-Z\s]{2,15})$|^([а-яёА-ЯЁ\s]{2,15}))$/;
 const mailReg = /^[a-zA-Z0-9_-]{2,15}@[a-zA-Z]{4,}.[a-zA-Z]{2,}$/;
 const phoneReg =
@@ -403,8 +368,4 @@ inputMail.addEventListener("blur", (e) => {
 
 inputPhone.addEventListener("blur", (e) => {
   phoneRequirements.style.display = "none";
-});
-
-popupForm.addEventListener("submit", (e) => {
-  e.preventDefault();
 });
