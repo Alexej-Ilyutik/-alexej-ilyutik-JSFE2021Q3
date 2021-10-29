@@ -23,7 +23,7 @@ const swiperVideoMain = new Swiper(".Video__player-container", {
       // slidesPerView: 3,
       // spaceBetween: 42,
       breakpoints: {
-      420: {
+      320: {
         slidesPerView: 2,
         spaceBetween: 20,
       },
