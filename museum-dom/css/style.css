@@ -605,17 +605,31 @@ h4 {
   padding-right: 30px;
 }
 
-.Video__player {
+.Video__player-container {
   position: relative;
+  margin-bottom: 30px;
 }
 
-.Video__player video {
+.Video__slider-container {
+  margin-bottom: 40px;
+}
+
+.swiper-slide-src{
+  width: 452px;
+  height: 254px;
+}
+/* 
+.swiper-wrapper-slide{
+  margin-right: 42px;
+} */
+
+/* .Video__player video {
   width: 100%;
   height: 650px;
   object-fit: cover;
-}
+} */
 
-.Video__button-play {
+/* .Video__button-play {
   position: absolute;
   background-image: url("../assets/svg/Play.svg");
   background-repeat: no-repeat;
@@ -635,8 +649,8 @@ h4 {
 
 .Video__button-play:not(:hover) {
   transition: 0.5s;
-}
-
+} */
+/* 
 .Video__player-panel {
   background: no-repeat center;
   background-image: url("../assets/img/UnderLine.jpg");
@@ -794,32 +808,40 @@ h4 {
 
 .Video__player-fullscreen:not(:hover) {
   transition: 0.5s;
-}
+} */
 
-.Video__slider {
+/* .Video__slider ul{
   display: flex;
   justify-content: space-between;
   margin-bottom: 40px;
+  width: 1440px;
+  overflow: hidden;
+}
+
+.Video__slider ul li{
+ 
+  margin-right: 42px;
+
 }
 
 .Video__slider-pic {
   width: 31.5%;
   height: 254px;
-}
+} */
 
 .Video__carousel {
   display: flex;
   justify-content: center;
-  margin-bottom: 75px;
+  margin: 0 auto 75px auto;
+  width: 250px;
 }
 
 .Video__left {
   background-image: url("../assets/img/Stroke_left.png");
   background-repeat: no-repeat;
-  width: 10px;
+  width: 12px;
   height: 12px;
   cursor: pointer;
-  margin-right: 20px;
 }
 
 .Video__left:hover {
@@ -832,33 +854,16 @@ h4 {
   transition: 0.2s;
 }
 
-.Video__circle {
-  background-image: url("../assets/img/Ellipse.png");
-  background-repeat: no-repeat;
-  width: 12px;
-  height: 12px;
-  cursor: pointer;
-  margin-right: 20px;
-}
-
-.Video__circle.first {
-  background-image: url("../assets/img/Ellipse_dark.png");
-}
-
-.Video__circle:hover {
-  filter: invert(13%) sepia(39%) saturate(5666%) hue-rotate(351deg)
-    brightness(82%) contrast(103%);
-  transition: 0.2s;
-}
-
-.Video__circle:not(:hover) {
-  transition: 0.2s;
+.Video__pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .Video__right {
   background-image: url("../assets/img/Stroke_right.png");
   background-repeat: no-repeat;
-  width: 10px;
+  width: 12px;
   height: 12px;
   cursor: pointer;
 }
@@ -1419,9 +1424,9 @@ h5.tickets__amount-total {
   border-radius: 10px;
 }
 
-.input-requirements span{
+.input-requirements span {
   border: 2px solid red;
-border-radius: 5px;
+  border-radius: 5px;
   padding: 5px 5px;
   text-align: center;
   z-index: 1100;

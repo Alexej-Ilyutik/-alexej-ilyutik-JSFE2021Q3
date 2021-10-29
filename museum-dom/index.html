@@ -408,67 +408,67 @@
               masterpieces such as Mona Lisa or Hammurabi's Code
             </p>
           </div>
-          <div class="Video__player">
-            <video src="#" poster="assets/img/Video.jpg "></video>
-            <button class="Video__button-play"></button>
-            <div class="Video__player-panel">
-              <div class="Video__player-wrapper">
-                <button class="Video__player-play"></button>
+          <div class="Video__player-container swiper">
+            <div class="Video__player swiper-wrapper">
+                  <div class="swiper-wrapper-player swiper-slide">
+                    <div class="swiper-player-src"><iframe id="vid1" width="1440" height="900" src="https://www.youtube.com/embed/zp1BXPX8jcU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
 
-                <input
-                  type="range"
-                  value="54"
-                  min="0"
-                  max="100"
-                  step="1"
-                  class="First__progress Video__progress"
-                />
+                  </div>
+                  <div class="swiper-wrapper-player swiper-slide">
+                    <div class="swiper-player-src"><iframe id="vid2" width="1440" height="900" src="https://www.youtube.com/embed/Vi5D6FKhRmo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
 
-                <input
-                  type="range"
-                  value="40"
-                  min="0"
-                  max="100"
-                  step="1"
-                  class="Second__progress Video__progress"
-                />
-                <button class="Video__player-sound"></button>
-                <input
-                  type="range"
-                  value="43"
-                  min="0"
-                  max="100"
-                  step="1"
-                  class="Sound__progress"
-                />
-                <button class="Video__player-fullscreen"></button>
+                  </div>
+                  <div class="swiper-wrapper-player swiper-slide">
+                    <div class="swiper-player-src"><iframe id="vid3" width="1440" height="900" src="https://www.youtube.com/embed/NOhDysLnTvY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+
+                  </div>
+                  <div class="swiper-wrapper-player swiper-slide">
+                    <div class="swiper-player-src"><iframe id="vid4" width="1440" height="900" src="https://www.youtube.com/embed/aWmJ5DgyWPI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+
+                  </div>
+                  <div class="swiper-wrapper-player swiper-slide">
+                    <div class="swiper-player-src"><iframe id="vid5" width="1440" height="900" src="https://www.youtube.com/embed/2OR0OCr6uRE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+
+                  </div>
+              
+              </div>
+         
+          </div>
+          <div class="Video__slider-container swiper">
+                <div class="Video__slider swiper-wrapper">
+                  <div class="swiper-wrapper-slide swiper-slide">
+                    <div class="swiper-slide-src"><img src="/assets/img/Video_slide1.jpg" alt="preview"></div>
+                  </div>
+
+                  <div class="swiper-wrapper-slide swiper-slide">
+                    <div class="swiper-slide-src"><img src="/assets/img/Video_slide3.jpg" alt="preview"></div>
+                  </div>
+
+                  <div class="swiper-wrapper-slide swiper-slide">
+                    <div class="swiper-slide-src"><img src="/assets/img/Video_slide4.jpg" alt="preview"></div>
+                  </div>
+
+                  <div class="swiper-wrapper-slide swiper-slide">
+                    <div class="swiper-slide-src"><img src="/assets/img/Video_slide2.jpg" alt="preview"></div>
+                  </div>
+
+                  <div class="swiper-wrapper-slide swiper-slide">
+                    <div class="swiper-slide-src"><img src="/assets/img/Video_slide5.jpg" alt="preview"></div>
+                  </div>
+              
               </div>
             </div>
-          </div>
-          <div class="Video__slider">
-            <img
-              src="assets/img/Video_slide1.jpg"
-              alt="Video"
-              class="Video__slider-pic"
-            />
-            <img
-              src="assets/img/Video_slide2.jpg"
-              alt="Video"
-              class="Video__slider-pic"
-            />
-            <img
-              src="assets/img/Video_slide3.jpg"
-              alt="Video"
-              class="Video__slider-pic"
-            />
-          </div>
+            
           <div class="Video__carousel">
             <div class="Video__left"></div>
-            <div class="Video__circle first"></div>
-            <div class="Video__circle"></div>
-            <div class="Video__circle"></div>
-            <div class="Video__circle"></div>
-            <div class="Video__circle"></div>
+            <div class="Video__pagination">
+              <div class="Video__circle first"></div>
+              <div class="Video__circle"></div>
+              <div class="Video__circle"></div>
+              <div class="Video__circle"></div>
+              <div class="Video__circle"></div>
+            </div>
+            
             <div class="Video__right"></div>
           </div>
         </div>
@@ -679,7 +679,12 @@
                       <label class="label_date" for="date_id"
                         ><img src="assets/svg/arrow.svg" alt="arrow"
                       /></label>
-                      <input type="date" id="date_id" name="date_value" required/>
+                      <input
+                        type="date"
+                        id="date_id"
+                        name="date_value"
+                        required
+                      />
                     </div>
 
                     <div class="time_form">
@@ -724,7 +729,7 @@
                       />
                       <p class="input-requirements username-requirements">
                         The name must contain between 2 and 15 characters. Only
-                        English or Russian letters and spaces can be used.<br><br>
+                        English or Russian letters and spaces can be used.<br /><br />
                         <span id="invalid__form">Ok</span>
                       </p>
                     </div>
@@ -741,7 +746,7 @@
                       <p class="input-requirements mail-requirements">
                         The username in email address must contain between 2 and
                         15 characters (English letters, numbers, underscore,
-                        hyphen) and must not contain spaces.<br><br>
+                        hyphen) and must not contain spaces.<br /><br />
                         <span id="invalid__form">Ok</span>
                       </p>
                     </div>
@@ -758,7 +763,7 @@
                       <p class="input-requirements phone-requirements">
                         The number requires only digits without division or with
                         division (hyphen or space) into two or three digits. The
-                        maximum length is 10 digits.<br><br>
+                        maximum length is 10 digits.<br /><br />
                         <span id="invalid__form">Ok</span>
                       </p>
                     </div>
@@ -924,7 +929,6 @@
                           min="1"
                           max="12"
                           value="03"
-                         
                         />
                         <input
                           class="Card__date-year"
@@ -934,7 +938,6 @@
                           min="2018"
                           max="2035"
                           value="2024"
-                         
                         />
                       </div>
                     </div>
@@ -1010,16 +1013,7 @@
               </p>
             </div>
             <div class="map" id="map"></div>
-            <!-- <img
-              src="assets/img/Map.png"
-              alt="Map"
-              class="Contacts__content-map"
-            />
-            <img
-              src="assets/img/Map-two.jpg"
-              alt="Map"
-              class="Contacts__content-map-two"
-            /> -->
+         
           </div>
         </div>
       </section>
@@ -1163,6 +1157,7 @@
     <script src="js/slider-welcome.js"></script>
     <script src="js/burger.js"></script>
     <script src="js/explore.js"></script>
+    <script src="js/video.js"></script>
     <script src="js/tickets.js"></script>
     <script src="js/form.js"></script>
     <script src="js/ripple.js"></script>
