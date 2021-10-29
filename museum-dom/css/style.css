@@ -616,6 +616,12 @@ h4 {
   width: 100%;
 }
 
+.swiper-player-src iframe{
+  width: 100%;
+  height: 100%;
+  border: hidden;
+}
+
 .Video__slider-container {
   margin-bottom: 40px;
 }

@@ -48,7 +48,7 @@ const inputPhone = document.getElementById("phone");
 const userNameRequirements = document.querySelector(".username-requirements");
 const mailRequirements = document.querySelector(".mail-requirements");
 const phoneRequirements = document.querySelector(".phone-requirements");
-const invalidForm = document.getElementById("invalid__form");
+const invalidForm = document.querySelector(".invalid__form");
 
 //binding the buttons and input in the section Tickets
 
