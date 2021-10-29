@@ -606,228 +606,24 @@ h4 {
 }
 
 .Video__player-container {
-  position: relative;
+  width: 100%;
+  height: 900px;
   margin-bottom: 30px;
+}
+
+.swiper-player-src {
+  height: 100%;
+  width: 100%;
 }
 
 .Video__slider-container {
   margin-bottom: 40px;
 }
 
-.swiper-slide-src{
+.swiper-slide-src {
   width: 452px;
   height: 254px;
 }
-/* 
-.swiper-wrapper-slide{
-  margin-right: 42px;
-} */
-
-/* .Video__player video {
-  width: 100%;
-  height: 650px;
-  object-fit: cover;
-} */
-
-/* .Video__button-play {
-  position: absolute;
-  background-image: url("../assets/svg/Play.svg");
-  background-repeat: no-repeat;
-  width: 220px;
-  height: 220px;
-  right: 42.3%;
-  top: 215px;
-  background-color: transparent;
-  border: 0;
-  border-radius: 50%;
-}
-
-.Video__button-play:hover {
-  transform: scale(1.1);
-  transition: 0.5s;
-}
-
-.Video__button-play:not(:hover) {
-  transition: 0.5s;
-} */
-/* 
-.Video__player-panel {
-  background: no-repeat center;
-  background-image: url("../assets/img/UnderLine.jpg");
-  background-size: cover;
-  max-width: 100%;
-  height: 85px;
-  margin-top: -11px;
-  margin-bottom: 40px;
-}
-
-.Video__player-wrapper {
-  display: flex;
-  flex-wrap: nowrap;
-  align-items: center;
-  padding-top: 25px;
-  justify-content: center;
-}
-
-.Video__player-play {
-  background-image: url("../assets/svg/Play_small.svg");
-  background-repeat: no-repeat;
-  width: 23px;
-  height: 30px;
-  background-color: transparent;
-  border: 0;
-  margin-right: 3.5%;
-}
-
-.Second__progress {
-  display: none;
-}
-
-.Video__progress {
-  background: linear-gradient(
-    to right,
-    #710707 0%,
-    #710707 54%,
-    #c4c4c4 54%,
-    #c4c4c4 107%
-  );
-  height: 8px;
-  width: 64.3%;
-  -webkit-appearance: none;
-  margin-right: 3.7%;
-}
-
-.Video__progress::-webkit-slider-thumb {
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
-  -webkit-appearance: none;
-  cursor: ew-resize;
-  background: #ffffff;
-}
-
-.Video__progress:hover::-webkit-slider-thumb {
-  transform: scale(1.4);
-  border: 3px solid rgb(111, 0, 255);
-  transition: 0.3s;
-}
-
-.Video__player-sound {
-  background-image: url("../assets/svg/volume.svg");
-  background-repeat: no-repeat;
-  width: 37px;
-  height: 29.5px;
-  background-color: transparent;
-  border: 0;
-  margin-right: 3.5%;
-}
-
-.Sound__progress {
-  background: linear-gradient(
-    to right,
-    #710707 0%,
-    #710707 42%,
-    #c4c4c4 42%,
-    #c4c4c4 107%
-  );
-  height: 8px;
-  width: 10.7%;
-  -webkit-appearance: none;
-  margin-right: 3.5%;
-}
-
-.Sound__progress::-webkit-slider-thumb {
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
-  -webkit-appearance: none;
-  cursor: ew-resize;
-  background: #ffffff;
-}
-
-.Sound__progress:hover::-webkit-slider-thumb {
-  transform: scale(1.4);
-  border: 3px solid rgb(111, 0, 255);
-  transition: 0.3s;
-}
-
-.Video__player-fullscreen {
-  background-image: url("../assets/svg/Fullscreen.svg");
-  background-repeat: no-repeat;
-  width: 36px;
-  height: 36px;
-  background-color: transparent;
-  border: 0;
-}
-
-.Video__player-previous:hover {
-  transform: scale(1.2);
-  transition: 0.5s;
-}
-
-.Video__player-previous:not(:hover) {
-  transition: 0.5s;
-}
-
-.Video__player-play:hover {
-  transform: scale(1.2);
-  transition: 0.5s;
-}
-
-.Video__player-play:not(:hover) {
-  transition: 0.5s;
-}
-.Video__player-next:hover {
-  transform: scale(1.2) rotate(180deg);
-  transition: 0.5s;
-}
-
-.Video__player-next:not(:hover) {
-  transition: 0.5s;
-}
-
-.Video__player-sound:hover {
-  transform: scale(1.2);
-  transition: 0.5s;
-}
-
-.Video__player-sound:not(:hover) {
-  transition: 0.5s;
-}
-
-.Video__player-fullscreen:hover {
-  transform: scale(1.2);
-  transition: 0.5s;
-  background-image: url("../assets/svg/Fullscreen-2.svg");
-  background-repeat: no-repeat;
-  width: 36px;
-  height: 36px;
-  background-color: transparent;
-  border: 0;
-}
-
-.Video__player-fullscreen:not(:hover) {
-  transition: 0.5s;
-} */
-
-/* .Video__slider ul{
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 40px;
-  width: 1440px;
-  overflow: hidden;
-}
-
-.Video__slider ul li{
- 
-  margin-right: 42px;
-
-}
-
-.Video__slider-pic {
-  width: 31.5%;
-  height: 254px;
-} */
 
 .Video__carousel {
   display: flex;
@@ -1097,17 +893,6 @@ h5.tickets__amount-title {
 .number-minus:not(:hover) {
   transition: 0.3s;
 }
-
-/* .Basic__amount-list span {
-  display: block;
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: 300;
-  font-size: 22px;
-  line-height: 50px;
-  width: 100%;
-  color: #000;
-} */
 
 .number-plus {
   position: absolute;
@@ -2235,6 +2020,20 @@ h5.tickets__amount-total {
     margin-bottom: 50px;
   }
 
+  .Welcome__slider-section {
+    width: 700px;
+    height: 525px;
+  }
+
+  .Welcome__control {
+    width: 700px;
+    bottom: -10px;
+  }
+
+  .Welcome__image-slider img {
+    height: 575px;
+  }
+
   .Welcome__button {
     width: 300px;
     height: 60px;
@@ -2393,79 +2192,20 @@ h5.tickets__amount-total {
     height: 444px;
   }
 
-  .Video__button-play {
-    width: 152px;
-    height: 152px;
-    background-size: cover;
-    right: 42.3%;
-    top: 145px;
+  .Video__player-container {
+    height: 504px;
   }
 
-  .Video__player-panel {
-    height: 60px;
-    margin-top: -12px;
-    margin-bottom: 40px;
+  .Video__slider-container {
+    margin-bottom: 0px;
   }
-
-  .Video__player-wrapper {
-    padding-top: 14px;
-    width: 905px;
-    margin: 0 auto;
-    justify-content: space-between;
-  }
-
-  .Video__progress {
-    height: 5px;
-    width: 63.5%;
-  }
-
-  .Video__progress {
-    background: linear-gradient(
-      to right,
-      #710707 0%,
-      #710707 40%,
-      #c4c4c4 40%,
-      #c4c4c4 107%
-    );
-    height: 5px;
-    width: 63.5%;
-    order: 1;
-  }
-
-  .First__progress {
-    display: none;
-  }
-
-  .Second__progress {
-    display: block;
-  }
-
-  .Video__player-sound {
-    width: 26px;
-    height: 20px;
-    background-size: cover;
-    order: 2;
-  }
-
-  .Sound__progress {
-    height: 5px;
-    width: 15.8%;
-  }
-
-  .Video__player-fullscreen {
-    width: 26px;
-    height: 26px;
-    background-size: cover;
-    order: 3;
-  }
-
-  .Video__slider-pic {
-    width: 30.5%;
-    height: 170px;
-  }
-
   .Video__carousel {
     margin-bottom: 0px;
+  }
+
+  .swiper-slide-src img {
+    width: 300px;
+    height: 170px;
   }
 
   .Gallery {
@@ -2587,6 +2327,16 @@ h5.tickets__amount-total {
   .tickets__wrapper {
     margin-top: 38px;
   }
+
+  .Contacts {
+    height: 680px;
+    margin-bottom: 0px;
+  }
+
+  .map {
+    width: 694px;
+    height: 454px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -2625,11 +2375,10 @@ h5.tickets__amount-total {
 
   .Welcome__section {
     align-items: center;
-    width: auto;
-    max-width: 598px;
+    width: 100%;
+    max-width: 728px;
     height: 165px;
-    margin-top: 10px;
-    margin-bottom: 50px;
+    margin: 10px auto 50px auto;
   }
 
   .Welcome__title {
@@ -2646,12 +2395,18 @@ h5.tickets__amount-total {
     margin-bottom: 0px;
   }
 
+  .Welcome__slider-section {
+    top: 194px;
+    width: 728px;
+    height: 546px;
+  }
+
   .Welcome__button {
     display: none;
   }
 
   .Welcome__picture {
-    display: block;
+    display: none;
     object-fit: cover;
   }
 
@@ -2666,7 +2421,11 @@ h5.tickets__amount-total {
     width: 100%;
     height: 100px;
     justify-content: center;
-    padding-top: 8px;
+    padding-top: 0px;
+  }
+
+  .Welcome__control-wrapper {
+    padding-top: 10px;
   }
 
   .Welcome__arrow.right {
@@ -2793,6 +2552,15 @@ h5.tickets__amount-total {
     height: 329px;
   }
 
+  .Video__player-container {
+    height: 386px;
+  }
+
+  .swiper-slide-src img {
+    width: 354px;
+    height: 199px;
+  }
+
   .Video__player-wrapper {
     padding-top: 14px;
     width: 674px;
@@ -2800,32 +2568,8 @@ h5.tickets__amount-total {
     justify-content: space-between;
   }
 
-  .Video__button-play {
-    width: 80px;
-    height: 80px;
-    right: 44.7%;
-    top: 125px;
-  }
-
-  .Video__player-panel {
-    height: 57px;
-    margin-top: -12px;
-    margin-bottom: 20px;
-  }
-
-  .Sound__progress {
-    display: none;
-  }
-
-  .Video__progress {
-    width: 71.5%;
-    order: 2;
-  }
-
-  .Video__player-sound {
-    width: 26px;
-    height: 20px;
-    order: 1;
+  .Video__slider-container {
+    height: 250px;
   }
 
   .Video__slider {
@@ -3021,7 +2765,7 @@ h5.tickets__amount-total {
   }
 
   .label_date {
-    left: 131px;
+    left: 60px;
   }
 
   #date_id {
@@ -3033,10 +2777,12 @@ h5.tickets__amount-total {
     left: 127px;
   }
 
-  #time_id {
-    right: 0px;
-    left: 23px;
-    bottom: 0px;
+  .time_wrapper {
+    width: 225px;
+  }
+
+  .time_wrapper-select {
+    width: 100%;
   }
 
   .select {
@@ -3079,6 +2825,11 @@ h5.tickets__amount-total {
     margin: 56px 0px 0 282px;
     padding: 12px 0;
     padding-top: 4px;
+  }
+
+  .map {
+    width: 100%;
+    height: 476px;
   }
 }
 
@@ -3158,7 +2909,7 @@ h5.tickets__amount-total {
   }
 
   .Welcome__section {
-    max-width: 278px;
+    max-width: 380px;
     height: 124px;
     margin-bottom: 20px;
   }
@@ -3176,15 +2927,36 @@ h5.tickets__amount-total {
     margin-bottom: 0px;
   }
 
-  .Welcome__picture img {
+  .Welcome__slider-section {
+    top: 194px;
+    width: 380px;
+    height: 285px;
+  }
+
+  .Welcome__image-slider img {
     height: 285px;
   }
 
   .Welcome__control {
-    width: 230px;
+    width: 260px;
     height: 40px;
-    padding-top: 0px;
-    padding-bottom: 10px;
+    padding-top: 15px;
+    padding-bottom: 0px;
+    margin: 0 auto;
+    justify-content: space-between;
+  }
+
+  .Welcome__control-wrapper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .Welcome__slider-fraction {
+    font-size: 16px;
+  }
+
+  .Welcome__slider-arrow {
+    width: 90px;
   }
 
   .Welcome__position {
@@ -3210,19 +2982,18 @@ h5.tickets__amount-total {
     margin-right: 25px;
   }
 
-  .Welcome__arrow.left {
-    width: 20px;
+  .Welcome__arrow.Welcome__slider-left {
+    background-size: 100%;
+    width: 25px;
+    height: 15px;
     margin-right: 15px;
-    background-size: cover;
   }
 
-  .Welcome__arrow.right {
-    margin-right: 0px;
-    width: 20px;
-    background-size: cover;
-    background-position: right;
+  .Welcome__arrow.Welcome__slider-right {
+    background-size: 100%;
+    width: 25px;
+    height: 15px;
   }
-
   .Visiting {
     height: 2113px;
   }
@@ -3295,7 +3066,7 @@ h5.tickets__amount-total {
   }
 
   .Video {
-    height: 551px;
+    height: 510px;
   }
 
   .Video__title {
@@ -3308,48 +3079,23 @@ h5.tickets__amount-total {
     height: 172px;
   }
 
+  .Video__player-container {
+    height: 215px;
+    margin-bottom: 15px;
+  }
+
+  .Video__slider-container {
+    height: 135px;
+  }
+
+  .swiper-slide-src img {
+    width: 180px;
+    height: 100px;
+  }
+
   .Video__player-wrapper {
     padding-top: 20px;
     width: 341px;
-  }
-
-  .Video__button-play {
-    width: 50px;
-    height: 50px;
-    right: 43.4%;
-    top: 61px;
-  }
-
-  .Video__player-panel {
-    height: 55px;
-    margin-bottom: 40px;
-  }
-
-  .Video__player-play {
-    width: 14px;
-    height: 18px;
-    background-size: cover;
-    margin-right: 3.5%;
-  }
-
-  .Video__player-sound {
-    width: 18px;
-    height: 14px;
-  }
-
-  .Video__progress {
-    height: 4px;
-    width: 58.5%;
-  }
-
-  .Video__player-fullscreen {
-    width: 18px;
-    height: 18px;
-  }
-
-  .Video__progress::-webkit-slider-thumb {
-    width: 10px;
-    height: 10px;
   }
 
   .Video__slider {
@@ -3423,6 +3169,10 @@ h5.tickets__amount-total {
     display: block;
     width: 100%;
     height: 160px;
+  }
+
+  .tickets__age-basic {
+    width: 100%;
   }
 
   h5.tickets__amount-title {
@@ -3591,20 +3341,20 @@ h5.tickets__amount-total {
   }
 
   .label_date {
-    left: 239px;
+    left: 176px;
   }
 
   #date_id {
-    left: 30px;
-    bottom: 0;
+    left: 140px;
+    bottom: 40px;
   }
 
   .label_time {
-    left: 235px;
+    left: 335px;
   }
 
-  #time_id {
-    left: 130px;
+  .time_wrapper {
+    width: 342px;
   }
 
   .select {
@@ -3694,5 +3444,10 @@ h5.tickets__amount-total {
     margin: 68px 0px 0 113px;
     padding: 12px 0;
     padding-top: 4px;
+  }
+
+  .map {
+    width: 100%;
+    height: 248px;
   }
 }

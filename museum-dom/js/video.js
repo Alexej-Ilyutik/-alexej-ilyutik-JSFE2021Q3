@@ -20,9 +20,20 @@ const swiperVideoMain = new Swiper(".Video__player-container", {
   thumbs: {
     swiper: {
       el: ".Video__slider-container",
-      slidesPerView: 3,
-      spaceBetween: 42,
+      // slidesPerView: 3,
+      // spaceBetween: 42,
+      breakpoints: {
+      420: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      770: {
+        slidesPerView: 3,
+        spaceBetween: 42,
+      },
     },
+    },
+    
   },
 });
 
