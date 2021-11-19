@@ -1,0 +1,98 @@
+@import "footer";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+
+@mixin flex() {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin backgroundImg() {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@mixin sizeMainImg() {
+  width: 385px;
+  height: 385px;
+}
+
+@mixin btn() {
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 400;
+  cursor: pointer;
+  background-color: $main-color;
+  text-transform: uppercase;
+  width: 150px;
+  height: 50px;
+  &:hover {
+    background-color: $hover;
+  }
+}
+
+$font: "Montserrat", sans-serif;
+$main-color: #660033;
+$hover: #9e0b54;
+$shadow: 1px 6px 11px 1px rgb(0 0 0 / 70%);
+
+body {
+  background-image: url(../assets/background.png);
+  @include backgroundImg();
+  font-family: $font;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 44px;
+  color: #fff;
+  .main__wrapper {
+    h1 {
+      color: rgb(187, 192, 188);
+      width: 220px;
+      height: 140px;
+      margin: 50px auto 0 auto;
+    }
+    .main__menu {
+      @include flex();
+      margin-top: 80px;
+      .artists__quiz-img {
+        background-image: url(../assets/artists-quiz.png);
+      }
+      .pictures__quiz-img {
+        background-image: url(../assets/pictures-quiz.png);
+      }
+      .main__img {
+        @include backgroundImg();
+        @include sizeMainImg();
+        box-shadow: $shadow;
+      }
+      .quiz__description {
+        text-align: right;
+        color: $main-color;
+        text-transform: uppercase;
+        font-size: 36px;
+        font-weight: 400;
+        margin-top: 15px;
+        .quiz__description-text {
+          font-weight: 700;
+        }
+      }
+    }
+    .button__settings {
+      @include btn();
+      position: relative;
+      left: 50%;
+      transform: translate(-50%, 70px);
+      box-shadow: $shadow;
+      white-space: nowrap;
+      color: #fff;
+      //text-align: right;
+      //padding: 2px 7px 3px 3px;
+    }
+  }
+}
+
+.container {
+  max-width: 1030px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
