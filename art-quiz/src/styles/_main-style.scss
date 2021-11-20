@@ -6,6 +6,17 @@
   justify-content: space-between;
 }
 
+@mixin description() {
+  color: $main-color;
+  text-transform: uppercase;
+  font-size: 36px;
+  font-weight: 400;
+  margin-top: 15px;
+  .quiz__description-text {
+    font-weight: 700;
+  }
+}
+
 @mixin backgroundImg() {
   background-repeat: no-repeat;
   background-size: cover;

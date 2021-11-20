@@ -1,8 +1,14 @@
 @import "main-style";
 
+.setting__title{
+  @include description();
+  margin-top: 20px;
+  text-align: center;
+}
+
 .setting__menu {
   @include flex();
-  margin-top: 80px;
+  margin-top: 40px;
   .setting-block {
     @include sizeMainImg();
     background-color: $white;
@@ -29,7 +35,7 @@
 .setting__btn {
   @include flex();
   width: 400px;
-  margin: 80px auto 0 auto;
+  margin: 70px auto 0 auto;
   .setting__page-btn {
     @include btn();
   }

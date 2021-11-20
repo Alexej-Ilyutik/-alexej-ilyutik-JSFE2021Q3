@@ -1,5 +1,6 @@
 @import "main-style";
 @import "setting";
+@import "categories";
 @import "footer";
 
 
@@ -36,15 +37,8 @@ body {
         box-shadow: $shadow;
       }
       .quiz__description {
+        @include description();
         text-align: right;
-        color: $main-color;
-        text-transform: uppercase;
-        font-size: 36px;
-        font-weight: 400;
-        margin-top: 15px;
-        .quiz__description-text {
-          font-weight: 700;
-        }
       }
     }
     .button__settings {

@@ -1,0 +1,37 @@
+@import "main-style";
+
+.artists__categories-menu,
+.pictures__categories-menu {
+  @include flex();
+  margin-top: 40px;
+  .categories-btn {
+    @include btn();
+    padding-top: 5px;
+  }
+  .categories__title {
+    @include description();
+  }
+}
+
+.artists__categories-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 20px 20px;
+  margin-top: 30px;
+  .categories__card{
+      @include hoverImg();
+      background-color: $main-color;
+      .categories__card-header{
+          @include flex();
+          width: 165px;
+          margin: 0 auto;
+          .categories__card-number{
+              font-size: 42px;
+          }
+
+      }
+      .categories__pic{
+          width: 100%;
+      }
+  }
+}
