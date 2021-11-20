@@ -1,0 +1,36 @@
+@import "main-style";
+
+.setting__menu {
+  @include flex();
+  margin-top: 80px;
+  .setting-block {
+    @include sizeMainImg();
+    background-color: $white;
+    color: $main-color;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  .volume-img {
+    background-image: url(../assets/svg/volume-on.svg);
+    width: 85px;
+    height: 70px;
+  }
+  .time-img {
+    background-image: url(../assets/svg/timer-picture.svg);
+    width: 72px;
+    height: 85px;
+  }
+  .setting__img {
+    background-size: cover;
+    margin: 40px auto 0 auto;
+  }
+}
+
+.setting__btn {
+  @include flex();
+  width: 400px;
+  margin: 80px auto 0 auto;
+  .setting__page-btn {
+    @include btn();
+  }
+}

@@ -1,8 +1,19 @@
-.footer{
- 
-}
-.Personal__contacts{
+.Personal__contacts {
+  margin-top: 75px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  text-transform: uppercase;
+  font-size: 24px;
+  line-height: 36px;
+  color: #000;
+  .year{
+    padding-right: 100px;
+  }
+}
+
+a:-webkit-any-link {
+  color: #000;
+  cursor: pointer;
+   text-decoration: none;
 }

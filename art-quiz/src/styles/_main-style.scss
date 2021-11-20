@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+
+@mixin flex() {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin backgroundImg() {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@mixin sizeMainImg() {
+  width: 385px;
+  height: 385px;
+}
+
+@mixin btn() {
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 400;
+  cursor: pointer;
+  background-color: $main-color;
+  text-transform: uppercase;
+  width: 150px;
+  height: 50px;
+  transition: 0.3s;
+  color: $white;
+  box-shadow: $shadow;
+  &:hover {
+    background-color: $hover-btn;
+  }
+}
+
+@mixin hoverImg() {
+  transition: 0.3s;
+  cursor: pointer;
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+$font: "Montserrat", sans-serif;
+$main-color: #660033;
+$white: #fff;
+$hover-btn: #9e0b54;
+$shadow: 1px 6px 11px 1px rgb(0 0 0 / 70%);
