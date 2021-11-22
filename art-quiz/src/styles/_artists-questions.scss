@@ -1,0 +1,71 @@
+@import "main-style";
+
+.artists__questions-header {
+  @include flex();
+  margin-top: 35px;
+  .artists__questions-progress {
+    width: 150px;
+    height: 10px;
+    border: 3px solid $main-color;
+    border-radius: 10px;
+    overflow: hidden;
+    #artistProgressFull {
+      height: 100%;
+      border-radius: 10px;
+      background: $hover-btn;
+      width: 0%;
+    }
+  }
+  .artists__questions-text {
+    @include description();
+    margin-top: 0px;
+  }
+  .artists__questions-timer {
+    @include flex();
+    width: 150px;
+    .artists__questions-img {
+      background-image: url(../assets/svg/timer-picture.svg);
+      width: 38px;
+      height: 45px;
+      background-size: cover;
+    }
+    .artists__questions-time {
+      @include description();
+      margin-top: 0px;
+    }
+  }
+}
+
+.artists__questions-container {
+  width: 500px;
+  height: auto;
+  margin: 35px auto 0 auto;
+  @include hoverChoice();
+  .artists__questions-pic {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.artists__questions-option {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 3px 3px;
+  margin: 30px auto 0 auto;
+  background-color: $main-color;
+  width: 450px;
+  height: 100px;
+  .artists__questions-choice {
+    background-color: $white;
+    color: $main-color;
+    padding: 0 15px;
+    font-weight: 400;
+    cursor: pointer;
+    &:hover {
+      background-color: $gray;
+    }
+  }
+  .right {
+    text-align: right;
+  }
+}

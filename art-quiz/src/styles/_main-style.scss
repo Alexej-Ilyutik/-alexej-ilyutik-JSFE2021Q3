@@ -52,8 +52,17 @@
   }
 }
 
+@mixin hoverChoice() {
+  transition: 0.3s;
+  cursor: pointer;
+  &:hover {
+    transform: scale(1.7);
+  }
+}
+
 $font: "Montserrat", sans-serif;
 $main-color: #660033;
 $white: #fff;
+$gray: rgb(172, 170, 170);
 $hover-btn: #9e0b54;
 $shadow: 1px 6px 11px 1px rgb(0 0 0 / 70%);

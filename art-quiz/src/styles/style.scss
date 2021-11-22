@@ -1,8 +1,8 @@
 @import "main-style";
 @import "setting";
 @import "categories";
+@import "artists-questions";
 @import "footer";
-
 
 body {
   width: 100%;
@@ -56,6 +56,14 @@ body {
   padding: 0 15px;
 }
 
-.hide{
+.hide {
   display: none;
+}
+
+.correct{
+  background-color: rgba(0, 102, 53, 0.5);
+}
+
+.incorrect{
+  background-color: rgba(102, 0, 51, 0.5)
 }
