@@ -1,6 +1,6 @@
 import "./styles/reset.css";
 import "./styles/style.scss";
-import "./question"
+import "./question";
 
 const SETTING_BTN = document.querySelector(".button__settings");
 const ARTIST_BTN = document.querySelector(".artists__quiz-img");

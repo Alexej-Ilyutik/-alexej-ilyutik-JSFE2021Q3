@@ -38,14 +38,6 @@ const plugins = () => {
     new MiniCssExtractPlugin({
       filename: filename("css"),
     }),
-    new CopyWebpackPlugin({
-      patterns: [
-        {
-          from: path.resolve(__dirname, "src/favicon.ico"),
-          to: path.resolve(__dirname, "dist/public"),
-        },
-      ],
-    }),
   ];
   if (isProd) {
     base.push(new BundleAnalyzerPlugin());
@@ -105,6 +97,10 @@ module.exports = {
         ],
       },
       {
+        test: /\.html$/i,
+        loader: "html-loader",
+      },
+      {
         test: /\.s[ac]ss$/i,
         use: [
           // Creates `style` nodes from JS strings
@@ -118,6 +114,9 @@ module.exports = {
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
         type: "asset/resource",
+        generator: {
+          filename: "./assets/[name][ext][query]",
+        },
       },
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/i,
