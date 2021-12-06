@@ -1,7 +1,12 @@
 import AppLoader from './appLoader';
 
+interface HandleNameChangeInterface {
+    target: HTMLElement;
+    currentTarget: HTMLElement;
+}
+
 class AppController extends AppLoader {
-    getSources(callback) {
+    getSources(callback: () => void) {
         super.getResp(
             {
                 endpoint: 'sources',
@@ -10,7 +15,7 @@ class AppController extends AppLoader {
         );
     }
 
-    getNews(e, callback) {
+    getNews(e: HandleNameChangeInterface, callback: () => void) {
         let target = e.target;
         const newsContainer = e.currentTarget;
 
@@ -31,7 +36,7 @@ class AppController extends AppLoader {
                 }
                 return;
             }
-            target = target.parentNode;
+            target = target.parentNode as HTMLElement;
         }
     }
 }
