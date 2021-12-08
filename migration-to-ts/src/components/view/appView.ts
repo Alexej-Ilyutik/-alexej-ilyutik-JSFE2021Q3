@@ -13,6 +13,7 @@ export class AppView {
     drawNews(data: DataNews) {
         const values = data?.articles ? data?.articles : [];
         this.news.draw(values);
+        
     }
 
     drawSources(data: DataSource) {

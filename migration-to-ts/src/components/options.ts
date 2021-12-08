@@ -1,15 +1,15 @@
 export type Options = {
-    [key: string]: string;
-};
+  [key: string]: string;
+}
 
 export type Key = keyof InOptions;
 
 export type Callback<T> = (data: T) => void;
 
 export type InOptions = {
-    baseLink?: string;
-    options?: Options;
-};
+  baseLink?: string;
+options?: Options;
+}
 export interface DataNews {
     status: string;
     totalResults: number;
@@ -18,7 +18,7 @@ export interface DataNews {
 
 export interface DataSource {
     status: string;
-    sources: Array<Article>;
+    sources: Article[];
 }
 
 export type Text = {

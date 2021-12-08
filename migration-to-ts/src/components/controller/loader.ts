@@ -1,3 +1,5 @@
+import { Callback } from '../options';
+
 class Loader {
     baseLink: string;
     options: { [key: string]: string };
@@ -8,7 +10,7 @@ class Loader {
 
     getResp(
         { endpoint, options = {} }: { endpoint: string; options?: Record<string, unknown> },
-        callback = () => {
+        callback: Callback<object> = () => {
             console.error('No callback for GET response');
         }
     ) {
