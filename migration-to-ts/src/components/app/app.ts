@@ -12,7 +12,9 @@ class App {
     start(): void {
         document
             .querySelector('.sources')
-            .addEventListener('click', (e: MouseEvent) => this.controller.getNews(e, <T>(data: T) => this.view.drawNews(data)));
+            .addEventListener('click', (e: MouseEvent) =>
+                this.controller.getNews(e, <IData>(data: IData) => this.view.drawNews(data))
+            );
         this.controller.getSources((data) => this.view.drawSources(data));
     }
 }

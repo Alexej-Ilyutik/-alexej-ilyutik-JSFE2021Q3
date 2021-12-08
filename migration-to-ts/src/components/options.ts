@@ -1,3 +1,15 @@
+export type Options = {
+    [key: string]: string;
+};
+
+export type Key = keyof InOptions;
+
+export type Callback<T> = (data: T) => void;
+
+export type InOptions = {
+    baseLink?: string;
+    options?: Options;
+};
 export interface DataNews {
     status: string;
     totalResults: number;

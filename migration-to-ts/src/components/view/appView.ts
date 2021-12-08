@@ -1,6 +1,6 @@
 import News from './news/news';
 import Sources from './sources/sources';
-import {Article} from '../options';
+import {Article, DataSource} from '../options';
 
 interface IApiData {
     status: string;
@@ -20,7 +20,7 @@ export class AppView {
         this.news.draw(values);
     }
 
-    drawSources(data) {
+    drawSources(data: DataSource) {
         const values = data?.sources ? data?.sources : [];
         this.sources.draw(values);
     }
