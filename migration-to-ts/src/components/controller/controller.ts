@@ -1,12 +1,7 @@
 import AppLoader from './appLoader';
 
-interface HandleNameChangeInterface {
-    target: HTMLElement;
-    currentTarget: HTMLElement;
-}
-
 class AppController extends AppLoader {
-    getSources(callback: () => void) {
+    getSources(callback: <IData>(data: IData) => void) {
         super.getResp(
             {
                 endpoint: 'sources',
@@ -15,9 +10,9 @@ class AppController extends AppLoader {
         );
     }
 
-    getNews(e: HandleNameChangeInterface, callback: () => void) {
-        let target = e.target;
-        const newsContainer = e.currentTarget;
+    getNews(e: MouseEvent, callback: <IData>(data: IData) => void) {
+        let target = e.target as HTMLElement;
+        const newsContainer = e.currentTarget as HTMLElement;
 
         while (target !== newsContainer) {
             if (target.classList.contains('source__item')) {
