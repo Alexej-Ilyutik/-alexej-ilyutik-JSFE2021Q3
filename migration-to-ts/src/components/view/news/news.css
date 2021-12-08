@@ -1,7 +1,11 @@
+.news {
+    margin: 0.5em auto;
+}
+
 .news__item {
     display: flex;
     flex-direction: column;
-    margin: 1rem auto;
+    margin: 0 auto;
     margin-bottom: 1.6%;
     background: #fff;
     color: #333;
@@ -124,7 +128,7 @@
 @media (min-width: 640px) {
     .news__item {
         flex-direction: row;
-        max-width: 700px;
+        max-width: 800px;
     }
 
     .news__item .news__meta {
