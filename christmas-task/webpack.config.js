@@ -7,6 +7,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const isProduction = process.env.NODE_ENV == 'production';
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const ProgressPlugin = require('progress-webpack-plugin');
+const ESLintPlugin = require('eslint-webpack-plugin');
 
 const stylesHandler = isProduction
   ? MiniCssExtractPlugin.loader
@@ -40,6 +41,7 @@ const config = {
     }),
     new CleanWebpackPlugin(),
     new ProgressPlugin(true),
+    new ESLintPlugin(),
     // Add your plugins here
     // Learn more about plugins from https://webpack.js.org/configuration/plugins/
   ],
