@@ -1,8 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
 
-.root{
-  display: flex;
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: Roboto;
+  font-style: normal;
+  font-size: 22px;
+  font-weight: 300;
+  color: #ffffff;
   width: 100vw;
-  height: 100vh;
-  background-color: yellow;
-  flex-direction: column;
 }

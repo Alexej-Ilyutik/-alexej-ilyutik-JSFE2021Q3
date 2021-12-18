@@ -48,4 +48,5 @@
     "progress-webpack-plugin": "^1.0.12",
     "querystring": "^0.2.1"
   }
+
 }
