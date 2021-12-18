@@ -1,43 +1,36 @@
 // Generated using webpack-cli https://github.com/webpack/webpack-cli
 
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const path = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
-const isProduction = process.env.NODE_ENV == 'production';
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const ProgressPlugin = require('progress-webpack-plugin');
-const ESLintPlugin = require('eslint-webpack-plugin');
+const isProduction = process.env.NODE_ENV == "production";
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const ProgressPlugin = require("progress-webpack-plugin");
+const ESLintPlugin = require("eslint-webpack-plugin");
 
 const stylesHandler = isProduction
   ? MiniCssExtractPlugin.loader
-  : 'style-loader';
+  : "style-loader";
 
 const config = {
-  entry: './src/index.ts',
-  devtool: 'source-map',
+  entry: "./src/index.ts",
+  devtool: "source-map",
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, "dist"),
   },
   devServer: {
-    server: 'http',
-    open: {
-      app: {
-        name: 'chrome',
-        arguments: ['--incognito'],
-      },
-    },
-    host: 'localhost',
+    host: "localhost",
     port: 3000,
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './src/index.html',
-      filename: 'index.html',
-      minify: 'false',
-      inject: 'body',
-      favicon: './src/assets/favicon.svg',
-      scriptLoading: 'defer',
+      template: "./src/index.html",
+      filename: "index.html",
+      minify: "false",
+      inject: "body",
+      favicon: "./src/assets/favicon.svg",
+      scriptLoading: "defer",
     }),
     new CleanWebpackPlugin(),
     new ProgressPlugin(true),
@@ -49,7 +42,7 @@ const config = {
     rules: [
       {
         test: /\.html$/i,
-        loader: 'html-loader',
+        loader: "html-loader",
         options: {
           sources: true,
           minimize: false, // minify: 'true', минимизирует код html
@@ -58,30 +51,30 @@ const config = {
       },
       {
         test: /\.(ts|tsx)$/i,
-        loader: 'ts-loader',
-        exclude: ['/node_modules/'],
+        loader: "ts-loader",
+        exclude: ["/node_modules/"],
       },
       {
         test: /\.css$/i,
-        use: [stylesHandler, 'css-loader'],
+        use: [stylesHandler, "css-loader"],
       },
       {
         test: /\.s[ac]ss$/i,
         use: [
           stylesHandler,
-          'css-loader',
+          "css-loader",
           {
-            loader: 'postcss-loader',
+            loader: "postcss-loader",
             options: {
               postcssOptions: {
                 plugins: [
                   [
-                    'autoprefixer',
+                    "autoprefixer",
                     {
                       overrideBrowserslist: [
-                        'defaults',
-                        'ie >= 8',
-                        'last 4 version',
+                        "defaults",
+                        "ie >= 8",
+                        "last 4 version",
                       ],
                     },
                   ],
@@ -89,7 +82,7 @@ const config = {
               },
             },
           },
-          'sass-loader',
+          "sass-loader",
         ],
       },
       // {
@@ -98,30 +91,30 @@ const config = {
       // },
       {
         test: /\.(?:gif|png|jpg|jpeg|webp)$/,
-        type: 'asset/resource',
+        type: "asset/resource",
         generator: {
-          filename: './assets/img/[name][ext][query]',
+          filename: "./assets/img/[name][ext][query]",
         },
       },
       {
         test: /\.(?:ico)$/,
-        type: 'asset/resource',
+        type: "asset/resource",
         generator: {
-          filename: './assets/ico/[name][ext][query]',
+          filename: "./assets/ico/[name][ext][query]",
         },
       },
       {
         test: /\.(?:svg)$/,
-        type: 'asset/resource',
+        type: "asset/resource",
         generator: {
-          filename: './assets/svg/[name][ext][query]',
+          filename: "./assets/svg/[name][ext][query]",
         },
       },
       {
         test: /\.(woff(2)?|eot|ttf|otf)$/i,
-        type: 'asset/resource',
+        type: "asset/resource",
         generator: {
-          filename: './assets/fonts/[name][ext][query]',
+          filename: "./assets/fonts/[name][ext][query]",
         },
       },
 
@@ -130,17 +123,17 @@ const config = {
     ],
   },
   resolve: {
-    extensions: ['.tsx', '.ts', '.js'],
+    extensions: [".tsx", ".ts", ".js"],
   },
 };
 
 module.exports = () => {
   if (isProduction) {
-    config.mode = 'production';
+    config.mode = "production";
 
     config.plugins.push(new MiniCssExtractPlugin());
   } else {
-    config.mode = 'development';
+    config.mode = "development";
   }
   return config;
 };

@@ -1,6 +1,7 @@
 // const path = require('path');
 import './scss/style.scss';
 import './scss/reset.scss';
+
 import Header from './template/Header/header';
 import Main from './template/Main/main';
 import Footer from './template/Footer/footer';
@@ -15,4 +16,3 @@ const footer = document.querySelector('footer');
 footer.append(Footer);
 
 // console.log('Hello World!');
-document.getElementsByName
