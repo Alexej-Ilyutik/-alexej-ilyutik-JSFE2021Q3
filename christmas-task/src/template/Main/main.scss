@@ -1,16 +1,60 @@
-// @import './header/index.scss';
+@import "../../scss/style";
 
-.main-wrapper{
+.main-wrapper {
   width: 100vw;
   height: 92vh;
   background-color: black;
-  .images{
+  .main-images {
     width: 100%;
     height: 100%;
-    img{
+    img {
       width: 100%;
       height: 100%;
     }
+    .main-img-bg {
+      @include flex();
+      @include block-center-horizon();
+      width: 50em;
+      height: 38em;
+      top: 0px;
+      .first-ball {
+        height: auto;
+        width: 418px;
+      }
+      .second-ball {
+        margin-top: 100px;
+        height: 446px;
+        width: 246px;
+      }
+    }
+    .blur {
+      @include block-center-horizon();
+      background: rgba(186, 186, 243, 0.1);
+      backdrop-filter: blur(25px);
+    }
+    .main-title {
+      top: 340px;
+      width: 600px;
+      height: 250px;
+      border-radius: 15px;
+      p {
+        font-family: Neucha;
+        font-size: 2.8em;
+        line-height: 70px;
+        text-transform: uppercase;
+        text-align: center;
+        margin-top: 55px;
+      }
+    }
+    .main-btn {
+      top: 800px;
+      width: 320px;
+      height: 55px;
+      border-radius: 28px;
+      font-family: Roboto;
+      font-size: 32px;
+      font-weight: 400;
+      color: #ffffff;
+    }
   }
-   
 }

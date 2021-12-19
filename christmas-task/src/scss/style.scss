@@ -1,4 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Neucha&family=Roboto:wght@100;300;400;500;700&display=swap');
+
+@mixin block-center-horizon() {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+@mixin flex() {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 
 *,
 *::before,
