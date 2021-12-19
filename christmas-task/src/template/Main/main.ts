@@ -6,6 +6,6 @@ import './main.scss';
 import Main from './main.html';
 
 
-
 const main = htmlToElement(Main);
 export default main;
+
