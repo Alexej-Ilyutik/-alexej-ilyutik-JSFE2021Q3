@@ -11,6 +11,7 @@
     }
     .main-img-bg {
       @include flex();
+      align-items: center;
       @include block-center-horizon();
       width: 50em;
       height: 38em;
@@ -27,8 +28,7 @@
     }
     .blur {
       @include block-center-horizon();
-      background: rgba(186, 186, 243, 0.1);
-      backdrop-filter: blur(25px);
+      @include blur();
     }
     .main-title {
       top: 340px;

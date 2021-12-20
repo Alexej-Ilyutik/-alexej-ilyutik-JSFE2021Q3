@@ -1,12 +1,36 @@
-<div class="main1-wrapper">
-  <aside class="main1-menu">
-    <div class="main1-tools">
-      <div class="sound">
-            <button class="volume tools-icon" style="display: block;"></button>
-            <button class="mute tools-icon" style="display: none;"></button>
-          </div>
-          <button class="snow tools-icon"></button>
-    </div>
-
-  </aside>
+<div class="main1__wrapper">
+  <div class="main1__container">
+    <aside class="main1__menu menu-main1">
+      <div class="menu-main1__tools">
+        <div class="menu-main1__sound">
+          <button
+            class="menu-main1__volume btn-menu"
+            style="display: block"
+          ></button>
+          <button
+            class="menu-main1__mute btn-menu"
+            style="display: none"
+          ></button>
+        </div>
+        <button class="menu-main1__snow btn-menu"></button>
+        <div class="menu-main1__search">
+          <form action="#" class="search-menu">
+            <input
+              autocomplete="off"
+              type="text"
+              name="form[]"
+              data-error="Ошибка"
+              placeholder="Поиск"
+              class="search-menu__input"
+            />
+            <button type="submit" class="search-menu__btn"></button>
+          </form>
+        </div>
+      </div>
+      <div class="menu-main1__filter filter-form">hgasjk</div>
+      <div class="menu-main1__filter filter-property"></div>
+      <div class="menu-main1__filter filter-sort"></div>
+    </aside>
+    <div class="main1__content content-main1"></div>
+  </div>
 </div>

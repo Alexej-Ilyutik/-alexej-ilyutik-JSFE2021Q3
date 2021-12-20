@@ -6,6 +6,7 @@
   background-color: $main-color;
   .footer-content{
     @include flex();
+    align-items: center;
     margin: 0 auto;
     width: 95vw;
     height: 90%;

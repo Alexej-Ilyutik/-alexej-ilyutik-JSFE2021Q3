@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Neucha&family=Roboto:wght@100;300;400;500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Neucha&family=Roboto:wght@100;300;400;500;700&display=swap");
 
 @mixin block-center-horizon() {
   position: absolute;
@@ -8,11 +8,28 @@
 
 @mixin flex() {
   display: flex;
-  align-items: center;
   justify-content: space-between;
 }
 
-$main-color: #192F2D;
+@mixin bg-image {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+  opacity: 0.8;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+@mixin blur {
+  background: rgba(186, 186, 243, 0.1);
+  backdrop-filter: blur(15px);
+}
+
+$title-text: Neucha;
+$main-color: #192f2d;
+$border: rgb(85, 131, 168);
 
 *,
 *::before,
@@ -27,9 +44,10 @@ body {
   font-weight: 300;
   color: #ffffff;
   width: 100vw;
-  .main{
+  .main {
     width: 100vw;
-  height: 92vh;
-  background-color: $main-color;
+    height: 92vh;
+    background-color: $main-color;
+  
   }
 }
