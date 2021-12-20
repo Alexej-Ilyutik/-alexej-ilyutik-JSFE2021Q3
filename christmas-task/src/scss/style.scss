@@ -27,7 +27,12 @@
   backdrop-filter: blur(15px);
 }
 
-$title-text: Neucha;
+@mixin title-text($fontSize: 1.2em) {
+  font-family: Neucha;
+  font-size: $fontSize;
+  text-transform: uppercase;
+}
+
 $main-color: #192f2d;
 $border: rgb(85, 131, 168);
 
@@ -48,6 +53,5 @@ body {
     width: 100vw;
     height: 92vh;
     background-color: $main-color;
-  
   }
 }

@@ -66,9 +66,111 @@
         padding-top: 6px;
       }
       .menu-main1__filter {
-        width: 85%;
-        height: 50px;
+        width: 100%;
+        border-radius: 10px;
+        margin-top: 50px;
         @include blur();
+        padding: 20px 15px;
+        box-sizing: border-box;
+      }
+      .filter-form__title {
+        @include title-text();
+      }
+      .filter-form__description {
+        @include title-text(0.9em);
+      }
+      .filter-content {
+        margin-top: 1em;
+        @include flex();
+        align-items: center;
+      }
+      .filter-content__forma {
+        @include flex();
+        gap: 0.25em;
+        button {
+          width: 38px;
+          height: 38px;
+          background-size: 38px 38px;
+          @include bg-image();
+          &:hover {
+            opacity: 1;
+          }
+          &:nth-child(1) {
+            background-image: url("../../assets/svg/bell.svg");
+          }
+          &:nth-child(2) {
+            background-image: url("../../assets/svg/ball.svg");
+          }
+          &:nth-child(3) {
+            background-image: url("../../assets/svg/cone.svg");
+          }
+          &:nth-child(4) {
+            background-image: url("../../assets/svg/star.svg");
+          }
+          &:nth-child(5) {
+            background-image: url("../../assets/svg/snow.svg");
+          }
+          &:nth-child(6) {
+            background-image: url("../../assets/svg/toy.svg");
+          }
+        }
+      }
+      .filter-content__color {
+        @include flex();
+        gap: 0.7em;
+        button {
+          width: 38px;
+          height: 38px;
+          border-radius: 5px;
+          border: none;
+          &:hover {
+            opacity: 1;
+          }
+          &:nth-child(1) {
+            background-color: white;
+          }
+          &:nth-child(2) {
+            background-color: gold;
+          }
+          &:nth-child(3) {
+            background-color: red;
+          }
+          &:nth-child(4) {
+            background-color: blue;
+          }
+          &:nth-child(5) {
+            background-color: green;
+          }
+        }
+      }
+      .filter-content__size {
+        @include flex();
+        gap: 0.7em;
+        align-items: center;
+        margin-right: 3.6em;
+        button {
+          background-image: url("../../assets/svg/ball.svg");
+          @include bg-image();
+
+          &:hover {
+            opacity: 1;
+          }
+          &:nth-child(1) {
+            width: 52px;
+            height: 52px;
+            background-size: 52px 52px;
+          }
+          &:nth-child(2) {
+            width: 44px;
+            height: 44px;
+            background-size: 44px 44px;
+          }
+          &:nth-child(3) {
+            width: 36px;
+            height: 36px;
+            background-size: 36px 36px;
+          }
+        }
       }
     }
     .content-main1 {
